@@ -34,11 +34,11 @@ public class DatabaseModule : IServiceModule
 			options.UseSqlServer(connectionString: connectionString);
 		});
 
-		services.AddScoped<Persistence.IUnitOfWork, Persistence.UnitOfWork>(implementationFactory: sp =>
+		services.AddScoped<IUnitOfWork, UnitOfWork>(implementationFactory: sp =>
 		{
 			DatabaseContext context = sp.GetRequiredService<DatabaseContext>();
 
-			var result = new Persistence.UnitOfWork(databaseContext: context);
+			var result = new UnitOfWork(databaseContext: context);
 
 			return result;
 		});

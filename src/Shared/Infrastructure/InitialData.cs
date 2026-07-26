@@ -71,7 +71,7 @@ public class InitialData : object
 	{
 		var subSystem =
 			await SubSystemManager
-				.FindByNameAsync(domain: nameof(Domain.Status));
+				.FindByNameAsync(domain: nameof(Status));
 
 		if (subSystem is null)
 		{
@@ -112,7 +112,7 @@ public class InitialData : object
 
 			if (statusEntity is null)
 			{
-				statusEntity = new Domain.Status(code: seed.Code)
+				statusEntity = new Status(code: seed.Code)
 				{
 					Description = $"{seed.ArOm} | {seed.EnUs}"
 				};
@@ -156,7 +156,7 @@ public class InitialData : object
 	{
 		var subSystem =
 			await SubSystemManager
-				.FindByNameAsync(domain: nameof(Domain.ReportReason));
+				.FindByNameAsync(domain: nameof(ReportReason));
 
 		if (subSystem is null)
 		{
@@ -199,7 +199,7 @@ public class InitialData : object
 
 			if (reasonEntity is null)
 			{
-				reasonEntity = new Domain.ReportReason(code: seed.Code)
+				reasonEntity = new ReportReason(code: seed.Code)
 				{
 					Ordering = seed.Code,
 					HasDescription = seed.HasDescription,
@@ -247,7 +247,7 @@ public class InitialData : object
 	{
 		var subSystem =
 			await SubSystemManager
-				.FindByNameAsync(domain: nameof(Domain.DeleteReason));
+				.FindByNameAsync(domain: nameof(DeleteReason));
 
 		if (subSystem is null)
 		{
@@ -296,7 +296,7 @@ public class InitialData : object
 
 			if (reasonEntity is null)
 			{
-				reasonEntity = new Domain.DeleteReason(code: seed.Code)
+				reasonEntity = new DeleteReason(code: seed.Code)
 				{
 					Ordering = seed.Code,
 
@@ -343,7 +343,7 @@ public class InitialData : object
 	{
 		var subSystem =
 			await SubSystemManager
-				.FindByNameAsync(domain: nameof(Domain.NeedToEditReason));
+				.FindByNameAsync(domain: nameof(NeedToEditReason));
 
 		if (subSystem is null)
 		{
@@ -387,7 +387,7 @@ public class InitialData : object
 
 			if (reasonEntity is null)
 			{
-				reasonEntity = new Domain.NeedToEditReason(code: seed.Code)
+				reasonEntity = new NeedToEditReason(code: seed.Code)
 				{
 					Ordering = seed.Code,
 					Description = $"{seed.ArOm} | {seed.EnUs}",
@@ -447,7 +447,7 @@ public class InitialData : object
 			if (categoryEntity is null)
 			{
 				categoryEntity =
-					new Domain.CategoryType(code: seed.Code, hasAccessToChild: seed.HasAccessToChild);
+					new CategoryType(code: seed.Code, hasAccessToChild: seed.HasAccessToChild);
 
 				await UnitOfWork.CategoryTypeRepository.AddAsync(entity: categoryEntity);
 				existingCategories.Add(item: categoryEntity);
@@ -619,7 +619,7 @@ public class InitialData : object
 			};
 
 			var owner = new LocalizationOwner(
-				SubSystemName: nameof(Domain.PhoneOperator),
+				SubSystemName: nameof(PhoneOperator),
 				RelationId: entity.Id,
 				PropertyName: PhoneOperator.NamePropertyLocalizer);
 
@@ -627,7 +627,7 @@ public class InitialData : object
 
 			var ownerAttachmentLarge =
 				new AttachmentOwner(
-					SubSystemName: nameof(Domain.PhoneOperator),
+					SubSystemName: nameof(PhoneOperator),
 					RelationId: entity.Id,
 					ServerId: Domain.Base.ServerKeyConstant.Key,
 					SubjectCode: AnnouncementAttachmentSubjectKeys.PhoneOperator);
@@ -654,7 +654,7 @@ public class InitialData : object
 		var existing =
 			entities.ToDictionary(keySelector: x => x!.Code, comparer: StringComparer.OrdinalIgnoreCase);
 
-		var seedData = new DynamicFields.Seed.RegionSeedData();
+		var seedData = new RegionSeedData();
 
 		foreach (var root in seedData.Data)
 		{
@@ -689,7 +689,7 @@ public class InitialData : object
 			];
 
 			var owner = new LocalizationOwner(
-				SubSystemName: nameof(Domain.Region),
+				SubSystemName: nameof(Region),
 				RelationId: entity.Id,
 				PropertyName: Region.PropertyNameKey);
 
@@ -750,7 +750,7 @@ public class InitialData : object
 			};
 
 			var owner = new LocalizationOwner(
-				SubSystemName: nameof(Domain.PlateStatus),
+				SubSystemName: nameof(PlateStatus),
 				RelationId: entity.Id,
 				PropertyName: PlateStatus.PropertyNameKey);
 
@@ -798,7 +798,7 @@ public class InitialData : object
 			if (existingCategories
 					.TryGetValue(key: seed.Code, value: out var categoryEntity) == false)
 			{
-				categoryEntity = new Domain.Category
+				categoryEntity = new Category
 				{
 					Code = seed.Code,
 					Ordering = seed.Ordering,
@@ -816,7 +816,7 @@ public class InitialData : object
 				};
 
 				var owner = new LocalizationOwner(
-					SubSystemName: nameof(Domain.Category),
+					SubSystemName: nameof(Category),
 					RelationId: categoryEntity.Id,
 					PropertyName: Category.PropertyNameKey);
 
@@ -824,7 +824,7 @@ public class InitialData : object
 
 				var ownerAttachmentLarge =
 					new AttachmentOwner(
-						SubSystemName: nameof(Domain.Category),
+						SubSystemName: nameof(Category),
 						RelationId: categoryEntity.Id,
 						ServerId: Domain.Base.ServerKeyConstant.Key,
 						SubjectCode: AnnouncementAttachmentSubjectKeys.CategoryImageLarge);
@@ -835,7 +835,7 @@ public class InitialData : object
 
 				var ownerAttachmentSmall =
 					new AttachmentOwner(
-						SubSystemName: nameof(Domain.Category),
+						SubSystemName: nameof(Category),
 						RelationId: categoryEntity.Id,
 						ServerId: Domain.Base.ServerKeyConstant.Key,
 						SubjectCode: AnnouncementAttachmentSubjectKeys.CategoryImageSmall);
@@ -904,7 +904,7 @@ public class InitialData : object
 			if (fields.Any() == false)
 			{
 				var provider =
-					new DynamicFields.Seed.CategoryTypeFieldProvider();
+					new CategoryTypeFieldProvider();
 
 				var fieldData =
 					provider.GetFieldsForCategoryType(categoryType: category.CategoryType!.Code);
@@ -957,7 +957,7 @@ public class InitialData : object
 					};
 
 					var titleOwner = new LocalizationOwner(
-						SubSystemName: nameof(Domain.Field),
+						SubSystemName: nameof(Field),
 						RelationId: newField.Id,
 						PropertyName: Field.NamePropertyLocalizer
 					);
@@ -974,7 +974,7 @@ public class InitialData : object
 					};
 
 					var hintOwner = new LocalizationOwner(
-						SubSystemName: nameof(Domain.Field),
+						SubSystemName: nameof(Field),
 						RelationId: newField.Id,
 						PropertyName: Field.HintPropertyLocalizer
 					);
@@ -991,7 +991,7 @@ public class InitialData : object
 					};
 
 					var descriptionOwner = new LocalizationOwner(
-						SubSystemName: nameof(Domain.Field),
+						SubSystemName: nameof(Field),
 						RelationId: newField.Id,
 						PropertyName: Field.DescriptionPropertyLocalizer
 					);

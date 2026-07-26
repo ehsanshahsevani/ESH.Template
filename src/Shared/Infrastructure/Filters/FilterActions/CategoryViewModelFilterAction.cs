@@ -52,8 +52,8 @@ public class CategoryViewModelFilterAction :
 					if (entity is null)
 					{
 						var errorMessage = string.Format(
-							format: ESH.Resources.Messages.NotFoundError,
-							arg0: ESH.Resources.DataDictionary.Category);
+							format: Messages.NotFoundError,
+							arg0: DataDictionary.Category);
 
 						result.WithError(errorMessage: errorMessage);
 					}

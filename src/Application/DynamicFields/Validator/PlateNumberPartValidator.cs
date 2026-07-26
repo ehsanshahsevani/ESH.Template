@@ -10,7 +10,7 @@ public class PlateNumberPartValidator : IFieldValidator
 	public async Task<Result> Validate(object? value, IFieldTypeConfig config)
 	{
 		var result =
-			new FluentResults.Result();
+			new Result();
 
 		var numberConfig =
 			config as NumberConfig;

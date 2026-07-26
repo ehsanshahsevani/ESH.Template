@@ -11,7 +11,7 @@ public class UnitOfWork : Base.UnitOfWork, IUnitOfWork
 	{
 	}
 
-	public UnitOfWork(Persistence.DatabaseContext databaseContext) : base(databaseContext)
+	public UnitOfWork(DatabaseContext databaseContext) : base(databaseContext)
 	{
 	}
 

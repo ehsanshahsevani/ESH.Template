@@ -62,7 +62,7 @@ public static class ServiceExtensions
 				BaseEntity.DomainFinder(assemblyName: nameof(Domain));
 
 			await subSystemManager.AddByNamesAsync(
-				domains: domains, serverId: Domain.Base.ServerKeyConstant.Key);
+				domains: domains, serverId: ServerKeyConstant.Key);
 
 			await unitOfWork.SaveAsync();
 
@@ -75,7 +75,7 @@ public static class ServiceExtensions
 			var result = await subSystemHttpService.AddAsync(
 				model: subSystemViewModels,
 				projectType: ProjectType.Announcement,
-				serverId: Domain.Base.ServerKeyConstant.Key);
+				serverId: ServerKeyConstant.Key);
 
 			if (result!.IsFailed == true)
 			{
@@ -84,10 +84,10 @@ public static class ServiceExtensions
 
 			var actions =
 				ActionScanner.ScanCodedActionsOnly(
-					assembly: assembly, serverKey: Domain.Base.ServerKeyConstant.Key);
+					assembly: assembly, serverKey: ServerKeyConstant.Key);
 
 			var resultSaveAction = await actionService.AddAsync(
-				model: actions, serverId: Domain.Base.ServerKeyConstant.Key,
+				model: actions, serverId: ServerKeyConstant.Key,
 				projectType: ProjectType.Announcement);
 
 			if (resultSaveAction!.IsFailed == true)
@@ -122,7 +122,7 @@ public static class ServiceExtensions
 			// **************************************************
 			// Initial Data Seeding
 			var initialData =
-				new Infrastructure.InitialData(
+				new InitialData(
 					configuration: app.Configuration, unitOfWork: unitOfWork,
 					subSystemManager: subSystemManager, languageLocalizerManager: languageLocalizerManager,
 					languageCodeManager: languageCodeManager, attachmentSubjectManager: attachmentSubjectManager,

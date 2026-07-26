@@ -44,14 +44,13 @@ public class FieldService : object, IFieldService
 		CancellationToken cancellationToken = default)
 	{
 		var result =
-			new FluentResults
-				.Result<List<FieldResponseViewModel>>();
+			new Result<List<FieldResponseViewModel>>();
 
 		if (string.IsNullOrEmpty(categoryId) == true)
 		{
 			var errorMessage = string.Format(
-				ESH.Resources.Messages.RequiredError,
-				ESH.Resources.DataDictionary.Category);
+				Messages.RequiredError,
+				DataDictionary.Category);
 
 			result.WithError(errorMessage);
 			return result;
@@ -63,8 +62,8 @@ public class FieldService : object, IFieldService
 		if (category is null)
 		{
 			var errorMessage = string.Format(
-				ESH.Resources.Messages.NotFoundError,
-				ESH.Resources.DataDictionary.Category);
+				Messages.NotFoundError,
+				DataDictionary.Category);
 
 			result.WithError(errorMessage);
 			return result;
@@ -94,24 +93,24 @@ public class FieldService : object, IFieldService
 
 			await LanguageService.LocalizeAsync(
 				values,
-				subSystem: nameof(Domain.Field),
+				subSystem: nameof(Field),
 				x => x.Id,
 				applyValue: (vm, text) => vm.Name = text,
-				key: Domain.Field.NamePropertyLocalizer, cancellationToken: cancellationToken);
+				key: Field.NamePropertyLocalizer, cancellationToken: cancellationToken);
 
 			await LanguageService.LocalizeAsync(
 				values,
-				subSystem: nameof(Domain.Field),
+				subSystem: nameof(Field),
 				x => x.Id,
 				applyValue: (vm, text) => vm.Hint = text,
-				key: Domain.Field.HintPropertyLocalizer, cancellationToken: cancellationToken);
+				key: Field.HintPropertyLocalizer, cancellationToken: cancellationToken);
 
 			await LanguageService.LocalizeAsync(
 				values,
-				subSystem: nameof(Domain.Field),
+				subSystem: nameof(Field),
 				x => x.Id,
 				applyValue: (vm, text) => vm.Description = text,
-				key: Domain.Field.DescriptionPropertyLocalizer, cancellationToken: cancellationToken);
+				key: Field.DescriptionPropertyLocalizer, cancellationToken: cancellationToken);
 
 			result.WithValue(values);
 		}
@@ -123,7 +122,7 @@ public class FieldService : object, IFieldService
 
 	public async Task<Result<List<UiSelectModel>>> GetCustomValuesAsync(string fieldId, bool? isActive)
 	{
-		var result = new FluentResults.Result<List<UiSelectModel>>();
+		var result = new Result<List<UiSelectModel>>();
 
 		var field = await UnitOfWork
 			.FieldRepository.FindAsync(fieldId);
@@ -147,10 +146,10 @@ public class FieldService : object, IFieldService
 
 			await LanguageService.LocalizeAsync(
 				values,
-				subSystem: nameof(Domain.FieldMultiValue),
+				subSystem: nameof(FieldMultiValue),
 				x => x.ValueId,
 				applyValue: (vm, text) => vm.Value = text,
-				key: Domain.FieldMultiValue.TextPropertyLocalizer);
+				key: FieldMultiValue.TextPropertyLocalizer);
 
 			result.WithValue(values);
 		}
@@ -164,14 +163,13 @@ public class FieldService : object, IFieldService
 		GetFiltersByCategoryIdAsync(string? categoryId, CancellationToken cancellationToken = default)
 	{
 		var result =
-			new FluentResults
-				.Result<List<FieldResponseViewModel>>();
+			new Result<List<FieldResponseViewModel>>();
 
 		if (string.IsNullOrEmpty(categoryId) == true)
 		{
 			var errorMessage = string.Format(
-				ESH.Resources.Messages.RequiredError,
-				ESH.Resources.DataDictionary.Id);
+				Messages.RequiredError,
+				DataDictionary.Id);
 			
 			result.WithError(errorMessage);
 			return result;
@@ -183,8 +181,8 @@ public class FieldService : object, IFieldService
 		if (category is null)
 		{
 			var errorMessage = string.Format(
-				ESH.Resources.Messages.NotFoundError,
-				ESH.Resources.DataDictionary.Category);
+				Messages.NotFoundError,
+				DataDictionary.Category);
 
 			result.WithError(errorMessage);
 			return result;
@@ -218,24 +216,24 @@ public class FieldService : object, IFieldService
 
 		await LanguageService.LocalizeAsync(
 			values,
-			subSystem: nameof(Domain.Field),
+			subSystem: nameof(Field),
 			x => x.Id,
 			applyValue: (vm, text) => vm.Name = text,
-			key: Domain.Field.NamePropertyLocalizer, cancellationToken: cancellationToken);
+			key: Field.NamePropertyLocalizer, cancellationToken: cancellationToken);
 
 		await LanguageService.LocalizeAsync(
 			values,
-			subSystem: nameof(Domain.Field),
+			subSystem: nameof(Field),
 			x => x.Id,
 			applyValue: (vm, text) => vm.Hint = text,
-			key: Domain.Field.HintPropertyLocalizer, cancellationToken: cancellationToken);
+			key: Field.HintPropertyLocalizer, cancellationToken: cancellationToken);
 
 		await LanguageService.LocalizeAsync(
 			values,
-			subSystem: nameof(Domain.Field),
+			subSystem: nameof(Field),
 			x => x.Id,
 			applyValue: (vm, text) => vm.Description = text,
-			key: Domain.Field.DescriptionPropertyLocalizer, cancellationToken: cancellationToken);
+			key: Field.DescriptionPropertyLocalizer, cancellationToken: cancellationToken);
 
 		result.WithValue(values);
 
@@ -454,7 +452,7 @@ public class FieldService : object, IFieldService
 
 		if (category.CategoryType!.IsOther() is false)
 		{
-			result.WithError(ESH.Resources.Messages.EditRestrictionCategories);
+			result.WithError(Messages.EditRestrictionCategories);
 			return result;
 		}
 
@@ -473,7 +471,7 @@ public class FieldService : object, IFieldService
 
 		if (field is not null)
 		{
-			result.WithError(ESH.Resources.Messages.FieldHasExistErrorMessage);
+			result.WithError(Messages.FieldHasExistErrorMessage);
 			return result;
 		}
 
@@ -541,7 +539,7 @@ public class FieldService : object, IFieldService
 
 		var resultName = await SaveInLocalizersAsync(
 			values: model.Name,
-			propertyName: Domain.Field.NamePropertyLocalizer,
+			propertyName: Field.NamePropertyLocalizer,
 			relationId: entity.Id,
 			cancellationToken: cancellationToken
 		);
@@ -550,7 +548,7 @@ public class FieldService : object, IFieldService
 
 		var resultHint = await SaveInLocalizersAsync(
 			values: model.Hint,
-			propertyName: Domain.Field.HintPropertyLocalizer,
+			propertyName: Field.HintPropertyLocalizer,
 			relationId: entity.Id,
 			cancellationToken: cancellationToken
 		);
@@ -559,7 +557,7 @@ public class FieldService : object, IFieldService
 
 		var resultDescription = await SaveInLocalizersAsync(
 			values: model.FieldDescription,
-			propertyName: Domain.Field.DescriptionPropertyLocalizer,
+			propertyName: Field.DescriptionPropertyLocalizer,
 			relationId: entity.Id,
 			cancellationToken: cancellationToken
 		);
@@ -581,7 +579,7 @@ public class FieldService : object, IFieldService
 	public async Task<Result> UpdateFieldAsync(
 		FieldReadyRequestViewModel model, CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		if (string.IsNullOrEmpty(model.Id) == true)
 		{
@@ -595,8 +593,8 @@ public class FieldService : object, IFieldService
 		if (entity is null)
 		{
 			var errorMessage = string.Format(
-				ESH.Resources.Messages.NotFoundError,
-				ESH.Resources.DataDictionary.Field);
+				Messages.NotFoundError,
+				DataDictionary.Field);
 
 			result.WithError(errorMessage);
 			return result;
@@ -642,7 +640,7 @@ public class FieldService : object, IFieldService
 
 		var resultName = await SaveInLocalizersAsync(
 			values: model.Name,
-			propertyName: Domain.Field.NamePropertyLocalizer,
+			propertyName: Field.NamePropertyLocalizer,
 			relationId: entity.Id,
 			cancellationToken: cancellationToken
 		);
@@ -651,7 +649,7 @@ public class FieldService : object, IFieldService
 
 		var resultHint = await SaveInLocalizersAsync(
 			values: model.Hint,
-			propertyName: Domain.Field.HintPropertyLocalizer,
+			propertyName: Field.HintPropertyLocalizer,
 			relationId: entity.Id,
 			cancellationToken: cancellationToken
 		);
@@ -660,7 +658,7 @@ public class FieldService : object, IFieldService
 
 		var resultDescription = await SaveInLocalizersAsync(
 			values: model.FieldDescription,
-			propertyName: Domain.Field.DescriptionPropertyLocalizer,
+			propertyName: Field.DescriptionPropertyLocalizer,
 			relationId: entity.Id,
 			cancellationToken: cancellationToken
 		);
@@ -675,8 +673,8 @@ public class FieldService : object, IFieldService
 			await UnitOfWork.SaveAsync(cancellationToken);
 
 			var successMessage = string.Format(
-				ESH.Resources.Messages.UpdateMessageSuccess,
-				ESH.Resources.DataDictionary.Field);
+				Messages.UpdateMessageSuccess,
+				DataDictionary.Field);
 
 			result.WithSuccess(successMessage);
 		}
@@ -691,7 +689,7 @@ public class FieldService : object, IFieldService
 	public async Task<Result> ChangeActivationAsync(
 		string id, CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		if (string.IsNullOrEmpty(id) == true)
 		{
@@ -705,8 +703,8 @@ public class FieldService : object, IFieldService
 		if (entity is null)
 		{
 			var errorMessage = string.Format(
-				ESH.Resources.Messages.NotFoundError,
-				ESH.Resources.DataDictionary.Field);
+				Messages.NotFoundError,
+				DataDictionary.Field);
 
 			result.WithError(errorMessage);
 			return result;
@@ -715,13 +713,13 @@ public class FieldService : object, IFieldService
 		if (result.IsSuccess == true)
 		{
 			entity.IsActive = !entity.IsActive;
-			entity.UpdateDateTime = ESH.Utilities.DateTools.DateTimeNow();
+			entity.UpdateDateTime = DateTools.DateTimeNow();
 
 			await UnitOfWork.SaveAsync(cancellationToken);
 
 			var successMessage = string.Format(
-				ESH.Resources.Messages.UpdateMessageSuccess,
-				ESH.Resources.DataDictionary.Field);
+				Messages.UpdateMessageSuccess,
+				DataDictionary.Field);
 
 			result.WithSuccess(successMessage);
 		}
@@ -733,7 +731,7 @@ public class FieldService : object, IFieldService
 
 	#region SaveInLocalizersAsync(List<ValueLocalizerViewModel> values, string propertyName, string relationId)
 
-	private async Task<FluentResults.Result> SaveInLocalizersAsync(
+	private async Task<Result> SaveInLocalizersAsync(
 		List<ValueLocalizerViewModel> values,
 		string propertyName, string relationId,
 		CancellationToken cancellationToken = default)
@@ -741,7 +739,7 @@ public class FieldService : object, IFieldService
 		var owner =
 			new LocalizationOwner(
 				RelationId: relationId,
-				SubSystemName: nameof(Domain.Field),
+				SubSystemName: nameof(Field),
 				PropertyName: propertyName
 			);
 
@@ -762,7 +760,7 @@ public class FieldService : object, IFieldService
 	#region UpdateInLocalizersAsync(List<ValueLocalizerViewModel> values, string propertyName, string relationId)
 
 	// ReSharper disable once UnusedMember.Local
-	private async Task<FluentResults.Result> UpdateInLocalizersAsync(
+	private async Task<Result> UpdateInLocalizersAsync(
 		List<ValueLocalizerViewModel> values,
 		string propertyName, string relationId,
 		CancellationToken cancellationToken = default)
@@ -770,7 +768,7 @@ public class FieldService : object, IFieldService
 		var owner =
 			new LocalizationOwner(
 				RelationId: relationId,
-				SubSystemName: nameof(Domain.Field),
+				SubSystemName: nameof(Field),
 				PropertyName: propertyName
 			);
 
@@ -790,10 +788,10 @@ public class FieldService : object, IFieldService
 
 	#region CreateFieldWithValuesAsync(FieldValuesRequestViewModel model)
 
-	public async Task<FluentResults.Result> CreateFieldWithValuesAsync(
+	public async Task<Result> CreateFieldWithValuesAsync(
 		FieldCustomValuesRequestViewModel model, CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		var fieldType = await UnitOfWork
 			.FieldTypeRepository.GetByCodeAsync(FieldTypes.CustomValues, cancellationToken);
@@ -809,7 +807,7 @@ public class FieldService : object, IFieldService
 
 		if (hashValues.Count != hashValues.Distinct().Count())
 		{
-			result.WithError(ESH.Resources.Messages.DuplicateValuesNotAllowedErrorMessage);
+			result.WithError(Messages.DuplicateValuesNotAllowedErrorMessage);
 			return result;
 		}
 
@@ -893,8 +891,8 @@ public class FieldService : object, IFieldService
 			var owner =
 				new LocalizationOwner(
 					RelationId: fieldMultiValue.Id,
-					SubSystemName: nameof(Domain.FieldMultiValue),
-					PropertyName: Domain.FieldMultiValue.TextPropertyLocalizer
+					SubSystemName: nameof(FieldMultiValue),
+					PropertyName: FieldMultiValue.TextPropertyLocalizer
 				);
 
 			var valueLocalizer =
@@ -919,8 +917,8 @@ public class FieldService : object, IFieldService
 
 			var successMessage =
 				string.Format(
-					ESH.Resources.Messages.CreateSuccessMessage,
-					ESH.Resources.DataDictionary.Field);
+					Messages.CreateSuccessMessage,
+					DataDictionary.Field);
 
 			result.WithSuccess(successMessage);
 		}

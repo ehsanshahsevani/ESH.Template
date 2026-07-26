@@ -194,7 +194,7 @@ public class AnnouncementViewsRepository
 		return result;
 	}
 
-	public override async Task<ESH.BuildingBlocks.SampleResult.Result> AddAsync(AnnouncementViews? entity, CancellationToken cancellationToken = default)
+	public override async Task<Result> AddAsync(AnnouncementViews? entity, CancellationToken cancellationToken = default)
 	{
 		var result = new Result();
 

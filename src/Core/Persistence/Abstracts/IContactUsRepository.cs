@@ -6,7 +6,7 @@ using ESH.ViewModels.Announcement.ModelParameters;
 
 namespace Persistence.Abstracts;
 
-public interface IContactUsRepository : IRepository<Domain.ContactUs>
+public interface IContactUsRepository : IRepository<ContactUs>
 {
 	Task<PagedList<ContactUs>> GetWithPageAsync(
 		ContactUsParameters parameters, CancellationToken cancellationToken = default);

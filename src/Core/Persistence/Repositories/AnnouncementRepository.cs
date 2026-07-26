@@ -30,7 +30,7 @@ public class AnnouncementRepository : Repository<Announcement>, IAnnouncementRep
 		return result;
 	}
 
-	public async Task<List<Domain.Announcement>> GetByIdsAsync(
+	public async Task<List<Announcement>> GetByIdsAsync(
 		List<string> ids, CancellationToken cancellationToken = default)
 	{
 		var result = await DbSet
@@ -550,7 +550,7 @@ public class AnnouncementRepository : Repository<Announcement>, IAnnouncementRep
 
 	#region ApplyFilter
 
-	private async Task<IQueryable<Domain.Announcement>> ApplyFilters(
+	private async Task<IQueryable<Announcement>> ApplyFilters(
 		IQueryable<Announcement> source, AnnouncementParameters parameters,
 		CancellationToken cancellationToken = default)
 	{
@@ -663,7 +663,7 @@ public class AnnouncementRepository : Repository<Announcement>, IAnnouncementRep
 
 			List<string> subSystems =
 			[
-				nameof(Domain.Announcement)
+				nameof(Announcement)
 			];
 
 			if (ids.Any() == true)
@@ -684,7 +684,7 @@ public class AnnouncementRepository : Repository<Announcement>, IAnnouncementRep
 			parameters.RegionIds.AddRange(
 				await DatabaseContext.LanguageLocalizers
 					.Include(current => current.SubSystem)
-					.Where(current => current.SubSystem.Name == nameof(Domain.Region))
+					.Where(current => current.SubSystem.Name == nameof(Region))
 					.Where(current => current.Value.Contains(parameters.Text))
 					.Select(current => current.RelationId)
 					.ToListAsync(cancellationToken)
@@ -696,7 +696,7 @@ public class AnnouncementRepository : Repository<Announcement>, IAnnouncementRep
 			parameters.PhoneOperatorIds.AddRange(
 				await DatabaseContext.LanguageLocalizers
 					.Include(current => current.SubSystem)
-					.Where(current => current.SubSystem.Name == nameof(Domain.PhoneOperator))
+					.Where(current => current.SubSystem.Name == nameof(PhoneOperator))
 					.Where(current => current.Value.Contains(parameters.Text))
 					.Select(current => current.RelationId)
 					.ToListAsync(cancellationToken)
@@ -1207,7 +1207,7 @@ public class AnnouncementRepository : Repository<Announcement>, IAnnouncementRep
 		if (ids.Any() == true)
 		{
 			await DatabaseContext.Attachments
-				.Where(x => x.SubSystem.Name == nameof(Domain.Announcement))
+				.Where(x => x.SubSystem.Name == nameof(Announcement))
 				.Where(x => ids.Contains(x.RelationId))
 				.ExecuteDeleteAsync(cancellationToken);
 

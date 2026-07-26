@@ -58,7 +58,7 @@ public class ReportReasonRepository : Repository<ReportReason>, IReportReasonRep
 			var valueLocalizersIds =
 				await DatabaseContext.LanguageLocalizers
 					.Where(current => current.IsDeleted == false)
-					.Where(current => current.SubSystem.Name == nameof(Domain.ReportReason))
+					.Where(current => current.SubSystem.Name == nameof(ReportReason))
 					.Where(current => current.Value.Contains(parameter.Text))
 
 					.Select(current => current.Id)

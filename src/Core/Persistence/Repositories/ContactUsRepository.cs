@@ -7,7 +7,7 @@ using Persistence.Abstracts;
 
 namespace Persistence.Repositories;
 
-public class ContactUsRepository : Repository<Domain.ContactUs>, IContactUsRepository
+public class ContactUsRepository : Repository<ContactUs>, IContactUsRepository
 {
 	#region Constructor
 

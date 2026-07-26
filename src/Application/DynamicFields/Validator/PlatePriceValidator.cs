@@ -9,7 +9,7 @@ public class PlatePriceValidator : IFieldValidator
 {
 	public async Task<Result> Validate(object value, IFieldTypeConfig config)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		if (value is null)
 		{

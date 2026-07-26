@@ -95,7 +95,7 @@ public class PollingDeleteAccountService : BackgroundService
 					await unitOfWork.SaveAsync(stoppingToken);
 
 					_ = await deleteAccountQueueService.CheckAsync(
-							userIdsDeleted, serverKey: Domain.Base.ServerKeyConstant.Key);
+							userIdsDeleted, serverKey: ServerKeyConstant.Key);
 				}
 			}
 			catch (Exception ex)

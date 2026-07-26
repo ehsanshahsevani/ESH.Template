@@ -53,13 +53,13 @@ public class Region : Base.BaseEntity
 	/// </summary>
 
 	[Display(
-		ResourceType = typeof(ESH.Resources.DataDictionary),
-		Name = nameof(ESH.Resources.DataDictionary.Parent))]
+		ResourceType = typeof(DataDictionary),
+		Name = nameof(DataDictionary.Parent))]
 
 	[MaxLength(
 		length: FixedLength.Guid,
-		ErrorMessageResourceType = typeof(ESH.Resources.Messages),
-		ErrorMessageResourceName = nameof(ESH.Resources.Messages.MaxLengthError))]
+		ErrorMessageResourceType = typeof(Messages),
+		ErrorMessageResourceName = nameof(Messages.MaxLengthError))]
 
 	public string? ParentId { get; set; }
 

@@ -351,7 +351,7 @@ public class MappingProfile : AutoMapper.Profile
 
 			;
 
-		CreateMap<Domain.DictionaryChecker, ESH.ViewModels.Announcement.DictionaryCheckerResponseViewModel>()
+		CreateMap<DictionaryChecker, DictionaryCheckerResponseViewModel>()
 
 			.ReverseMap()
 
@@ -362,7 +362,7 @@ public class MappingProfile : AutoMapper.Profile
 
 		;
 
-		CreateMap<Domain.DictionaryChecker, ESH.ViewModels.Announcement.DictionaryCheckerRequestViewModel>()
+		CreateMap<DictionaryChecker, DictionaryCheckerRequestViewModel>()
 
 			.ReverseMap()
 

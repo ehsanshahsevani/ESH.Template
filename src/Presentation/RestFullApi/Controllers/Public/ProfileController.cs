@@ -36,7 +36,7 @@ public class ProfileController : BaseControllerApi
 	public ProfileController(IMapper mapper, HttpClient httpClient, IConfiguration configuration,
 		IHttpContextAccessor httpContextAccessor, IUnitOfWork unitOfWork, ILogDetailManager logDetailManager,
 		ILogServerManager logServerManager, ILanguageCodeManager languageCodeManager,
-		IAttachmentService attachmentService, ESH.BuildingBlocks.Application.Abstraction.IJwtTokenValidator jwtTokenValidator) : base()
+		IAttachmentService attachmentService, IJwtTokenValidator jwtTokenValidator) : base()
 	{
 		Mapper = mapper;
 		HttpClient = httpClient;
@@ -69,7 +69,7 @@ public class ProfileController : BaseControllerApi
 		
 		if (string.IsNullOrEmpty(resultToken) == true)
 		{
-			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
+			result.WithError(ResponseErrors.UnauthorizedError401);
 			return ToSampleResult(result);
 		}
 
@@ -80,8 +80,8 @@ public class ProfileController : BaseControllerApi
 
 		if (entity is null)
 		{
-			result.WithError(Resources.ResponseErrors.ForbiddenError403);
-			return FluentResult(result);
+			result.WithError(ResponseErrors.ForbiddenError403);
+			return ToSampleResult(result);
 		}
 
 		if (result.IsSuccess == true)
@@ -94,7 +94,7 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 		}
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpGet(template: "mini")]
@@ -112,8 +112,8 @@ public class ProfileController : BaseControllerApi
 
 		if (string.IsNullOrEmpty(profileId) == true)
 		{
-			result.WithError(Resources.ResponseErrors.RequestNotValid400);
-			return FluentResult(result);
+			result.WithError(ResponseErrors.RequestNotValid400);
+			return ToSampleResult(result);
 		}
 
 		var entity =
@@ -123,8 +123,8 @@ public class ProfileController : BaseControllerApi
 
 		if (entity is null || entity.ShowProfileInAnnouncement == false)
 		{
-			result.WithError(Resources.ResponseErrors.ForbiddenError403);
-			return FluentResult(result);
+			result.WithError(ResponseErrors.ForbiddenError403);
+			return ToSampleResult(result);
 		}
 
 		if (result.IsSuccess == true)
@@ -137,7 +137,7 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 		}
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpGet(template: "mini-other/{profileId}")]
@@ -160,7 +160,7 @@ public class ProfileController : BaseControllerApi
 		
 		if (string.IsNullOrEmpty(resultToken) == true)
 		{
-			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
+			result.WithError(ResponseErrors.UnauthorizedError401);
 			return ToSampleResult(result);
 		}
 
@@ -169,7 +169,7 @@ public class ProfileController : BaseControllerApi
 		if (validateModel.IsSuccess == false)
 		{
 			result.WithErrors(validateModel.Errors);
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 
 		var entity =
@@ -177,7 +177,7 @@ public class ProfileController : BaseControllerApi
 
 		if (entity is null)
 		{
-			throw new InvalidOperationException(Resources.ResponseErrors.ForbiddenError403);
+			throw new InvalidOperationException(ResponseErrors.ForbiddenError403);
 		}
 
 		if (model.FileUpload is not null)
@@ -232,12 +232,12 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 
 			var successMessage = string.Format
-				(Resources.Messages.UpdateMessageSuccess, Resources.DataDictionary.Profile);
+				(Messages.UpdateMessageSuccess, DataDictionary.Profile);
 
 			result.WithSuccess(successMessage);
 		}
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPut(template: "update-profile")]
@@ -258,7 +258,7 @@ public class ProfileController : BaseControllerApi
 		
 		if (string.IsNullOrEmpty(resultToken) == true)
 		{
-			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
+			result.WithError(ResponseErrors.UnauthorizedError401);
 			return ToSampleResult(result);
 		}
 
@@ -267,7 +267,7 @@ public class ProfileController : BaseControllerApi
 
 		if (entity is null)
 		{
-			throw new InvalidOperationException(Resources.ResponseErrors.ForbiddenError403);
+			throw new InvalidOperationException(ResponseErrors.ForbiddenError403);
 		}
 
 		var languageCodeEntity =
@@ -276,7 +276,7 @@ public class ProfileController : BaseControllerApi
 		if (languageCodeEntity is null)
 		{
 			result.WithError(ESH.Helpers.ResponseHelper.Response400WithCode(10));
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 
 		if (result.IsSuccess == true)
@@ -293,7 +293,7 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 		}
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPut(template: "update-profile")]
@@ -313,7 +313,7 @@ public class ProfileController : BaseControllerApi
 		
 		if (string.IsNullOrEmpty(resultToken) == true)
 		{
-			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
+			result.WithError(ResponseErrors.UnauthorizedError401);
 			return ToSampleResult(result);
 		}
 
@@ -322,8 +322,8 @@ public class ProfileController : BaseControllerApi
 
 		if (entity is null)
 		{
-			result.WithError(Resources.ResponseErrors.ForbiddenError403);
-			return FluentResult(result);
+			result.WithError(ResponseErrors.ForbiddenError403);
+			return ToSampleResult(result);
 		}
 
 		var owner = new AttachmentOwner(
@@ -347,7 +347,7 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 		}
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpDelete(template: "delete-all-image-profile")]
@@ -367,7 +367,7 @@ public class ProfileController : BaseControllerApi
 		
 		if (string.IsNullOrEmpty(resultToken) == true)
 		{
-			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
+			result.WithError(ResponseErrors.UnauthorizedError401);
 			return ToSampleResult(result);
 		}
 
@@ -376,8 +376,8 @@ public class ProfileController : BaseControllerApi
 
 		if (entity is null)
 		{
-			result.WithError(Resources.ResponseErrors.ForbiddenError403);
-			return FluentResult(result);
+			result.WithError(ResponseErrors.ForbiddenError403);
+			return ToSampleResult(result);
 		}
 
 		var owner = new AttachmentOwner(
@@ -407,7 +407,7 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 		}
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpDelete(template: "delete-image-profile")]
@@ -439,7 +439,7 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(value);
 		}
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPost("get-by-ids")]

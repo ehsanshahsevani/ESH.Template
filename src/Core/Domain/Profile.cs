@@ -167,7 +167,7 @@ public class Profile : Base.BaseProfile
 	// *********************************************
 	public void SetShowProfileInAnnouncement(bool value)
 	{
-		this.ShowProfileInAnnouncement = value;
+		ShowProfileInAnnouncement = value;
 		UpdateDateTime = ESH.Utilities.DateTools.DateTimeNow();
 	}
 	// *********************************************

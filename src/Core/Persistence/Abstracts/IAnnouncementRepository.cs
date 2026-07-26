@@ -17,7 +17,7 @@ public interface IAnnouncementRepository : IRepository<Announcement>
 		CancellationToken cancellationToken = default);
 	Task<List<Announcement>> GetAnnouncementsByStatusIdAsync(int code, CancellationToken cancellationToken = default);
 	Task<int> GetAnnouncementsCountAsync(string? statusId, DateTime startDate, DateTime endDate);
-	Task<List<Domain.Announcement>> GetByIdsAsync(
+	Task<List<Announcement>> GetByIdsAsync(
 		List<string> ids, CancellationToken cancellationToken = default);
 	Task<Announcement?> GetByIdWithDetailsAsync(string id, CancellationToken cancellationToken = default);
 	Task<int> GetCurrentMonthAnnouncementsCountAsync(string? statusId);

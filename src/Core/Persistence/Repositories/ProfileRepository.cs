@@ -193,7 +193,7 @@ public class ProfileRepository
         CancellationToken cancellationToken = default)
     {
         await DatabaseContext.Attachments
-            .Where(x => x.SubSystem.Name == nameof(Domain.Profile))
+            .Where(x => x.SubSystem.Name == nameof(Profile))
             .Where(x => x.RelationId == profileId)
             .ExecuteDeleteAsync(cancellationToken);
 

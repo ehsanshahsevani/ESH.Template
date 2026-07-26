@@ -238,21 +238,21 @@ public class AnnouncementService : object, IAnnouncementService
 
 		await LanguageService.LocalizeAsync(
 			model.Fields,
-			subSystem: nameof(Domain.Field),
+			subSystem: nameof(Field),
 			x => x.FieldId,
 			applyValue: (vm, text) => vm.Key = text,
-			key: Domain.Field.NamePropertyLocalizer, cancellationToken: cancellationToken);
+			key: Field.NamePropertyLocalizer, cancellationToken: cancellationToken);
 
 		await LanguageService.LocalizeAsync(
 			[model],
-			subSystem: nameof(Domain.Category),
+			subSystem: nameof(Category),
 			x => x.CategoryId,
 			applyValue: (vm, text) => vm.CategoryDisplayName = text,
-			key: Domain.Category.PropertyNameKey, cancellationToken: cancellationToken);
+			key: Category.PropertyNameKey, cancellationToken: cancellationToken);
 
 
 		await AttachmentService.AttachAsync
-			<AnnouncementResponseViewModel, AnnouncementRequestViewModel>(model, nameof(Domain.Announcement));
+			<AnnouncementResponseViewModel, AnnouncementRequestViewModel>(model, nameof(Announcement));
 
 		foreach (var item in model.Fields)
 		{
@@ -262,7 +262,7 @@ public class AnnouncementService : object, IAnnouncementService
 				{
 					var value = await LanguageService.GetValueAsync(
 						nameof(PlateStatus),
-						item.Value!, Domain.PlateStatus.PropertyNameKey, cancellationToken);
+						item.Value!, PlateStatus.PropertyNameKey, cancellationToken);
 
 					item.Value = value?.Value;
 					item.ValueId = value?.RelationId;
@@ -272,7 +272,7 @@ public class AnnouncementService : object, IAnnouncementService
 				{
 					var value = await LanguageService.GetValueAsync(
 						nameof(PhoneOperator),
-						item.Value!, Domain.PhoneOperator.NamePropertyLocalizer, cancellationToken);
+						item.Value!, PhoneOperator.NamePropertyLocalizer, cancellationToken);
 
 					item.Value = value?.Value;
 					item.ValueId = value?.RelationId;
@@ -282,7 +282,7 @@ public class AnnouncementService : object, IAnnouncementService
 				{
 					var value = await LanguageService.GetValueAsync(
 						nameof(Region),
-						item.Value!, Domain.Region.PropertyNameKey, cancellationToken);
+						item.Value!, Region.PropertyNameKey, cancellationToken);
 
 					item.Value = value?.Value;
 					item.ValueId = value?.RelationId;
@@ -291,8 +291,8 @@ public class AnnouncementService : object, IAnnouncementService
 				case FieldTypes.CustomValues:
 				{
 					var value = await LanguageService.GetValueAsync(
-						nameof(Domain.FieldMultiValue),
-						item.Value!, Domain.FieldMultiValue.TextPropertyLocalizer, cancellationToken);
+						nameof(FieldMultiValue),
+						item.Value!, FieldMultiValue.TextPropertyLocalizer, cancellationToken);
 
 					item.Value = value?.Value;
 					item.ValueId = value?.RelationId;
@@ -490,7 +490,7 @@ public class AnnouncementService : object, IAnnouncementService
 			if (currentFieldRequired is not null
 			    && string.IsNullOrEmpty(currentFieldRequired.Value) == true)
 			{
-				var currentLanguageCode = ESH.Helpers.CurrentLanguage.Code();
+				var currentLanguageCode = CurrentLanguage.Code();
 				
 				var languageLocalizer =
 					await LanguageLocalizerManager
@@ -733,7 +733,7 @@ public class AnnouncementService : object, IAnnouncementService
 		{
 			// var entity = Mapper.Map<Domain.Announcement>(model);
 
-			var languageCode = ESH.Helpers.CurrentLanguage.Code();
+			var languageCode = CurrentLanguage.Code();
 
 			var language = await LanguageCodeManager
 				.FindLanguageByCodeAsync(languageCode, cancellationToken);
@@ -755,7 +755,7 @@ public class AnnouncementService : object, IAnnouncementService
 
 			foreach (var validatedValue in validatedFieldValues)
 			{
-				var fieldValueEntity = new Domain.FieldValueAnnouncement
+				var fieldValueEntity = new FieldValueAnnouncement
 				{
 					Value = validatedValue.Value,
 					FieldId = validatedValue.FieldId,
@@ -873,7 +873,7 @@ public class AnnouncementService : object, IAnnouncementService
 
 			var subSystem =
 				await SubSystemManager
-					.FindByNameAsync(domain: nameof(Domain.Announcement), cancellationToken);
+					.FindByNameAsync(domain: nameof(Announcement), cancellationToken);
 
 			attachmentsDatabase =
 				await AttachmentManager
@@ -1068,7 +1068,7 @@ public class AnnouncementService : object, IAnnouncementService
 				}
 
 				var owner = new AttachmentOwner(
-					nameof(Domain.Announcement),
+					nameof(Announcement),
 					announcement.Id,
 					ServerId: Domain.Base.ServerKeyConstant.Key,
 					AnnouncementAttachmentSubjectKeys.AnnouncementImage
@@ -1088,7 +1088,7 @@ public class AnnouncementService : object, IAnnouncementService
 
 				var owner =
 					new AttachmentOwner(
-						nameof(Domain.Announcement),
+						nameof(Announcement),
 						RelationId: announcement.Id,
 						ServerId: Domain.Base.ServerKeyConstant.Key,
 						SubjectCode: AnnouncementAttachmentSubjectKeys.AnnouncementImage);
@@ -1169,7 +1169,7 @@ public class AnnouncementService : object, IAnnouncementService
 		string userId,
 		CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result<bool>();
+		var result = new Result<bool>();
 
 		var announcement = await UnitOfWork
 			.AnnouncementRepository.FindAsync(id, cancellationToken:cancellationToken);
@@ -1221,7 +1221,7 @@ public class AnnouncementService : object, IAnnouncementService
 		string id,
 		CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result<bool>();
+		var result = new Result<bool>();
 
 		var announcement = await UnitOfWork
 			.AnnouncementRepository.FindAsync(id, cancellationToken:cancellationToken);
@@ -1387,17 +1387,17 @@ public class AnnouncementService : object, IAnnouncementService
 
 		await LanguageService.LocalizeAsync(
 			value.TopCategoriesByAnnouncements,
-			subSystem: nameof(Domain.Category),
+			subSystem: nameof(Category),
 			x => x.Category.Id,
 			applyValue: (vm, text) => vm.Category.Name = text,
-			key: Domain.Category.PropertyNameKey, cancellationToken: cancellationToken);
+			key: Category.PropertyNameKey, cancellationToken: cancellationToken);
 
 		await LanguageService.LocalizeAsync(
 			value.TopCategoriesByAnnouncements,
-			subSystem: nameof(Domain.Category),
+			subSystem: nameof(Category),
 			x => x.Category.ParentId,
 			applyValue: (vm, text) => vm.Category.ParentDisplayName = text,
-			key: Domain.Category.PropertyNameKey, cancellationToken: cancellationToken);
+			key: Category.PropertyNameKey, cancellationToken: cancellationToken);
 
 		var categories =
 			value.TopCategoriesByAnnouncements
@@ -1405,7 +1405,7 @@ public class AnnouncementService : object, IAnnouncementService
 
 		await AttachmentService.AttachAsync<
 				CategoryResponseViewModel, CategoryRequestViewModel>
-			(categories, nameof(Domain.Category));
+			(categories, nameof(Category));
 
 		result.WithValue(value);
 
@@ -1424,17 +1424,17 @@ public class AnnouncementService : object, IAnnouncementService
 	public async Task<Result<List<ChartDataViewModel>>>
 		GetChartDataForStatusAsync(CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result<List<ChartDataViewModel>>();
+		var result = new Result<List<ChartDataViewModel>>();
 
 		var data = await UnitOfWork.StatusRepository
 			.GetChartDataForStatusAsync(cancellationToken);
 
 		await LanguageService.LocalizeAsync(
 			data,
-			subSystem: nameof(Domain.Status),
+			subSystem: nameof(Status),
 			x => x.Id,
 			applyValue: (vm, text) => vm.Label = text,
-			key: Domain.Status.TitleProperty, cancellationToken: cancellationToken);
+			key: Status.TitleProperty, cancellationToken: cancellationToken);
 
 		result.WithValue(data);
 
@@ -1456,11 +1456,11 @@ public class AnnouncementService : object, IAnnouncementService
 	public async Task<Result> AcceptForPublishAsync(
 		string? id, string profileId, CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		if (string.IsNullOrEmpty(id) == true)
 		{
-			result.WithError(ESH.Helpers.ResponseHelper.Response400WithCode(10));
+			result.WithError(ResponseHelper.Response400WithCode(10));
 			return result;
 		}
 
@@ -1469,7 +1469,7 @@ public class AnnouncementService : object, IAnnouncementService
 
 		if (entity is null)
 		{
-			result.WithError(ESH.Helpers.ResponseHelper.Response400WithCode(20));
+			result.WithError(ResponseHelper.Response400WithCode(20));
 			return result;
 		}
 
@@ -1532,7 +1532,7 @@ public class AnnouncementService : object, IAnnouncementService
 		string userId,
 		CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		var modelValidate = model.Validate();
 
@@ -1585,7 +1585,7 @@ public class AnnouncementService : object, IAnnouncementService
 			entity.SetStatusId(status.Id);
 
 			var needToEditLog =
-				new Domain.NeedToEditLog
+				new NeedToEditLog
 				{
 					ProfileId = userId,
 					AnnouncementId = entity.Id,
@@ -1631,11 +1631,11 @@ public class AnnouncementService : object, IAnnouncementService
 		string userId,
 		CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		if (string.IsNullOrEmpty(id) == true)
 		{
-			result.WithError(ESH.Helpers.ResponseHelper.Response400WithCode(10));
+			result.WithError(ResponseHelper.Response400WithCode(10));
 		}
 
 		var entity = await UnitOfWork
@@ -1643,7 +1643,7 @@ public class AnnouncementService : object, IAnnouncementService
 
 		if (entity is null)
 		{
-			result.WithError(ESH.Helpers.ResponseHelper.Response400WithCode(20));
+			result.WithError(ResponseHelper.Response400WithCode(20));
 			return result;
 		}
 
@@ -1693,7 +1693,7 @@ public class AnnouncementService : object, IAnnouncementService
 		DeleteLogRequestViewModel model,
 		string profileId, CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		var modelValidate = model.Validate();
 
@@ -1759,7 +1759,7 @@ public class AnnouncementService : object, IAnnouncementService
 			.RemoveByAnnouncementIdAsync(entity.Id, cancellationToken);
 
 		var owner = new AttachmentOwner(
-			nameof(Domain.Announcement),
+			nameof(Announcement),
 			entity.Id, Domain.Base.ServerKeyConstant.Key,
 			AnnouncementAttachmentSubjectKeys.AnnouncementImage);
 
@@ -1821,13 +1821,13 @@ public class AnnouncementService : object, IAnnouncementService
 			.Select(e => e!.CategoryId)
 			.ToList();
 
-		var codeLanguage = ESH.Helpers.CurrentLanguage.Code();
+		var codeLanguage = CurrentLanguage.Code();
 
 		var searchModel =
 			new SearchBySubSystemNameAndRelationIdsAndPropertyNameAndLanguageCodeModel(
-			nameof(Domain.Category),
+			nameof(Category),
 			allCategoryIds,
-			Domain.Category.PropertyNameKey,
+			Category.PropertyNameKey,
 			codeLanguage
 		);
 
@@ -1839,9 +1839,9 @@ public class AnnouncementService : object, IAnnouncementService
 			.ToList();
 
 		var searchModelTitleStatus = new SearchBySubSystemNameAndRelationIdsAndPropertyNameAndLanguageCodeModel(
-			nameof(Domain.Status),
+			nameof(Status),
 			statusIds,
-			Domain.Status.TitleProperty,
+			Status.TitleProperty,
 			codeLanguage
 		);
 
@@ -2055,18 +2055,18 @@ public class AnnouncementService : object, IAnnouncementService
 
 		await LanguageService.LocalizeAsync(
 			listModels,
-			subSystem: nameof(Domain.Status),
+			subSystem: nameof(Status),
 			x => x.StatusId,
 			applyValue: (model, text) => model.StatusTitle = text,
-			key: Domain.Status.TitleProperty,
+			key: Status.TitleProperty,
 			cancellationToken: cancellationToken);
 
 		await LanguageService.LocalizeAsync(
 			listModels,
-			subSystem: nameof(Domain.DeleteReason),
+			subSystem: nameof(DeleteReason),
 			x => x.DeleteReasonId,
 			applyValue: (model, text) => model.DeleteReasonText = text,
-			key: Domain.DeleteReason.TextPropertyLocalizer,
+			key: DeleteReason.TextPropertyLocalizer,
 			cancellationToken: cancellationToken);
 
 		await AttachmentService.AttachAsync
@@ -2177,5 +2177,5 @@ public class ValidatedFieldValue : object
 
 	public string Value { get; set; }
 	public string FieldId { get; set; }
-	public Domain.Field? Field { get; set; }
+	public Field? Field { get; set; }
 }

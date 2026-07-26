@@ -16,7 +16,7 @@ public class PhoneOperatorValidator : IFieldValidator
 
 	public async Task<Result> Validate(object value, IFieldTypeConfig config)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		var id = value.ToString();
 

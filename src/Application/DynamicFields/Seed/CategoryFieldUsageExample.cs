@@ -24,7 +24,7 @@ public static class CategoryFieldUsageExample
 		// حالا می‌توانید این فیلدها را برای ثبت یا سایر اهداف استفاده کنید
 		foreach (var field in plateFields)
 		{
-			System.Console.WriteLine(value: $"Field: {field.Code}, TitleAr: {field.TitleAr}, TitleEn: {field.TitleEn}");
+			Console.WriteLine(value: $"Field: {field.Code}, TitleAr: {field.TitleAr}, TitleEn: {field.TitleEn}");
 		}
 	}
 
@@ -42,10 +42,10 @@ public static class CategoryFieldUsageExample
 		// استفاده از فیلدها
 		foreach (var field in phoneFields)
 		{
-			System.Console.WriteLine(value: $"Field Code: {field.Code}");
-			System.Console.WriteLine(value: $"Data Type: {field.DataType}");
-			System.Console.WriteLine(value: $"JsonConfig: {field.JsonConfig}");
-			System.Console.WriteLine(value: "---");
+			Console.WriteLine(value: $"Field Code: {field.Code}");
+			Console.WriteLine(value: $"Data Type: {field.DataType}");
+			Console.WriteLine(value: $"JsonConfig: {field.JsonConfig}");
+			Console.WriteLine(value: "---");
 		}
 	}
 
@@ -59,11 +59,11 @@ public static class CategoryFieldUsageExample
 
 		// آیا PlateNumberPart برای نوع PLATE معتبر است؟
 		bool isValid = provider.ValidateField(categoryType: CategoryTypes.Plate, fieldCode: FieldTypes.PlateNumberPart);
-		System.Console.WriteLine(value: $"Is PlateNumberPart valid for Plate? {isValid}"); // true
+		Console.WriteLine(value: $"Is PlateNumberPart valid for Plate? {isValid}"); // true
 
 		// آیا PhoneBody برای نوع PLATE معتبر است؟
 		bool isInvalid = provider.ValidateField(categoryType: CategoryTypes.Plate, fieldCode: FieldTypes.PhoneBody);
-		System.Console.WriteLine(value: $"Is PhoneBody valid for Plate? {isInvalid}"); // false
+		Console.WriteLine(value: $"Is PhoneBody valid for Plate? {isInvalid}"); // false
 	}
 
 	/// <summary>
@@ -82,11 +82,11 @@ public static class CategoryFieldUsageExample
 
 		if (field != null)
 		{
-			System.Console.WriteLine(value: $"Field Found: {field.TitleEn} ({field.Code})");
+			Console.WriteLine(value: $"Field Found: {field.TitleEn} ({field.Code})");
 		}
 		else
 		{
-			System.Console.WriteLine(value: "Field not found or not valid for this category type");
+			Console.WriteLine(value: "Field not found or not valid for this category type");
 		}
 	}
 
@@ -109,12 +109,12 @@ public static class CategoryFieldUsageExample
 		foreach (var categoryType in allCategoryTypes)
 		{
 			var fields = provider.GetFieldsForCategoryType(categoryType: categoryType);
-			System.Console.WriteLine(value: $"\n=== {categoryType} ===");
-			System.Console.WriteLine(value: $"Total Fields: {fields.Count}");
+			Console.WriteLine(value: $"\n=== {categoryType} ===");
+			Console.WriteLine(value: $"Total Fields: {fields.Count}");
 
 			foreach (var field in fields)
 			{
-				System.Console.WriteLine(value: $"  - {field.TitleEn} ({field.Code})");
+				Console.WriteLine(value: $"  - {field.TitleEn} ({field.Code})");
 			}
 		}
 	}

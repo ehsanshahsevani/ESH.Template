@@ -64,7 +64,7 @@ public class BlackListController : Infrastructure.BaseControllerApi
 
 		await LogServerManager.CreateAsync(logMessage);
 		
-		return FluentResult(new FluentResults.Result());
+		return ToSampleResult(new FluentResults.Result());
 	}
 
 	#endregion /[HttpPost(template: "notify")]

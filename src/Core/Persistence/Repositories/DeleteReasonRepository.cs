@@ -58,7 +58,7 @@ public class DeleteReasonRepository : Repository<DeleteReason>, IDeleteReasonRep
 			var valueLocalizersIds =
 				await DatabaseContext.LanguageLocalizers
 					.Where(current => current.IsDeleted == false)
-					.Where(current => current.SubSystem.Name == nameof(Domain.DeleteReason))
+					.Where(current => current.SubSystem.Name == nameof(DeleteReason))
 					.Where(current => current.Value.Contains(parameter.Text))
 
 					.Select(current => current.Id)

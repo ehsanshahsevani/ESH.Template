@@ -169,7 +169,7 @@ public class CategoryService : object, ICategoryService
 		CancellationToken cancellationToken = default)
 	{
 		var result =
-			new FluentResults.Result<List<CategoryResponseViewModel>>();
+			new Result<List<CategoryResponseViewModel>>();
 
 		var entities =
 			await UnitOfWork.CategoryRepository.GetAllPinInHomeAsync(
@@ -510,7 +510,7 @@ public class CategoryService : object, ICategoryService
 		CategoryRequestViewModel model,
 		CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		var entity = await UnitOfWork
 			.CategoryRepository.FindAsync(model.Id!, isActive: null);
@@ -518,8 +518,8 @@ public class CategoryService : object, ICategoryService
 		if (entity is null)
 		{
 			var errorMessage = string.Format(
-				ESH.Resources.Messages.NotFoundError,
-				ESH.Resources.DataDictionary.Category);
+				Messages.NotFoundError,
+				DataDictionary.Category);
 
 			result.WithError(errorMessage);
 			return result;
@@ -533,8 +533,8 @@ public class CategoryService : object, ICategoryService
 			if (parentEntity is null)
 			{
 				var errorMessage = string.Format(
-					ESH.Resources.Messages.NotFoundError,
-					ESH.Resources.DataDictionary.Parent);
+					Messages.NotFoundError,
+					DataDictionary.Parent);
 
 				result.WithError(errorMessage);
 				return result;
@@ -550,8 +550,8 @@ public class CategoryService : object, ICategoryService
 			await UnitOfWork.SaveAsync(cancellationToken);
 
 			var successMessage = string.Format(
-				ESH.Resources.Messages.UpdateMessageSuccess,
-				ESH.Resources.DataDictionary.Category);
+				Messages.UpdateMessageSuccess,
+				DataDictionary.Category);
 
 			result.WithSuccess(successMessage);
 		}
@@ -715,7 +715,7 @@ public class CategoryService : object, ICategoryService
 		if (result.IsSuccess == true)
 		{
 			entity!.IsActive = !entity.IsActive;
-			entity.UpdateDateTime = ESH.Utilities.DateTools.DateTimeNow();
+			entity.UpdateDateTime = DateTools.DateTimeNow();
 
 			var value = Mapper.Map<CategoryResponseViewModel>(entity);
 

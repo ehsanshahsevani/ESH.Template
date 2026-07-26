@@ -29,7 +29,7 @@ public class NotificationAnnouncementService : INotificationAnnouncementService
 		SendNotificationForChangeStatusTo10Async(
 			string categoryId, Domain.Profile profile, CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		var subSystem =
 			await SubSystemManager
@@ -74,7 +74,7 @@ public class NotificationAnnouncementService : INotificationAnnouncementService
 			string needToEditReasonId,
 			Domain.Profile profile, CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		var subSystem =
 			await SubSystemManager
@@ -128,7 +128,7 @@ public class NotificationAnnouncementService : INotificationAnnouncementService
 		SendNotificationForChangeStatusTo30Async(
 			string categoryId, Domain.Profile profile, CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		var subSystem =
 			await SubSystemManager
@@ -171,7 +171,7 @@ public class NotificationAnnouncementService : INotificationAnnouncementService
 		SendNotificationForChangeStatusTo40Async(
 			string categoryId, Domain.Profile profile, CancellationToken cancellationToken = default)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		var subSystem =
 			await SubSystemManager

@@ -74,7 +74,7 @@ public class NeedToEditReasonRepository : Repository<NeedToEditReason>, INeedToE
 			var valueLocalizersIds =
 				await DatabaseContext.LanguageLocalizers
 					.Where(current => current.IsDeleted == false)
-					.Where(current => current.SubSystem.Name == nameof(Domain.NeedToEditReason))
+					.Where(current => current.SubSystem.Name == nameof(NeedToEditReason))
 					.Where(current => current.Value.Contains(parameter.Text))
 
 					.Select(current => current.Id)

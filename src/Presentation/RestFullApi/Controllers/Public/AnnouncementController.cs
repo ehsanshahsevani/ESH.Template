@@ -104,7 +104,7 @@ public class AnnouncementController : BaseControllerApi
 			await AnnouncementService
 				.GetAllWithPageAsync(parameters);
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPost(template: "get")]
@@ -145,7 +145,7 @@ public class AnnouncementController : BaseControllerApi
 			await AnnouncementService
 				.GetAllWithPageAsync(parameters);
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPost(template: "get-my-announcements")]
@@ -165,7 +165,7 @@ public class AnnouncementController : BaseControllerApi
 		if (JwtTokenValidator.IsAuthenticated() == false)
 		{
 			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 		
 		parameters.HasLiked = true;
@@ -191,7 +191,7 @@ public class AnnouncementController : BaseControllerApi
 			await AnnouncementService
 				.GetAllWithPageAsync(parameters);
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPost(template: "get-favorite")]
@@ -213,7 +213,7 @@ public class AnnouncementController : BaseControllerApi
 		if (ids is null || ids.Count == 0)
 		{
 			result.WithError(ResponseHelper.Response400WithCode(10));
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 		
 		var parameters =
@@ -245,7 +245,7 @@ public class AnnouncementController : BaseControllerApi
 			await AnnouncementService
 				.ResentVisitAsync(parameters);
 		
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPost(template: "recent-visit")]
@@ -268,13 +268,13 @@ public class AnnouncementController : BaseControllerApi
 		if (parameters is null)
 		{
 			result.WithError(ResponseHelper.Response400WithCode(10));
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 
 		if (parameters.MapRequest is null)
 		{
 			result.WithError(ResponseHelper.Response400WithCode(20));
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 		
 		parameters.IsHidden = false;
@@ -349,7 +349,7 @@ public class AnnouncementController : BaseControllerApi
 
 		result.WithValue(value);
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPost(template: "use-map")]
@@ -369,7 +369,7 @@ public class AnnouncementController : BaseControllerApi
 		if (JwtTokenValidator.IsAuthenticated() == false)
 		{
 			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 		
 		parameters.IsDeleted = false;
@@ -389,7 +389,7 @@ public class AnnouncementController : BaseControllerApi
 		result = await AnnouncementService
 			.GetAnnouncementsWithNotesPopulatedAsync(parameters.ProfileNoteWriterId, parameters);
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpGet(template: "get-announcements-with-notes")]
@@ -429,7 +429,7 @@ public class AnnouncementController : BaseControllerApi
 			await UnitOfWork.SaveAsync();
 		}
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpGet(template: "{id}")]
@@ -473,14 +473,14 @@ public class AnnouncementController : BaseControllerApi
 		if (profile is null || profile.ShowProfileInAnnouncement == false)
 		{
 			result.WithError(Resources.ResponseErrors.ForbiddenError403);
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 
 		result =
 			await AnnouncementService
 				.GetAllWithPageAsync(parameters);
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPost(template: "get-by-profile-id/{profileId}")]
@@ -503,12 +503,12 @@ public class AnnouncementController : BaseControllerApi
 		if (isAuthenticated == false)
 		{
 			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 
 		result = await AnnouncementService.CreateAsync(model);
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPost]
@@ -530,7 +530,7 @@ public class AnnouncementController : BaseControllerApi
 		if (JwtTokenValidator.IsAuthenticated() == false)
 		{
 			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 
 		string userId =
@@ -538,7 +538,7 @@ public class AnnouncementController : BaseControllerApi
 
 		result = await AnnouncementService.UpdateAsync(model, userId);
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPut]
@@ -570,7 +570,7 @@ public class AnnouncementController : BaseControllerApi
 		result = await AnnouncementService
 			.ChangeIsHiddenAsync(id, profile!.Id);
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpPatch(template: "change-hidden")]
@@ -590,7 +590,7 @@ public class AnnouncementController : BaseControllerApi
 		if (JwtTokenValidator.IsAuthenticated() == false)
 		{
 			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 
 		var userId = JwtTokenValidator.GetUserId();
@@ -598,12 +598,12 @@ public class AnnouncementController : BaseControllerApi
 		if (string.IsNullOrEmpty(userId) == true)
 		{
 			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
-			return FluentResult(result);
+			return ToSampleResult(result);
 		}
 
 		result = await AnnouncementService.DeleteAsync(model, userId);
 
-		return FluentResult(result);
+		return ToSampleResult(result);
 	}
 
 	#endregion /[HttpDelete]

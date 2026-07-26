@@ -101,7 +101,7 @@ public class AdminProfileController : BaseControllerApi
 	[HttpPost(template: "awaiting-queue/{userId}")]
 	public async Task<IActionResult> AwaitingQueueAsync(string userId, [FromBody] AwaitingQueueModel model)
 	{
-		var result = new FluentResults.Result();
+		var result = new Result();
 
 		Domain.Profile profile =
 			new Domain.Profile(userId, model.FullPhoneNumber);
