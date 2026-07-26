@@ -103,7 +103,8 @@ public class AdminProfileController : BaseControllerApi
 	{
 		var result = new FluentResults.Result();
 
-		Domain.Profile profile = new Domain.Profile(userId, model.FullPhoneNumber);
+		Domain.Profile profile =
+			new Domain.Profile(userId, model.FullPhoneNumber);
 
 		if (result.IsSuccess== true)
 		{
