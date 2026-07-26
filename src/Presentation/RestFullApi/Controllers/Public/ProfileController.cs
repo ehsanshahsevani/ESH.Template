@@ -1,32 +1,28 @@
+using Resources;
 using AutoMapper;
 using Persistence;
 using FluentResults;
-using ESH.Resources;
+using ESH.Utilities;
 using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
+using ESH.ViewModels.Announcement;
 using ESH.Constant.Attachment.Announcement;
-
+using ESH.BuildingBlocks.Logging.Contracts;
+using ESH.BuildingBlocks.Attachments.Contract;
 using ESH.BuildingBlocks.Application.Abstraction;
 using ESH.BuildingBlocks.Attachments.Abstraction;
-using ESH.BuildingBlocks.Attachments.Contract;
 using ESH.BuildingBlocks.Localization.Abstraction;
-using ESH.BuildingBlocks.Logging.Contracts;
-using ESH.Utilities;
-using ESH.ViewModels.Announcement;
-
 
 namespace RestFullApi.Controllers.Public;
 
 /// <summary>
 /// مدیریت پروفایل ها
 /// </summary>
-
 public class ProfileController : BaseControllerApi
 {
 	#region Constructor
 
 	public IMapper Mapper { get; }
-	public IJwtTokenValidator JwtTokenValidator { get; }
 	public HttpClient HttpClient { get; }
 	public IConfiguration Configuration { get; }
 	public IHttpContextAccessor HttpContextAccessor { get; }
@@ -35,14 +31,14 @@ public class ProfileController : BaseControllerApi
 	public ILogServerManager LogServerManager { get; }
 	public ILanguageCodeManager LanguageCodeManager { get; }
 	private IAttachmentService AttachmentService { get; }
+	public IJwtTokenValidator JwtTokenValidator { get; }
 
-	public ProfileController(IMapper mapper, IJwtTokenValidator jwtTokenValidator, HttpClient httpClient, IConfiguration configuration,
+	public ProfileController(IMapper mapper, HttpClient httpClient, IConfiguration configuration,
 		IHttpContextAccessor httpContextAccessor, IUnitOfWork unitOfWork, ILogDetailManager logDetailManager,
 		ILogServerManager logServerManager, ILanguageCodeManager languageCodeManager,
-		IAttachmentService attachmentService) : base()
+		IAttachmentService attachmentService, ESH.BuildingBlocks.Application.Abstraction.IJwtTokenValidator jwtTokenValidator) : base()
 	{
 		Mapper = mapper;
-		JwtTokenValidator = jwtTokenValidator;
 		HttpClient = httpClient;
 		Configuration = configuration;
 		HttpContextAccessor = httpContextAccessor;
@@ -51,20 +47,13 @@ public class ProfileController : BaseControllerApi
 		LogServerManager = logServerManager;
 		LanguageCodeManager = languageCodeManager;
 		AttachmentService = attachmentService;
+		JwtTokenValidator = jwtTokenValidator;
 	}
 
 	#endregion /Constructor
 
 	#region App & Web
 
-	[ApiController]
-	[Route("api/test")]
-	public class TestController : ControllerBase
-	{
-		[HttpGet]
-		public IActionResult Get() => Ok("Test");
-	}
-	
 	#region [HttpGet(template: "mini")]
 
 	/// <summary>
@@ -76,24 +65,23 @@ public class ProfileController : BaseControllerApi
 	{
 		var result = new Result<MiniProfileResponseViewModel>();
 
-		var userId = JwtTokenValidator.GetUserId();
+		var resultToken = JwtTokenValidator.GetUserId();
 		
-		if (string.IsNullOrEmpty(userId))
+		if (string.IsNullOrEmpty(resultToken) == true)
 		{
-			result.WithError(ESH.Resources.ResponseErrors.UnauthorizedError401);
-			
+			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
 			return ToSampleResult(result);
 		}
 
 		var entity =
 			await UnitOfWork
 				.ProfileRepository
-				.FindAsync(userId);
+				.FindAsync(resultToken);
 
 		if (entity is null)
 		{
-			result.WithError(ESH.Resources.ResponseErrors.ForbiddenError403);
-			return ToSampleResult(result);
+			result.WithError(Resources.ResponseErrors.ForbiddenError403);
+			return FluentResult(result);
 		}
 
 		if (result.IsSuccess == true)
@@ -106,7 +94,7 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 		}
 
-		return ToSampleResult(result);
+		return FluentResult(result);
 	}
 
 	#endregion /[HttpGet(template: "mini")]
@@ -124,8 +112,8 @@ public class ProfileController : BaseControllerApi
 
 		if (string.IsNullOrEmpty(profileId) == true)
 		{
-			result.WithError(ESH.Resources.ResponseErrors.RequestNotValid400);
-			return ToSampleResult(result);
+			result.WithError(Resources.ResponseErrors.RequestNotValid400);
+			return FluentResult(result);
 		}
 
 		var entity =
@@ -135,8 +123,8 @@ public class ProfileController : BaseControllerApi
 
 		if (entity is null || entity.ShowProfileInAnnouncement == false)
 		{
-			result.WithError(ESH.Resources.ResponseErrors.ForbiddenError403);
-			return ToSampleResult(result);
+			result.WithError(Resources.ResponseErrors.ForbiddenError403);
+			return FluentResult(result);
 		}
 
 		if (result.IsSuccess == true)
@@ -149,7 +137,7 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 		}
 
-		return ToSampleResult(result);
+		return FluentResult(result);
 	}
 
 	#endregion /[HttpGet(template: "mini-other/{profileId}")]
@@ -168,12 +156,11 @@ public class ProfileController : BaseControllerApi
 		var result =
 			new Result<MiniProfileResponseViewModel>();
 
-		var userId = JwtTokenValidator.GetUserId();
+		var resultToken = JwtTokenValidator.GetUserId();
 		
-		if (string.IsNullOrEmpty(userId))
+		if (string.IsNullOrEmpty(resultToken) == true)
 		{
-			result.WithError(ESH.Resources.ResponseErrors.UnauthorizedError401);
-			
+			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
 			return ToSampleResult(result);
 		}
 
@@ -182,7 +169,7 @@ public class ProfileController : BaseControllerApi
 		if (validateModel.IsSuccess == false)
 		{
 			result.WithErrors(validateModel.Errors);
-			return ToSampleResult(result);
+			return FluentResult(result);
 		}
 
 		var entity =
@@ -190,7 +177,7 @@ public class ProfileController : BaseControllerApi
 
 		if (entity is null)
 		{
-			throw new InvalidOperationException(ESH.Resources.ResponseErrors.ForbiddenError403);
+			throw new InvalidOperationException(Resources.ResponseErrors.ForbiddenError403);
 		}
 
 		if (model.FileUpload is not null)
@@ -245,12 +232,12 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 
 			var successMessage = string.Format
-				(ESH.Resources.Messages.UpdateMessageSuccess, ESH.Resources.DataDictionary.Profile);
+				(Resources.Messages.UpdateMessageSuccess, Resources.DataDictionary.Profile);
 
 			result.WithSuccess(successMessage);
 		}
 
-		return ToSampleResult(result);
+		return FluentResult(result);
 	}
 
 	#endregion /[HttpPut(template: "update-profile")]
@@ -267,12 +254,11 @@ public class ProfileController : BaseControllerApi
 		var result =
 			new Result<MiniProfileResponseViewModel>();
 
-		var userId = JwtTokenValidator.GetUserId();
+		var resultToken = JwtTokenValidator.GetUserId();
 		
-		if (string.IsNullOrEmpty(userId))
+		if (string.IsNullOrEmpty(resultToken) == true)
 		{
-			result.WithError(ESH.Resources.ResponseErrors.UnauthorizedError401);
-			
+			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
 			return ToSampleResult(result);
 		}
 
@@ -281,7 +267,7 @@ public class ProfileController : BaseControllerApi
 
 		if (entity is null)
 		{
-			throw new InvalidOperationException(ESH.Resources.ResponseErrors.ForbiddenError403);
+			throw new InvalidOperationException(Resources.ResponseErrors.ForbiddenError403);
 		}
 
 		var languageCodeEntity =
@@ -290,7 +276,7 @@ public class ProfileController : BaseControllerApi
 		if (languageCodeEntity is null)
 		{
 			result.WithError(ESH.Helpers.ResponseHelper.Response400WithCode(10));
-			return ToSampleResult(result);
+			return FluentResult(result);
 		}
 
 		if (result.IsSuccess == true)
@@ -307,7 +293,7 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 		}
 
-		return ToSampleResult(result);
+		return FluentResult(result);
 	}
 
 	#endregion /[HttpPut(template: "update-profile")]
@@ -323,12 +309,11 @@ public class ProfileController : BaseControllerApi
 	{
 		var result = new Result<MiniProfileResponseViewModel>();
 
-		var userId = JwtTokenValidator.GetUserId();
+		var resultToken = JwtTokenValidator.GetUserId();
 		
-		if (string.IsNullOrEmpty(userId))
+		if (string.IsNullOrEmpty(resultToken) == true)
 		{
-			result.WithError(ESH.Resources.ResponseErrors.UnauthorizedError401);
-			
+			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
 			return ToSampleResult(result);
 		}
 
@@ -337,8 +322,8 @@ public class ProfileController : BaseControllerApi
 
 		if (entity is null)
 		{
-			result.WithError(ESH.Resources.ResponseErrors.ForbiddenError403);
-			return ToSampleResult(result);
+			result.WithError(Resources.ResponseErrors.ForbiddenError403);
+			return FluentResult(result);
 		}
 
 		var owner = new AttachmentOwner(
@@ -362,7 +347,7 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 		}
 
-		return ToSampleResult(result);
+		return FluentResult(result);
 	}
 
 	#endregion /[HttpDelete(template: "delete-all-image-profile")]
@@ -378,12 +363,11 @@ public class ProfileController : BaseControllerApi
 	{
 		var result = new Result<MiniProfileResponseViewModel>();
 
-		var userId = JwtTokenValidator.GetUserId();
+		var resultToken = JwtTokenValidator.GetUserId();
 		
-		if (string.IsNullOrEmpty(userId))
+		if (string.IsNullOrEmpty(resultToken) == true)
 		{
-			result.WithError(ESH.Resources.ResponseErrors.UnauthorizedError401);
-			
+			result.WithError(Resources.ResponseErrors.UnauthorizedError401);
 			return ToSampleResult(result);
 		}
 
@@ -392,8 +376,8 @@ public class ProfileController : BaseControllerApi
 
 		if (entity is null)
 		{
-			result.WithError(ESH.Resources.ResponseErrors.ForbiddenError403);
-			return ToSampleResult(result);
+			result.WithError(Resources.ResponseErrors.ForbiddenError403);
+			return FluentResult(result);
 		}
 
 		var owner = new AttachmentOwner(
@@ -423,7 +407,7 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(profileResponse);
 		}
 
-		return ToSampleResult(result);
+		return FluentResult(result);
 	}
 
 	#endregion /[HttpDelete(template: "delete-image-profile")]
@@ -455,58 +439,10 @@ public class ProfileController : BaseControllerApi
 			result.WithValue(value);
 		}
 
-		return ToSampleResult(result);
+		return FluentResult(result);
 	}
 
 	#endregion /[HttpPost("get-by-ids")]
-
-	#region [HttpPut("change-show-announcement-in-profile")]
-
-	/// <summary>
-	/// پروفایل من را در آگهی هایم نمایش بده
-	/// </summary>
-	/// <returns></returns>
-	[HttpPut("change-show-announcement-in-profile")]
-	public async Task<IActionResult> ChangeShowProfileInAnnouncementAsync()
-	{
-		var result = new Result<MiniProfileResponseViewModel>();
-
-		var userId = JwtTokenValidator.GetUserId();
-		
-		if (string.IsNullOrEmpty(userId))
-		{
-			result.WithError(ESH.Resources.ResponseErrors.UnauthorizedError401);
-			
-			return ToSampleResult(result);
-		}
-		
-		var entity =
-			await UnitOfWork.ProfileRepository.FindByIdForAdminAsync(userId);
-
-		if (entity is null)
-		{
-			result.WithError(ResponseErrors.RequestNotValid400);
-		}
-
-		if (result.IsSuccess == true)
-		{
-			entity!.SetShowProfileInAnnouncement(!entity.ShowProfileInAnnouncement);
-
-			await UnitOfWork.SaveAsync();
-
-			var profileResponse =
-				Mapper.Map<MiniProfileResponseViewModel>(entity);
-			
-			await AttachmentService.AttachAsync
-				<MiniProfileResponseViewModel, MiniProfileRequestViewModel>(profileResponse, nameof(Profile));
-
-			result.WithValue(profileResponse);
-		}
-
-		return ToSampleResult(result);
-	}
-
-	#endregion /[HttpPut("change-show-announcement-in-profile")]
-
+	
 	#endregion /App & Web
 }
