@@ -92,20 +92,30 @@ public class AdminProfileController : BaseControllerApi
 
 	#region [HttpPost(template: "awaiting-queue/{userId}/{phoneNumber}")]
 
-	// /// <summary>
-	// /// این بخش برای اتصال به سرور اصلی طراحی شده است
-	// /// </summary>
-	// /// <param name="userId">شناسه کاربر </param>
-	// /// <param name="model"></param>
-	// /// <returns></returns>
-	// [HttpPost(template: "awaiting-queue/{userId}")]
-	// public async Task<IActionResult> AwaitingQueueAsync(string userId, [FromBody] AwaitingQueueModel model)
-	// {
-	// 	var result = await base.AwaitingProfileQueueAsync(
-	// 		userId, model.FullPhoneNumber, Domain.Base.ServerKeyConstant.Key);
-	//
-	// 	return result;
-	// }
+	/// <summary>
+	/// این بخش برای اتصال به سرور اصلی طراحی شده است
+	/// </summary>
+	/// <param name="userId">شناسه کاربر </param>
+	/// <param name="model"></param>
+	/// <returns></returns>
+	[HttpPost(template: "awaiting-queue/{userId}")]
+	public async Task<IActionResult> AwaitingQueueAsync(string userId, [FromBody] AwaitingQueueModel model)
+	{
+		var result = new FluentResults.Result();
+
+		Domain.Profile profile = new Domain.Profile(userId, model.FullPhoneNumber);
+
+		if (result.IsSuccess== true)
+		{
+			await UnitOfWork.ProfileRepository.AddAsync(profile);
+
+			await UnitOfWork.SaveAsync();
+
+			result.WithSuccess(Domain.Base.ServerKeyConstant.Key);
+		}
+		
+		return ToSampleResult(result);
+	}
 
 	#endregion /[HttpPost(template: "awaiting-queue/{userId}/{phoneNumber}")]
 
