@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="AccessDeny" xml:space="preserve">
+        <value>غير مصرح لك بالوصول إلى هذا القسم!</value>
+    </data>
+    <data name="AccessRestrictionsContactTechnicalTeam" xml:space="preserve">
+        <value>الوصول مقيد. يرجى التواصل مع الفريق الفني.</value>
+    </data>
+    <data name="AccountDeletedMessage" xml:space="preserve">
+        <value>تم حذف حسابك بنجاح.</value>
+    </data>
+    <data name="ActionPlaceHasTicketError" xml:space="preserve">
+        <value>يوجد بلاغات مرتبطة بموقع الإجراء هذا ولا يمكن حذفه.</value>
+    </data>
+    <data name="ActionPlaceIsNull" xml:space="preserve">
+        <value>لا يوجد موقع إجراء.</value>
+    </data>
+    <data name="ActionPlaceNameRequired" xml:space="preserve">
+        <value>اسم موقع الإجراء إلزامي.</value>
+    </data>
+    <data name="ActionPlaceNotFound" xml:space="preserve">
+        <value>لم يتم العثور على موقع الإجراء المطلوب.</value>
+    </data>
+    <data name="ActionPlaceSelectError" xml:space="preserve">
+        <value>لم يتم تحديد أي موقع إجراء.</value>
+    </data>
+    <data name="ActionTypeHasTicketError" xml:space="preserve">
+        <value>يوجد بلاغات مرتبطة بنوع الإجراء هذا ولا يمكن حذفه.</value>
+    </data>
+    <data name="ActionTypeIsNull" xml:space="preserve">
+        <value>لا يوجد نوع إجراء.</value>
+    </data>
+    <data name="ActionTypeNameRequired" xml:space="preserve">
+        <value>اسم نوع الإجراء إلزامي.</value>
+    </data>
+    <data name="ActionTypeNotFound" xml:space="preserve">
+        <value>لم يتم العثور على نوع الإجراء.</value>
+    </data>
+    <data name="ActionTypeSelectedError" xml:space="preserve">
+        <value>يرجى إدخال نوع الإجراء.</value>
+    </data>
+    <data name="AddressSummary" xml:space="preserve">
+        <value>مطلوب إدخال عدة قيم.</value>
+    </data>
+    <data name="AlbumSelect" xml:space="preserve">
+        <value>يرجى اختيار الألبوم المرتبط!</value>
+    </data>
+    <data name="AllLanguagesRequired" xml:space="preserve">
+        <value>جميع حقول اللغة مطلوبة عند إنشاء سجل جديد.</value>
+    </data>
+    <data name="AlreadyAxistsInTheList" xml:space="preserve">
+        <value>تمت إضافة {0} بالقيمة {1} مسبقًا.</value>
+    </data>
+    <data name="AltText" xml:space="preserve">
+        <value>النص البديل</value>
+    </data>
+    <data name="AnnouncementHasPublishedStatus" xml:space="preserve">
+        <value>حالة الإعلان منشورة!</value>
+    </data>
+    <data name="AnnouncementHiddenStatusChangedSuccessfully" xml:space="preserve">
+        <value>تم تغيير حالة ظهور الإعلان بنجاح.</value>
+    </data>
+    <data name="AnnouncementStatusIsLocked" xml:space="preserve">
+        <value>لا يُسمح بتغيير حالة الإعلان!</value>
+    </data>
+    <data name="AnswerChangeStatusTicket" xml:space="preserve">
+        <value>تم تغيير حالة تذكرتك رقم {0} من '{1}' إلى '{2}' بواسطة ( {3} ).</value>
+    </data>
+    <data name="AnswerForThisReferenceNotFound" xml:space="preserve">
+        <value>لم يتم العثور على رد لهذا الإحالة.</value>
+    </data>
+    <data name="AssemblyCannotBeNull" xml:space="preserve">
+        <value>لم يتم العثور على التجميع المطلوب للتحقق من إعدادات الأنظمة الفرعية.</value>
+    </data>
+    <data name="AttachFormat" xml:space="preserve">
+        <value>يرجى رفع ملف بصيغة .zip أو .pdf أو .rtf أو .doc أو .docx!</value>
+    </data>
+    <data name="BankCodeIsInvalid" xml:space="preserve">
+        <value>رمز البنك غير صالح.</value>
+    </data>
+    <data name="BankCodeIsRequired" xml:space="preserve">
+        <value>رمز البنك مطلوب.</value>
+    </data>
+    <data name="BeforeCodeIsActive" xml:space="preserve">
+        <value>لا يزال الرمز السابق الخاص بك فعالًا.</value>
+    </data>
+    <data name="BelowMinBuy" xml:space="preserve">
+        <value>الحد الأدنى للشراء في هذه الفترة الزمنية هو {0} سوت.</value>
+    </data>
+    <data name="BelowMinSell" xml:space="preserve">
+        <value>الحد الأدنى للبيع في هذه الفترة الزمنية هو {0} سوت.</value>
+    </data>
+    <data name="CannotDeleteLockedAccessLevels" xml:space="preserve">
+        <value>غير مسموح لك بحذف مستويات الوصول المقفلة.</value>
+    </data>
+    <data name="CaptchaIsNotValid" xml:space="preserve">
+        <value>فشل التحقق من رمز التحقق. يرجى المحاولة مرة أخرى.</value>
+    </data>
+    <data name="CaptchaNotFound" xml:space="preserve">
+        <value>يرجى إدخال رمز التحقق مرة أخرى.</value>
+    </data>
+    <data name="CardNumberIsInvalid" xml:space="preserve">
+        <value>رقم البطاقة غير صالح.</value>
+    </data>
+    <data name="CardNumberIsNotValid" xml:space="preserve">
+        <value>رقم البطاقة غير صحيح.</value>
+    </data>
+    <data name="CardNumberIsRequired" xml:space="preserve">
+        <value>رقم البطاقة مطلوب.</value>
+    </data>
+    <data name="CategoryNameRequired" xml:space="preserve">
+        <value>عنوان الموضوع إلزامي.</value>
+    </data>
+    <data name="CategoryNotFound" xml:space="preserve">
+        <value>لم يتم العثور على أي موضوع.</value>
+    </data>
+    <data name="CategorySelectedError" xml:space="preserve">
+        <value>لم يتم تحديد أي موضوع.</value>
+    </data>
+    <data name="ChangePrice" xml:space="preserve">
+        <value>تغيير السعر</value>
+    </data>
+    <data name="ChangeStatusSuccess" xml:space="preserve">
+        <value>تم تغيير الحالة بنجاح.</value>
+    </data>
+    <data name="CloseAndTryAgain" xml:space="preserve">
+        <value>إغلاق والمحاولة مرة أخرى</value>
+    </data>
+    <data name="ClosingPurchaseMoltenGoldError" xml:space="preserve">
+        <value>شراء الذهب المصهور غير مفعل.</value>
+    </data>
+    <data name="ClosingSaleAndPurchaseMoltenGoldError" xml:space="preserve">
+        <value>نظرًا لسياسات نظام طلاسوت، لا تتوفر عمليات الشراء والبيع حتى إشعار آخر. يرجى المحاولة بعد بضع دقائق.</value>
+    </data>
+    <data name="ClosingSaleMoltenGoldError" xml:space="preserve">
+        <value>بيع الذهب المصهور غير مفعل.</value>
+    </data>
+    <data name="CommutingNotFound" xml:space="preserve">
+        <value>لم يتم العثور على الجلسة المطلوبة.</value>
+    </data>
+    <data name="CompanyIsDeleted" xml:space="preserve">
+        <value>تم حذف الشركة المحددة بنجاح.</value>
+    </data>
+    <data name="ConfirmdFirstBankAccountMessageSuccess" xml:space="preserve">
+        <value>تم التحقق من البطاقة البنكية بنجاح.</value>
+    </data>
+    <data name="ConfirmdIdCardImageMessageSuccess" xml:space="preserve">
+        <value>تم التحقق من صور بطاقة الهوية الخاصة بك بنجاح.</value>
+    </data>
+    <data name="ConfirmdPersonalInformationMessageSuccess" xml:space="preserve">
+        <value>تم التحقق من بياناتك الشخصية بنجاح.</value>
+    </data>
+    <data name="ConfirmMessageSuccess" xml:space="preserve">
+        <value>تم تغيير حالة اعتماد المتجر بنجاح.</value>
+    </data>
+    <data name="ConfirmWarning" xml:space="preserve">
+        <value>لا يمكن التراجع عن هذا الإجراء.</value>
+    </data>
+    <data name="CountError" xml:space="preserve">
+        <value>لا يمكن أن يكون {0} أقل من {1}.</value>
+    </data>
+    <data name="CountFileError" xml:space="preserve">
+        <value>عدد الملفات يتجاوز الحد الأقصى المسموح به وهو {0}.</value>
+    </data>
+    <data name="CreateBuyInShopAccountCoding" xml:space="preserve">
+        <value>طلبات {0} من المتجر</value>
+    </data>
+    <data name="CreateDateFormat" xml:space="preserve">
+        <value>يرجى التحقق من تنسيق تاريخ البدء.</value>
+    </data>
+    <data name="CreateOrderForBuyInShopAccount" xml:space="preserve">
+        <value>الطلب {0} برمز الطلب {1}</value>
+    </data>
+    <data name="CreateProfileCodingForBankAccount" xml:space="preserve">
+        <value>الحسابات البنكية لـ {0}</value>
+    </data>
+    <data name="CreateSuccessMessage" xml:space="preserve">
+        <value>تم إنشاء {0} بنجاح.</value>
+    </data>
+    <data name="CreateUserBankAccount" xml:space="preserve">
+        <value>الحساب البنكي {0} للمستخدم {1} برقم البطاقة {2}</value>
+    </data>
+    <data name="CreateUserBuyByGoldRequestCodeAccountCoding" xml:space="preserve">
+        <value>طلبات {0} الخاصة بطلب الذهب</value>
+    </data>
+    <data name="CreateUserGoldAssets" xml:space="preserve">
+        <value>أصول الذهب للمستخدم {0}</value>
+    </data>
+    <data name="CreateUserMoneyAssets" xml:space="preserve">
+        <value>محفظة المستخدم {0}</value>
+    </data>
+    <data name="CustomerExpiredError" xml:space="preserve">
+        <value>انتهت مدة صلاحية شركتك. يرجى التنسيق مع الشركة.</value>
+    </data>
+    <data name="CustomerHasMappingError" xml:space="preserve">
+        <value>لحذف الشركة المحددة، يرجى التحقق أولًا من ارتباطات المجموعات.</value>
+    </data>
+    <data name="CustomerHasprojectError" xml:space="preserve">
+        <value>لحذف الشركة، يرجى حذف مشاريعها أولًا.</value>
+    </data>
+    <data name="CustomerHasUserError" xml:space="preserve">
+        <value>لحذف الشركة، يرجى حذف مستخدميها أولًا.</value>
+    </data>
+    <data name="CustomerNotActiveError" xml:space="preserve">
+        <value>الشركة المحددة غير نشطة. يرجى التنسيق مع الشركة.</value>
+    </data>
+    <data name="CustomerNotExist" xml:space="preserve">
+        <value>لا توجد شركة.</value>
+    </data>
+    <data name="CustomerNotFound" xml:space="preserve">
+        <value>لم يتم العثور على أي شركة.</value>
+    </data>
+    <data name="CustomerOrCompanyIsNull" xml:space="preserve">
+        <value>العميل/الشركة غير موجود.</value>
+    </data>
+    <data name="CustomerSelectedError" xml:space="preserve">
+        <value>لم يتم تحديد أي شركة.</value>
+    </data>
+    <data name="DataFound" xml:space="preserve">
+        <value>تم العثور على البيانات المطلوبة.</value>
+    </data>
+    <data name="DateConflictError" xml:space="preserve">
+        <value>يوجد تعارض في التاريخ.</value>
+    </data>
+    <data name="DateFormat" xml:space="preserve">
+        <value>تنسيق التاريخ غير صالح!</value>
+    </data>
+    <data name="DateOfOperation" xml:space="preserve">
+        <value>لم يتم إدخال تاريخ تنفيذ العملية.</value>
+    </data>
+    <data name="DecimalValueExceedsScaleError" xml:space="preserve">
+        <value>تتجاوز القيمة العشرية المقياس المسموح به وهو {0}.</value>
+    </data>
+    <data name="DegreeOfEducation" xml:space="preserve">
+        <value>المؤهل التعليمي</value>
+    </data>
+    <data name="DeleteMessageError" xml:space="preserve">
+        <value>لا يمكن الحذف.</value>
+    </data>
+    <data name="DeleteMessageSuccess" xml:space="preserve">
+        <value>تم حذف {0} بنجاح.</value>
+    </data>
+    <data name="DepositFromWalletError" xml:space="preserve">
+        <value>نظرًا لسياسات طلاسوت، لا تتوفر إمكانية شحن المحفظة حتى إشعار آخر.</value>
+    </data>
+    <data name="DescriptionIsRequired" xml:space="preserve">
+        <value>الوصف إلزامي.</value>
+    </data>
+    <data name="DigitFormat" xml:space="preserve">
+        <value>يرجى إدخال الحقول الرقمية بشكل صحيح.</value>
+    </data>
+    <data name="DiscountCode" xml:space="preserve">
+        <value>يرجى إدخال رمز الخصم.</value>
+    </data>
+    <data name="DocumentForTextDocumentTypeBuyFromShop" xml:space="preserve">
+        <value>شراء {0}، للطلب {1}، بمبلغ {2:N0} تومان</value>
+    </data>
+    <data name="DocumentForTextDocumentTypeBuyNow" xml:space="preserve">
+        <value>شراء ذهب مصهور بواسطة المستخدم {0} بكمية {1} سوت بتاريخ {2} | {3}</value>
+    </data>
+    <data name="DocumentForTextDocumentTypeDeposit" xml:space="preserve">
+        <value>شحن محفظة المستخدم {0} بمبلغ {1:N0} تومان بتاريخ {2} | {3}</value>
+    </data>
+    <data name="DocumentForTextDocumentTypeReferal" xml:space="preserve">
+        <value>إيداع هدية الدعوة على شكل ذهب مصهور للمستخدم {0} بكمية {1} سوت بتاريخ {2} | {3}</value>
+    </data>
+    <data name="DocumentForTextDocumentTypeSellNow" xml:space="preserve">
+        <value>بيع ذهب مصهور بواسطة المستخدم {0} بكمية {1} سوت بتاريخ {2} | {3}</value>
+    </data>
+    <data name="DocumentForTextDocumentTypeWithdraw" xml:space="preserve">
+        <value>سحب من محفظة المستخدم {0} بمبلغ {1:N0} تومان بتاريخ {2} | {3}</value>
+    </data>
+    <data name="DuplicateAccessesIgnoredNoNewItemsToCreate" xml:space="preserve">
+        <value>تم تجاهل صلاحيات الوصول المكررة؛ لا توجد عناصر جديدة متاحة للإنشاء.</value>
+    </data>
+    <data name="DuplicateValuesNotAllowedErrorMessage" xml:space="preserve">
+        <value>لا يُسمح لك بإرسال قيم مكررة.</value>
+    </data>
+    <data name="EditError" xml:space="preserve">
+        <value>حدث خطأ أثناء حفظ التغييرات!</value>
+    </data>
+    <data name="EditSuccess" xml:space="preserve">
+        <value>تم حفظ التغييرات بنجاح.</value>
+    </data>
+    <data name="EmailFormat" xml:space="preserve">
+        <value>يرجى إدخال البريد الإلكتروني بصيغة صحيحة.</value>
+    </data>
+    <data name="EmailHelp" xml:space="preserve">
+        <value>بعد استكمال المعلومات المطلوبة واختيار المستلم المناسب، اضغط على زر الإرسال.</value>
+    </data>
+    <data name="EmploymentStatus" xml:space="preserve">
+        <value>حالة التوظيف</value>
+    </data>
+    <data name="EmpttyTitle" xml:space="preserve">
+        <value>يرجى إدخال العنوان المطلوب!</value>
+    </data>
+    <data name="EmptyAnswer" xml:space="preserve">
+        <value>لم تقم بإدخال أي إجابة لسؤالك!</value>
+    </data>
+    <data name="EmptyCount" xml:space="preserve">
+        <value>يرجى إدخال العدد.</value>
+    </data>
+    <data name="EmptyEmail" xml:space="preserve">
+        <value>يرجى إدخال بريدك الإلكتروني!</value>
+    </data>
+    <data name="EmptyFields" xml:space="preserve">
+        <value>يرجى إدخال الحقل!</value>
+    </data>
+    <data name="EmptyFile" xml:space="preserve">
+        <value>يرجى اختيار الملف المطلوب!</value>
+    </data>
+    <data name="Emptyheight" xml:space="preserve">
+        <value>يرجى إدخال الارتفاع!</value>
+    </data>
+    <data name="EmptyLesson" xml:space="preserve">
+        <value>يرجى إدخال الدرس!</value>
+    </data>
+    <data name="EmptyPoll" xml:space="preserve">
+        <value>يرجى اختيار خيار لإرسال رأيك!</value>
+    </data>
+    <data name="EmptyQuestion" xml:space="preserve">
+        <value>يرجى إدخال سؤالك!</value>
+    </data>
+    <data name="EmptySection" xml:space="preserve">
+        <value>يرجى إدخال اسم القسم!</value>
+    </data>
+    <data name="EmptyText" xml:space="preserve">
+        <value>يرجى إدخال النص!</value>
+    </data>
+    <data name="EmptyTitle" xml:space="preserve">
+        <value>يرجى إدخال العنوان!</value>
+    </data>
+    <data name="EmptyUniversity" xml:space="preserve">
+        <value>يرجى إدخال الجامعة!</value>
+    </data>
+    <data name="EmptyWidth" xml:space="preserve">
+        <value>يرجى إدخال العرض!</value>
+    </data>
+    <data name="EnterCode" xml:space="preserve">
+        <value>أدخل الرمز</value>
+    </data>
+    <data name="ErrorCompare" xml:space="preserve">
+        <value>الحقول غير متطابقة.</value>
+    </data>
+    <data name="ErrorLogin" xml:space="preserve">
+        <value>اسم المستخدم أو كلمة المرور غير صحيحة. يرجى المحاولة مرة أخرى!</value>
+    </data>
+    <data name="ErrorPathFile" xml:space="preserve">
+        <value>العنوان غير صالح.</value>
+    </data>
+    <data name="ErrorPercentValue" xml:space="preserve">
+        <value>لا يمكن أن تكون النسبة أقل من 1 أو أكبر من 100.</value>
+    </data>
+    <data name="ErrorRequired" xml:space="preserve">
+        <value>الحقل {0} إلزامي.</value>
+    </data>
+    <data name="ErrorSizeFile" xml:space="preserve">
+        <value>لا يمكن أن يتجاوز حجم الملف {0} أكثر من {1} ميغابايت.</value>
+    </data>
+    <data name="ErroZiroByteFile" xml:space="preserve">
+        <value>الملف غير صالح.</value>
+    </data>
+    <data name="ExampleDateInput" xml:space="preserve">
+        <value>مثال: 2025-05-25</value>
+    </data>
+    <data name="ExistingNoteErrorMessage" xml:space="preserve">
+        <value>توجد ملاحظة مسبقًا لهذا الإعلان. يرجى حذف الملاحظة الحالية أو تحديثها قبل إنشاء ملاحظة جديدة.</value>
+    </data>
+    <data name="ExpireDateFormat" xml:space="preserve">
+        <value>يرجى التحقق من تنسيق تاريخ الانتهاء.</value>
+    </data>
+    <data name="ExtensionFileNotFound" xml:space="preserve">
+        <value>لم يتم العثور على امتداد مناسب للملف.</value>
+    </data>
+    <data name="ExtensionFileNotSupported" xml:space="preserve">
+        <value>الخادم لا يدعم الامتداد الحالي.</value>
+    </data>
+    <data name="FamilyEmpty" xml:space="preserve">
+        <value>يرجى إدخال اسم العائلة.</value>
+    </data>
+    <data name="FAQCategorySelectedError" xml:space="preserve">
+        <value>يرجى اختيار موضوع قاعدة المعرفة.</value>
+    </data>
+    <data name="FAQIsNull" xml:space="preserve">
+        <value>لم يتم تسجيل أي محتوى في قاعدة المعرفة.</value>
+    </data>
+    <data name="FAQNotFoundError" xml:space="preserve">
+        <value>لم يتم العثور على قاعدة المعرفة المطلوبة.</value>
+    </data>
+    <data name="FieldConflictError" xml:space="preserve">
+        <value>يجب ألا يتعارض {0} مع {2}.</value>
+    </data>
+    <data name="FieldHasExistErrorMessage" xml:space="preserve">
+        <value>تم تسجيل الحقل المطلوب مسبقًا.</value>
+    </data>
+    <data name="FieldMaxValueError" xml:space="preserve">
+        <value>يجب أن يكون {0} أقل من {1}.</value>
+    </data>
+    <data name="FieldMinValueError" xml:space="preserve">
+        <value>يجب أن يكون {0} أكبر من {1}.</value>
+    </data>
+    <data name="FieldOfStudy" xml:space="preserve">
+        <value>التخصص الدراسي</value>
+    </data>
+    <data name="File1MBError" xml:space="preserve">
+        <value>الحد الأقصى المسموح به للرفع هو 1 ميغابايت.</value>
+    </data>
+    <data name="FileEmpty" xml:space="preserve">
+        <value>يرجى اختيار ملف!</value>
+    </data>
+    <data name="FileError_SelectNewFile" xml:space="preserve">
+        <value>حدث خطأ. يرجى تجربة ملف جديد.</value>
+    </data>
+    <data name="FileExtensionError" xml:space="preserve">
+        <value>الملف {0} له امتداد غير صالح. الامتدادات المسموح بها: {1}.</value>
+    </data>
+    <data name="FileIsEmpty" xml:space="preserve">
+        <value>الملف فارغ.</value>
+    </data>
+    <data name="FileSelect" xml:space="preserve">
+        <value>اختر الملف المطلوب.</value>
+    </data>
+    <data name="FindUserIdFailed" xml:space="preserve">
+        <value>لم يتم العثور على المستخدم المطلوب.</value>
+    </data>
+    <data name="FirstUserAssetsDescription" xml:space="preserve">
+        <value>تسجيل أول أصل للمستخدم {0} {1} برصيد محفظة 0 ورصيد ذهب 0</value>
+    </data>
+    <data name="FixedLengthError" xml:space="preserve">
+        <value>يجب أن تكون قيمة الحقل {0} بالضبط {1}.</value>
+    </data>
+    <data name="ForceUpdateErrorMessage" xml:space="preserve">
+        <value>يلزم التحديث الإجباري إلى الإصدار {0}.</value>
+    </data>
+    <data name="ForOrdering" xml:space="preserve">
+        <value>الترتيب حسب</value>
+    </data>
+    <data name="ForSEO" xml:space="preserve">
+        <value>مناسب لتحسين محركات البحث</value>
+    </data>
+    <data name="ForWaitMouseOnImage" xml:space="preserve">
+        <value>تمرير المؤشر فوق الصورة</value>
+    </data>
+    <data name="GifOnly" xml:space="preserve">
+        <value>يجب عليك رفع ملف بصيغة gif!</value>
+    </data>
+    <data name="GoldSootValuesError" xml:space="preserve">
+        <value>لا يمكن أن يكون وزن الذهب أقل من 1000 سوت.</value>
+    </data>
+    <data name="GroupEmpty" xml:space="preserve">
+        <value>يرجى إدخال المجموعة.</value>
+    </data>
+    <data name="GroupHasMappingError" xml:space="preserve">
+        <value>لحذف مجموعة، يجب أولًا حذف ارتباطات تلك المجموعة.</value>
+    </data>
+    <data name="GroupHasUserError" xml:space="preserve">
+        <value>لا يمكن حذف مجموعة تحتوي على مستخدمين.</value>
+    </data>
+    <data name="GroupId" xml:space="preserve">
+        <value>حقل تعريف مجموعة المرتجعات في جدول المرتجعات</value>
+    </data>
+    <data name="GroupIsNull" xml:space="preserve">
+        <value>لا توجد مجموعة.</value>
+    </data>
+    <data name="GroupNotExist" xml:space="preserve">
+        <value>لا توجد مجموعة.</value>
+    </data>
+    <data name="GroupNotFound" xml:space="preserve">
+        <value>لم يتم العثور على المجموعة المطلوبة.</value>
+    </data>
+    <data name="GroupRelationIsNull" xml:space="preserve">
+        <value>لا توجد علاقة بين المجموعات.</value>
+    </data>
+    <data name="GroupSelectError" xml:space="preserve">
+        <value>لم يتم تحديد أي مجموعة.</value>
+    </data>
+    <data name="HasProductInThisBranch" xml:space="preserve">
+        <value>تم تسجيل منتج في هذا الفرع.</value>
+    </data>
+    <data name="HasProductInThisCategory" xml:space="preserve">
+        <value>تم تسجيل منتج في هذه الفئة.</value>
+    </data>
+    <data name="ImageNotExist" xml:space="preserve">
+        <value>الصورة غير موجودة.</value>
+    </data>
+    <data name="ImageSettings" xml:space="preserve">
+        <value>إعدادات الصور</value>
+    </data>
+    <data name="ImgFormat" xml:space="preserve">
+        <value>يجب عليك رفع ملف بصيغة gif أو jpg أو jpeg أو bmp!</value>
+    </data>
+    <data name="ImgSize" xml:space="preserve">
+        <value>حجم الملف كبير جدًا.</value>
+    </data>
+    <data name="InformationPriceIsRequired" xml:space="preserve">
+        <value>معلومات سجل أسعار المنتج إلزامية.</value>
+    </data>
+    <data name="InvalidDecimalFormat" xml:space="preserve">
+        <value>تنسيق الرقم العشري غير صالح.</value>
+    </data>
+    <data name="InvalidNumberFormat" xml:space="preserve">
+        <value>تنسيق الرقم غير صالح.</value>
+    </data>
+    <data name="IsNullMessages" xml:space="preserve">
+        <value>لا يوجد {0}.</value>
+    </data>
+    <data name="IsNullWarning" xml:space="preserve">
+        <value>لا يوجد {0}.</value>
+    </data>
+    <data name="ItemNotFound" xml:space="preserve">
+        <value>لم يتم العثور على العنصر المطلوب.</value>
+    </data>
+    <data name="LanguageRequired" xml:space="preserve">
+        <value>القيمة في {0} مطلوبة.</value>
+    </data>
+    <data name="LastNameRequired" xml:space="preserve">
+        <value>اسم العائلة إلزامي.</value>
+    </data>
+    <data name="LawNotFoundFileError" xml:space="preserve">
+        <value>حدثت مشكلة! وفقًا لقواعد وإعدادات الخادم ( {0} )، لا يُسمح لك برفع الملفات للقسم ( {1} ). يرجى التواصل مع الدعم.</value>
+    </data>
+    <data name="LinkFormat" xml:space="preserve">
+        <value>تنسيق الرابط المُدخل غير صالح!</value>
+    </data>
+    <data name="LisIsNotEmpty" xml:space="preserve">
+        <value>لا يمكن أن تكون قائمة {0} فارغة.</value>
+    </data>
+    <data name="ListIsNull" xml:space="preserve">
+        <value>لم يتم العثور على أي بيانات.</value>
+    </data>
+    <data name="ListRolesIsNotEmpty" xml:space="preserve">
+        <value>لا يمكن أن تكون قائمة الأدوار فارغة.</value>
+    </data>
+    <data name="Loading" xml:space="preserve">
+        <value>يرجى الانتظار قليلًا.</value>
+    </data>
+    <data name="LocationMustBeMapped" xml:space="preserve">
+        <value>يجب ربط الموقع.</value>
+    </data>
+    <data name="Login" xml:space="preserve">
+        <value>اسم المستخدم أو كلمة المرور غير صحيحة!</value>
+    </data>
+    <data name="LogOutedMessage" xml:space="preserve">
+        <value>تم إغلاق حسابك.</value>
+    </data>
+    <data name="LogOutFromAccount" xml:space="preserve">
+        <value>تسجيل الخروج من الحساب</value>
+    </data>
+    <data name="LogOutFromAccount1" xml:space="preserve">
+        <value>تسجيل الخروج من الحساب</value>
+    </data>
+    <data name="MappingNotFound" xml:space="preserve">
+        <value>لم يتم العثور على أي مسار لإحالة هذه التذكرة.</value>
+    </data>
+    <data name="MappingOwnerCompanyNotFound" xml:space="preserve">
+        <value>لا يمكن إحالة التذكرة المحددة إلى الشركة المالكة.</value>
+    </data>
+    <data name="MaritalStatus" xml:space="preserve">
+        <value>الحالة الاجتماعية</value>
+    </data>
+    <data name="MaximumSize1MB" xml:space="preserve">
+        <value>الحد الأقصى لحجم الملف هو 1 ميغابايت.</value>
+    </data>
+    <data name="MaxLengthError" xml:space="preserve">
+        <value>الحد الأقصى لعدد أحرف الحقل {0} هو {1}.</value>
+    </data>
+    <data name="MaxSize500000" xml:space="preserve">
+        <value>يجب أن يكون حجم الملف أقل من 500000 بايت!</value>
+    </data>
+    <data name="MaxUserUsed" xml:space="preserve">
+        <value>تم استخدام رمز الإحالة هذا من قبل الحد الأقصى من المستخدمين.</value>
+    </data>
+    <data name="MaxWordCountError" xml:space="preserve">
+        <value>الحد الأقصى المسموح به لعدد الكلمات في الحقل {0} هو {1} كلمة.</value>
+    </data>
+    <data name="Message" xml:space="preserve">
+        <value>يرجى إدخال رسالتك!</value>
+    </data>
+    <data name="MinAndMaxValueFieldError" xml:space="preserve">
+        <value>لا يمكن أن تكون قيمة الحقل {0} أقل من {1} أو أكبر من {2}.</value>
+    </data>
+    <data name="MinTicketCountError" xml:space="preserve">
+        <value>لا يمكن أن يكون الحد الأقصى لإرسال التذاكر 0.</value>
+    </data>
+    <data name="MobileError" xml:space="preserve">
+        <value>يرجى التحقق من رقم الهاتف المحمول.</value>
+    </data>
+    <data name="MultipleValuesAreRequired" xml:space="preserve">
+        <value>مطلوب إدخال عدة قيم.</value>
+    </data>
+    <data name="NameRequired" xml:space="preserve">
+        <value>الاسم إلزامي.</value>
+    </data>
+    <data name="NationalCodeError" xml:space="preserve">
+        <value>يرجى التحقق من الرقم المدني.</value>
+    </data>
+    <data name="Network_Internet_Error" xml:space="preserve">
+        <value>يرجى التحقق من اتصالك بالإنترنت.</value>
+    </data>
+    <data name="NoAccessToDelete" xml:space="preserve">
+        <value>لا توجد صلاحية للحذف.</value>
+    </data>
+    <data name="NoDocumentDetailsError" xml:space="preserve">
+        <value>لا يوجد أي مستند متاح للمراجعة.</value>
+    </data>
+    <data name="NoResultsFound" xml:space="preserve">
+        <value>لم يتم العثور على نتائج</value>
+    </data>
+    <data name="NoRulesError" xml:space="preserve">
+        <value>لا توجد أي قاعدة متاحة للمراجعة.</value>
+    </data>
+    <data name="NotAccessToAdminGroup" xml:space="preserve">
+        <value>ليس لديك صلاحية الوصول إلى مجموعة الإدارة.</value>
+    </data>
+    <data name="NotAccessToPageConnectToCompany" xml:space="preserve">
+        <value>يوجد تقييد في مستوى الوصول. يرجى التنسيق مع الشركة.</value>
+    </data>
+    <data name="NotAllowedNowBuyError" xml:space="preserve">
+        <value>شراء الذهب غير مسموح حاليًا.</value>
+    </data>
+    <data name="NotAllowedNowSellError" xml:space="preserve">
+        <value>بيع الذهب غير مسموح حاليًا.</value>
+    </data>
+    <data name="NotEnoughGoldValue" xml:space="preserve">
+        <value>رصيد الذهب غير كافٍ لتسجيل طلب سحب فعلي.</value>
+    </data>
+    <data name="NotEnoughGoldValueForDelivery" xml:space="preserve">
+        <value>رصيد الذهب غير كافٍ لهذه الكمية. يمكنك زيادة رصيد الذهب قبل الموافقة أو تحويل الطلب إلى حالة مرفوض.</value>
+    </data>
+    <data name="NotFoundError" xml:space="preserve">
+        <value>لم يتم العثور على {0} المطلوب.</value>
+    </data>
+    <data name="NumberRange" xml:space="preserve">
+        <value>الرقم المُدخل خارج النطاق المسموح به.</value>
+    </data>
+    <data name="OnlyOneValueAllowedErrorMessage" xml:space="preserve">
+        <value>يُسمح بقيمة واحدة فقط.</value>
+    </data>
+    <data name="OtpCodeIsInvalid" xml:space="preserve">
+        <value>رمز التحقق لمرة واحدة غير صالح.</value>
+    </data>
+    <data name="OTPVerification" xml:space="preserve">
+        <value>التحقق برمز OTP</value>
+    </data>
+    <data name="PageSettingDeleted" xml:space="preserve">
+        <value>تم حذف إعدادات الصفحة.</value>
+    </data>
+    <data name="PageTitleNotExist" xml:space="preserve">
+        <value>عنوان الصفحة غير موجود!!!</value>
+    </data>
+    <data name="PasswordConfirmRequired" xml:space="preserve">
+        <value>تأكيد كلمة المرور إلزامي.</value>
+    </data>
+    <data name="PasswordRequired" xml:space="preserve">
+        <value>كلمة المرور إلزامية.</value>
+    </data>
+    <data name="Password_PasswordConfirmError" xml:space="preserve">
+        <value>كلمة المرور وتأكيدها غير متطابقين.</value>
+    </data>
+    <data name="PermissionsAppliedDescription" xml:space="preserve">
+        <value>يتم تطبيق الصلاحيات فورًا عند تحديد المربع أو إلغاء تحديده.</value>
+    </data>
+    <data name="PhoneError" xml:space="preserve">
+        <value>يرجى التحقق من رقم الهاتف.</value>
+    </data>
+    <data name="PhoneNumberAndCaptchaError" xml:space="preserve">
+        <value>رقم الهاتف المحمول أو رمز التحقق غير صحيح.</value>
+    </data>
+    <data name="PhoneNumberIsInvalid" xml:space="preserve">
+        <value>رقم الهاتف غير صالح.</value>
+    </data>
+    <data name="PhoneNumberStartWithError" xml:space="preserve">
+        <value>رقم الاتصال غير صالح.</value>
+    </data>
+    <data name="PleaseLoginInSite" xml:space="preserve">
+        <value>يرجى تسجيل الدخول إلى حسابك قبل استخدام الموقع.</value>
+    </data>
+    <data name="PostEmpty" xml:space="preserve">
+        <value>يرجى إدخال المنصب!</value>
+    </data>
+    <data name="PostNotExistError" xml:space="preserve">
+        <value>لا يوجد أي منشور.</value>
+    </data>
+    <data name="PostTypeInitialIsNotWorking" xml:space="preserve">
+        <value>حدث خلل في أنواع المنشورات.</value>
+    </data>
+    <data name="ProcessingText" xml:space="preserve">
+        <value>جارٍ معالجة الطلب...</value>
+    </data>
+    <data name="ProfileNotVerifiedError" xml:space="preserve">
+        <value>لم يتم التحقق من المستخدم المطلوب.</value>
+    </data>
+    <data name="ProjectHasGroup" xml:space="preserve">
+        <value>لحذف المشروع، يرجى حذف المجموعات المرتبطة أولًا.</value>
+    </data>
+    <data name="ProjectHasMapping" xml:space="preserve">
+        <value>لحذف المشروع، يرجى حذف ارتباطات مجموعاته أولًا.</value>
+    </data>
+    <data name="ProjectHasSubSystemError" xml:space="preserve">
+        <value>لحذف المشروع، يرجى حذف أنظمته الفرعية أولًا.</value>
+    </data>
+    <data name="ProjectIsNull" xml:space="preserve">
+        <value>لا يوجد مشروع.</value>
+    </data>
+    <data name="ProjectNameRequired" xml:space="preserve">
+        <value>اسم المشروع إلزامي.</value>
+    </data>
+    <data name="ProjectNotExist" xml:space="preserve">
+        <value>لا يوجد أي مشروع.</value>
+    </data>
+    <data name="ProjectNotFound" xml:space="preserve">
+        <value>لم يتم العثور على المشروع المطلوب.</value>
+    </data>
+    <data name="ProjectSelectedError" xml:space="preserve">
+        <value>لم يتم تحديد أي مشروع.</value>
+    </data>
+    <data name="PurchasingProductsFromDifferentBranchesIsNotAllowed" xml:space="preserve">
+        <value>لا يُسمح بشراء منتجات مختلفة من فروع مختلفة.</value>
+    </data>
+    <data name="QuestionChangeActivation" xml:space="preserve">
+        <value>هل أنت متأكد من تغيير حالة هذا المنتج؟</value>
+    </data>
+    <data name="QuestionDelete" xml:space="preserve">
+        <value>هل أنت متأكد من حذف السجل المحدد؟</value>
+    </data>
+    <data name="QuestionDeleteAttachments" xml:space="preserve">
+        <value>هل ترغب في حذف الملفات المرتبطة بهذا السجل؟</value>
+    </data>
+    <data name="QuestionDeleteOtherImages" xml:space="preserve">
+        <value>هل أنت متأكد من حذف جميع الصور باستثناء صورة الملف الشخصي لهذا المنتج؟</value>
+    </data>
+    <data name="QuestionEmpty" xml:space="preserve">
+        <value>يرجى إدخال نص السؤال.</value>
+    </data>
+    <data name="QuestionMoveProductToPriceInquery" xml:space="preserve">
+        <value>هل أنت متأكد من تغيير سعر هذا المنتج إلى استعلام عن السعر؟</value>
+    </data>
+    <data name="QuestionUpdate" xml:space="preserve">
+        <value>هل تريد حفظ التغييرات؟</value>
+    </data>
+    <data name="QueueSentTicketIsFull" xml:space="preserve">
+        <value>قائمة انتظار إرسال التذاكر إلى الشركة ممتلئة. يرجى التنسيق مع الشركة.</value>
+    </data>
+    <data name="RangeFieldError" xml:space="preserve">
+        <value>يجب أن يكون الحقل {0} بين {1} و {2}.</value>
+    </data>
+    <data name="RangNo1000" xml:space="preserve">
+        <value>يرجى إدخال رقم في النطاق من 0 إلى 1000!</value>
+    </data>
+    <data name="RangUnit" xml:space="preserve">
+        <value>يرجى إدخال رقم بين 0 و10!</value>
+    </data>
+    <data name="ReferenceIsSeccess" xml:space="preserve">
+        <value>تمت الإحالة بنجاح.</value>
+    </data>
+    <data name="ReferenceTicketWithSaveAnswer" xml:space="preserve">
+        <value>إحالة وحفظ الرد</value>
+    </data>
+    <data name="ReferralCanNotUseForYourSelf" xml:space="preserve">
+        <value>لا يُسمح للمستخدم باستخدام رمز الإحالة الخاص به لنفسه.</value>
+    </data>
+    <data name="RegisterProfileQueueError" xml:space="preserve">
+        <value>لم تكتمل عملية تسجيلك. يرجى المحاولة مرة أخرى بعد بضع دقائق.</value>
+    </data>
+    <data name="RelationIsActiveError" xml:space="preserve">
+        <value>لحذف هذا السجل، يرجى إزالة التبعيات أولًا.</value>
+    </data>
+    <data name="RepeatError" xml:space="preserve">
+        <value>الحقل {0} مكرر.</value>
+    </data>
+    <data name="ReportIsDeleted" xml:space="preserve">
+        <value>تم حذف التقرير المحدد بنجاح.</value>
+    </data>
+    <data name="ReportIsNull" xml:space="preserve">
+        <value>لا يوجد تقرير.</value>
+    </data>
+    <data name="ReportNotFound" xml:space="preserve">
+        <value>لم يتم العثور على التقرير المطلوب.</value>
+    </data>
+    <data name="RequestExistInClosed" xml:space="preserve">
+        <value>تم وضع الطلب مسبقًا في مرحلة مغلق.</value>
+    </data>
+    <data name="RequestExistInDeliverd" xml:space="preserve">
+        <value>تم وضع الطلب مسبقًا في مرحلة تم التسليم.</value>
+    </data>
+    <data name="RequestExistInDeliveryPending" xml:space="preserve">
+        <value>تم وضع الطلب مسبقًا في مرحلة بانتظار التسليم.</value>
+    </data>
+    <data name="RequestExistInRejected" xml:space="preserve">
+        <value>تم وضع الطلب مسبقًا في مرحلة مرفوض.</value>
+    </data>
+    <data name="RequestExistInUnderReview" xml:space="preserve">
+        <value>تم وضع الطلب مسبقًا في مرحلة قيد المراجعة.</value>
+    </data>
+    <data name="RequiredError" xml:space="preserve">
+        <value>القيمة {0} إلزامية.</value>
+    </data>
+    <data name="RestrictedAccessContactTechnicalTeam" xml:space="preserve">
+        <value>يوجد تقييد في مستوى الوصول. يرجى التواصل مع الفريق الفني.</value>
+    </data>
+    <data name="RestrictedAccessToThisRecordContactTechnicalTeam" xml:space="preserve">
+        <value>الوصول إلى هذا السجل مقيد. يرجى التواصل مع الفريق الفني.</value>
+    </data>
+    <data name="ReturnRejectDescriptionNotEnterd" xml:space="preserve">
+        <value>لم يتم إدخال سبب رفض المرتجع.</value>
+    </data>
+    <data name="ReturnRequestAccepted" xml:space="preserve">
+        <value>تمت الموافقة على طلب المرتجع المحدد بنجاح.</value>
+    </data>
+    <data name="ReturnRequestNotFound" xml:space="preserve">
+        <value>لم يتم العثور على طلب المرتجع.</value>
+    </data>
+    <data name="ReturnRequestRejected" xml:space="preserve">
+        <value>تم رفض طلب المرتجع المحدد بنجاح.</value>
+    </data>
+    <data name="ReturnRequestStillNotChecked" xml:space="preserve">
+        <value>لم تتم مراجعة طلب المرتجع بعد.</value>
+    </data>
+    <data name="RoleAlreadyHasDashboardAccess" xml:space="preserve">
+        <value>للدور المحدد صلاحية وصول على مستوى لوحة التحكم لهذه اللوحة مسبقًا.</value>
+    </data>
+    <data name="RoleAlreadyHasDashboardAccessRemoveItFirst" xml:space="preserve">
+        <value>للدور المحدد صلاحية وصول على مستوى لوحة التحكم مسبقًا. يرجى إزالة صلاحية لوحة التحكم أولًا.</value>
+    </data>
+    <data name="RoleNameRequired" xml:space="preserve">
+        <value>اسم الدور إلزامي.</value>
+    </data>
+    <data name="RoleNotExist" xml:space="preserve">
+        <value>لا يوجد دور.</value>
+    </data>
+    <data name="RoleNotFound" xml:space="preserve">
+        <value>لم يتم العثور على الدور المطلوب.</value>
+    </data>
+    <data name="RoleSelectedError" xml:space="preserve">
+        <value>يرجى اختيار دور.</value>
+    </data>
+    <data name="RoleTitleRequired" xml:space="preserve">
+        <value>عنوان الدور باللغة الفارسية إلزامي.</value>
+    </data>
+    <data name="SaveError" xml:space="preserve">
+        <value>حدث خطأ أثناء حفظ المعلومات!</value>
+    </data>
+    <data name="SaveReportSuccessfully" xml:space="preserve">
+        <value>تم إرسال تقريرك بنجاح.</value>
+    </data>
+    <data name="SaveSuccess" xml:space="preserve">
+        <value>تم حفظ المعلومات بنجاح.</value>
+    </data>
+    <data name="SaveTicketToReport" xml:space="preserve">
+        <value>تسجيل كتقرير</value>
+    </data>
+    <data name="SaveTicketWhenCountFAQZiro" xml:space="preserve">
+        <value>إذا لم تجد مشكلتك، يمكنك تسجيل تذكرة.</value>
+    </data>
+    <data name="SearchInFAQ" xml:space="preserve">
+        <value>البحث في قاعدة المعرفة</value>
+    </data>
+    <data name="SearchResultIsNull" xml:space="preserve">
+        <value>لم يتم العثور على نتائج.</value>
+    </data>
+    <data name="SelectAll" xml:space="preserve">
+        <value>تحديد الكل</value>
+    </data>
+    <data name="SelectedCategoryError" xml:space="preserve">
+        <value>يرجى اختيار موضوع.</value>
+    </data>
+    <data name="SelectedFieldRequired" xml:space="preserve">
+        <value>اختيار الحقل {0} إلزامي.</value>
+    </data>
+    <data name="SelectedSubSystemError" xml:space="preserve">
+        <value>يرجى اختيار نظام فرعي.</value>
+    </data>
+    <data name="SelectedUserPriotryError" xml:space="preserve">
+        <value>يرجى اختيار أولوية.</value>
+    </data>
+    <data name="SelectItem" xml:space="preserve">
+        <value>اختيار</value>
+    </data>
+    <data name="SelectSubSystemOrProjectError" xml:space="preserve">
+        <value>اختيار نظام فرعي أو مشروع إلزامي.</value>
+    </data>
+    <data name="SelectTrueOptionUsers" xml:space="preserve">
+        <value>اختر العناصر المطلوبة من بين الأشخاص.</value>
+    </data>
+    <data name="SelectUserGroupProjectOrUserFromProjectSelected" xml:space="preserve">
+        <value>اختيار مجموعة أو شخص داخل مجموعة إلزامي.</value>
+    </data>
+    <data name="SendCodeFail" xml:space="preserve">
+        <value>حدث خطأ أثناء إرسال الرمز.</value>
+    </data>
+    <data name="SendCodeSuccess" xml:space="preserve">
+        <value>تم إرسال رمز تحقق لمرة واحدة إليك.</value>
+    </data>
+    <data name="ServerIsCheck" xml:space="preserve">
+        <value>تم فحص الخادم بالمعرّف {0}.</value>
+    </data>
+    <data name="ServerIsErlyExistButThisServerKeyIsChanged" xml:space="preserve">
+        <value>الخادم الحالي موجود، ولكن مفتاح الخادم قد تغير. يرجى التنسيق مع الفريق الفني.</value>
+    </data>
+    <data name="ServerReqestError" xml:space="preserve">
+        <value>حدث خطأ في الرد على الطلب.</value>
+    </data>
+    <data name="ShopAndProductRequired" xml:space="preserve">
+        <value>اختيار المتجر والمنتج إلزامي.</value>
+    </data>
+    <data name="ShowProfilePage" xml:space="preserve">
+        <value>عرض الملف الشخصي</value>
+    </data>
+    <data name="SiteTitle" xml:space="preserve">
+        <value>يرجى إدخال عنوان الموقع.</value>
+    </data>
+    <data name="Status404NotFoundErrorMessage" xml:space="preserve">
+        <value>لم يتم العثور على العنوان المطلوب.</value>
+    </data>
+    <data name="StatusTicketNotFound" xml:space="preserve">
+        <value>لم يتم العثور على الخدمة المطلوبة!</value>
+    </data>
+    <data name="StringInvalidValue" xml:space="preserve">
+        <value>قيمة النص غير صالحة.</value>
+    </data>
+    <data name="StringLengthExceedsTheMaximumLengthErrorMessage" xml:space="preserve">
+        <value>يتجاوز طول النص الحد الأقصى وهو {0}.</value>
+    </data>
+    <data name="StringLengthMustBeExactlyErrorMessage" xml:space="preserve">
+        <value>يجب أن يكون طول النص بالضبط {0}.</value>
+    </data>
+    <data name="SubSystemHasTicketError" xml:space="preserve">
+        <value>لا يمكن حذف الأنظمة الفرعية التي تم تسجيل تذاكر لها.</value>
+    </data>
+    <data name="SubSystemIsNull" xml:space="preserve">
+        <value>لا يوجد نظام فرعي.</value>
+    </data>
+    <data name="SubSystemNameRequired" xml:space="preserve">
+        <value>اسم النظام الفرعي إلزامي.</value>
+    </data>
+    <data name="SubSystemNotExist" xml:space="preserve">
+        <value>لا يوجد نظام فرعي.</value>
+    </data>
+    <data name="SubSystemNotFound" xml:space="preserve">
+        <value>لم يتم العثور على أي نظام فرعي.</value>
+    </data>
+    <data name="SubsystemSelectedError" xml:space="preserve">
+        <value>لم يتم تحديد أي نظام فرعي.</value>
+    </data>
+    <data name="SuccessLoginMessage" xml:space="preserve">
+        <value>تم تسجيل الدخول إلى حسابك بنجاح.</value>
+    </data>
+    <data name="SuccessMoveAllProductToRequestCheckPriceMessage" xml:space="preserve">
+        <value>تم نقل المنتجات الموجودة في الفئة المحددة إلى حالة استعلام عن السعر بنجاح.</value>
+    </data>
+    <data name="SupportManagmentGroupInCustomerNotFound" xml:space="preserve">
+        <value>لم يتم العثور على مجموعة إدارة المؤسسة / حدث خطأ في النظام.</value>
+    </data>
+    <data name="SystemError" xml:space="preserve">
+        <value>حدث خطأ في النظام.</value>
+    </data>
+    <data name="SystemErrorReLogin" xml:space="preserve">
+        <value>حدث خطأ في النظام. يرجى تسجيل الدخول مرة أخرى والمحاولة.</value>
+    </data>
+    <data name="SystemError_TryAgain" xml:space="preserve">
+        <value>حدث خطأ في النظام. يرجى المحاولة مرة أخرى.</value>
+    </data>
+    <data name="TableIsEmpty" xml:space="preserve">
+        <value>لم يتم تسجيل أي بيانات.</value>
+    </data>
+    <data name="TabPageMustBeSubmittedWithOneOfItsSubMenus" xml:space="preserve">
+        <value>يجب إرسال صفحة التبويب مع إحدى قوائمها الفرعية.</value>
+    </data>
+    <data name="TestNewPasswordError" xml:space="preserve">
+        <value>يرجى تجربة كلمة مرور جديدة.</value>
+    </data>
+    <data name="TextFormat" xml:space="preserve">
+        <value>يرجى رفع ملف بصيغة .pdf أو .doc أو .docx!</value>
+    </data>
+    <data name="TextLoading" xml:space="preserve">
+        <value>جارٍ التحميل ...</value>
+    </data>
+    <data name="TheDesiredRecordHasAlreadyBeenDeleted" xml:space="preserve">
+        <value>تم حذف السجل المطلوب مسبقًا.</value>
+    </data>
+    <data name="ThisNameIsExist" xml:space="preserve">
+        <value>الاسم المطلوب موجود مسبقًا في النظام.</value>
+    </data>
+    <data name="ThisRelationIsExist" xml:space="preserve">
+        <value>هذه العلاقة موجودة مسبقًا.</value>
+    </data>
+    <data name="TicketIsClosed" xml:space="preserve">
+        <value>التذكرة في حالة مغلقة.</value>
+    </data>
+    <data name="TicketNotFound" xml:space="preserve">
+        <value>لم يتم العثور على التذكرة المطلوبة.</value>
+    </data>
+    <data name="TicketReferenceForTicketNotSet" xml:space="preserve">
+        <value>لم يتم العثور على مسار إحالة للتذكرة المطلوبة وفقًا للمشروع والنظام الفرعي المحددين. يرجى التنسيق مع فريق الدعم.</value>
+    </data>
+    <data name="TicketReferenceNotExist" xml:space="preserve">
+        <value>لا توجد إحالات افتراضية.</value>
+    </data>
+    <data name="TicketSaveChangesMessageSendError" xml:space="preserve">
+        <value>تم حفظ تغييرات التذكرة المطلوبة بنجاح، ولكن حدث خلل في إرسال الرسالة النصية إلى المستخدم.</value>
+    </data>
+    <data name="TicketSaveSuccessMessageSendError" xml:space="preserve">
+        <value>تم تسجيل تذكرتك بنجاح، ولكن حدث خلل في إرسال الرسالة النصية.</value>
+    </data>
+    <data name="TicketTypeIsRequired" xml:space="preserve">
+        <value>نوع التذكرة إلزامي.</value>
+    </data>
+    <data name="TicketTypeNotFound" xml:space="preserve">
+        <value>لم يتم العثور على نوع التذكرة المطلوب.</value>
+    </data>
+    <data name="TimeOfOperation" xml:space="preserve">
+        <value>لم يتم إدخال وقت تنفيذ العملية.</value>
+    </data>
+    <data name="TimeOutSendCodeError" xml:space="preserve">
+        <value>يرجى استخدام آخر رمز تم إرساله إليك.</value>
+    </data>
+    <data name="TitleIsRequired" xml:space="preserve">
+        <value>العنوان إلزامي.</value>
+    </data>
+    <data name="TokenLifeTimeError" xml:space="preserve">
+        <value>انتهت مدة صلاحية جلسة حسابك. يرجى تسجيل الدخول مرة أخرى.</value>
+    </data>
+    <data name="UnAcceptablePrice" xml:space="preserve">
+        <value>المبلغ المُدخل غير صالح.</value>
+    </data>
+    <data name="UpdateActiveLastGoldPriceMessageError" xml:space="preserve">
+        <value>يُسمح لك فقط بتغيير حالة آخر سعر في القائمة.</value>
+    </data>
+    <data name="UpdateMessageSuccess" xml:space="preserve">
+        <value>تم تحديث {0} بنجاح.</value>
+    </data>
+    <data name="UpdateMovedFromCategoryToCategoryMessageSuccess" xml:space="preserve">
+        <value>تم نقل المنتجات من فئة إلى أخرى بنجاح.</value>
+    </data>
+    <data name="UpdateRecommended" xml:space="preserve">
+        <value>يتوفر إصدار جديد. يُوصى بالتحديث.</value>
+    </data>
+    <data name="UseCustomers" xml:space="preserve">
+        <value>العملاء قيد الاستخدام</value>
+    </data>
+    <data name="UseForBetterSearch" xml:space="preserve">
+        <value>استخدم لتحسين البحث</value>
+    </data>
+    <data name="Useprojects" xml:space="preserve">
+        <value>المشاريع قيد الاستخدام</value>
+    </data>
+    <data name="UserActiveSessionsDescription" xml:space="preserve">
+        <value>وصف جلسات المستخدم النشطة</value>
+    </data>
+    <data name="UserAddedInListGroup" xml:space="preserve">
+        <value>المستخدمون المضافون</value>
+    </data>
+    <data name="UserExistInGroup" xml:space="preserve">
+        <value>المستخدم المطلوب موجود في هذه المجموعة.</value>
+    </data>
+    <data name="UserExpiredError" xml:space="preserve">
+        <value>يرجى التواصل مع الشركة لتسجيل الدخول بهذا الحساب.</value>
+    </data>
+    <data name="UserGroupProjectNotFound" xml:space="preserve">
+        <value>لم يتم العثور على أي علاقة للشخص والمجموعة المحددين.</value>
+    </data>
+    <data name="UserGroupProjectSelectError" xml:space="preserve">
+        <value>يرجى اختيار شخص مع المجموعة المحددة.</value>
+    </data>
+    <data name="UserHasReportedErrorMessage" xml:space="preserve">
+        <value>لقد قمت بالإبلاغ عن هذا الإعلان مسبقًا.</value>
+    </data>
+    <data name="UserHasTicketError" xml:space="preserve">
+        <value>لا يمكن حذف المستخدمين الذين قاموا بإرسال تذاكر.</value>
+    </data>
+    <data name="UserIDNotSpecified" xml:space="preserve">
+        <value>لم يتم تحديد معرف المستخدم</value>
+    </data>
+    <data name="UserNameIsExistError" xml:space="preserve">
+        <value>اسم المستخدم المطلوب مكرر.</value>
+    </data>
+    <data name="UserNameRequied" xml:space="preserve">
+        <value>اسم المستخدم إلزامي.</value>
+    </data>
+    <data name="UserNotActiveError" xml:space="preserve">
+        <value>المستخدم المطلوب غير نشط.</value>
+    </data>
+    <data name="UserNotExist" xml:space="preserve">
+        <value>لا يوجد مستخدم.</value>
+    </data>
+    <data name="UserNotFound" xml:space="preserve">
+        <value>لم يتم العثور على المستخدم المطلوب.</value>
+    </data>
+    <data name="UserPriotryIsRequired" xml:space="preserve">
+        <value>أولوية المستخدم إلزامية.</value>
+    </data>
+    <data name="UserPriotryNotFound" xml:space="preserve">
+        <value>لم يتم العثور على أولوية المستخدم المطلوبة.</value>
+    </data>
+    <data name="UserPriotryNotSelected" xml:space="preserve">
+        <value>يرجى اختيار أولوية المستخدم.</value>
+    </data>
+    <data name="UserReferralLogExist" xml:space="preserve">
+        <value>تم تسجيل سجل الإحالة للمستخدم مسبقًا.</value>
+    </data>
+    <data name="UserRoundCode" xml:space="preserve">
+        <value>دخل تقريب الرصيد {0}</value>
+    </data>
+    <data name="UserSelectedCustomer" xml:space="preserve">
+        <value>مستخدمو الشركة المحددة</value>
+    </data>
+    <data name="UserSuspensionHistory" xml:space="preserve">
+        <value>سجل إيقاف المستخدم</value>
+    </data>
+    <data name="UserWithGroupHasTicketReferenceError" xml:space="preserve">
+        <value>لا يمكن حذف مستخدم تم اختياره في صفحة الإحالات الافتراضية.</value>
+    </data>
+    <data name="ValueCannotBeNull" xml:space="preserve">
+        <value>لا يمكن أن تكون القيمة فارغة.</value>
+    </data>
+    <data name="ValueIsGreaterThanTheMaximum" xml:space="preserve">
+        <value>القيمة أكبر من الحد الأقصى المسموح به وهو {0}.</value>
+    </data>
+    <data name="ValueIsLessMinimumError" xml:space="preserve">
+        <value>القيمة أقل من الحد الأدنى المسموح به وهو {0}.</value>
+    </data>
+    <data name="ViewOnTheMainPage" xml:space="preserve">
+        <value>عرض في الصفحة الرئيسية</value>
+    </data>
+    <data name="VolumeFileError" xml:space="preserve">
+        <value>يتجاوز الملف {0} الحد الأقصى للحجم وهو {1} ميغابايت.</value>
+    </data>
+    <data name="YouAreLatestVersion" xml:space="preserve">
+        <value>أنت تستخدم أحدث إصدار</value>
+    </data>
+    <data name="YouCanNotReportYourOwnAnnouncementErrorMessage" xml:space="preserve">
+        <value>لا يمكنك الإبلاغ عن إعلانك الخاص.</value>
+    </data>
+    <data name="ZeroValueError" xml:space="preserve">
+        <value>لا يمكن أن يكون العدد صفرًا.</value>
+    </data>
+    <data name="AdvertisementManagementSystem" xml:space="preserve">
+        <value>نظام إدارة الإعلانات</value>
+    </data>
+    <data name="SultanateOfOman" xml:space="preserve">
+        <value>سلطنة عُمان</value>
+    </data>
+    <data name="SecureOTPLogin" xml:space="preserve">
+        <value>تسجيل الدخول الآمن باستخدام الرمز لمرة واحدة</value>
+    </data>
+    <data name="Welcome" xml:space="preserve">
+        <value>مرحباً</value>
+    </data>
+    <data name="LoginRegisterMobile" xml:space="preserve">
+        <value>دخول / تسجيل برقم الجوال</value>
+    </data>
+    <data name="CountryCode" xml:space="preserve">
+        <value>رمز البلد</value>
+    </data>
+    <data name="EnterNumberWithoutCountryCode" xml:space="preserve">
+        <value>أدخل الرقم بدون رمز البلد</value>
+    </data>
+    <data name="YourInformationSecure" xml:space="preserve">
+        <value>معلوماتك آمنة</value>
+    </data>
+    <data name="SecureAccessToAdminPanel" xml:space="preserve">
+        <value>وصول آمن إلى لوحة التحكم</value>
+    </data>
+    <data name="OneTimePassword" xml:space="preserve">
+        <value>رمز لمرة واحدة</value>
+    </data>
+    <data name="ValidForMinutes" xml:space="preserve">
+        <value>صالح لمدة {0} دقائق</value>
+    </data>
+    <data name="VerifyYourIdentity" xml:space="preserve">
+        <value>تحقق من هويتك</value>
+    </data>
+    <data name="EnterDigitCodeSentToYourMobile" xml:space="preserve">
+        <value>أدخل الرمز المكون من {0} أرقام المرسل إلى جوالك</value>
+    </data>
+    <data name="PageNotFound" xml:space="preserve">
+        <value>الصفحة غير موجودة</value>
+    </data>
+    <data name="PageNotFoundSorryMessage" xml:space="preserve">
+        <value>عذراً، الصفحة التي تبحث عنها غير موجودة أو ربما تم نقلها.</value>
+    </data>
+    <data name="Solutions" xml:space="preserve">
+        <value>الحلول</value>
+    </data>
+    <data name="PleaseCheckPage" xml:space="preserve">
+        <value>يرجى التحقق من عنوان الصفحة مرة أخرى.</value>
+    </data>
+    <data name="GotToHomePageDescription" xml:space="preserve">
+        <value>انتقل إلى القسم المطلوب من الصفحة الرئيسية.</value>
+    </data>
+    <data name="PleaseContactSupportErrorMessage" xml:space="preserve">
+        <value>إذا كنت متأكدًا من أن هذا خطأ في النظام، يرجى الاتصال بالدعم.</value>
+    </data>
+    <data name="AccountBlocked" xml:space="preserve">
+        <value>تم حظر حسابك.</value>
+    </data>
+    <data name="Country Code" xml:space="preserve">
+        <value>فقط الفئات اللي تقدر تعدل فيها هي اللي ما تحتوي على أرقام لوحات، أو أرقام هواتف، أو عقارات.</value>
+    </data>
+    <data name="EditRestrictionCategories" xml:space="preserve">
+        <value>ليس لديك صلاحية لعرض هذه الصفحة. قد يكون هذا بسبب أحد الأسباب التالية:</value>
+    </data>
+    <data name="UnauthorizedReasonLoginRequired" xml:space="preserve">
+        <value>تتطلب تعديل أو عرض هذا القسم تسجيل الدخول إلى حسابك.</value>
+    </data>
+    <data name="UnauthorizedReasonInsufficientPermission" xml:space="preserve">
+        <value>مستوى الوصول لحسابك الحالي غير كافٍ لهذه العملية.</value>
+    </data>
+    <data name="UnauthorizedActionsTitle" xml:space="preserve">
+        <value>ما يمكنك فعله:</value>
+    </data>
+    <data name="UnauthorizedActionLogin" xml:space="preserve">
+        <value>إذا كان لديك حساب، يرجى تسجيل الدخول أولاً ثم المحاولة مرة أخرى.</value>
+    </data>
+    <data name="UnauthorizedActionContactSupport" xml:space="preserve">
+        <value>إذا كان يجب أن يكون لديك وصول إلى هذه الصفحة ولكن ليس لديك، يرجى التواصل مع الدعم أو مسؤول النظام.</value>
+    </data>
+    <data name="UnauthorizedPageMessage" xml:space="preserve">
+        <value>إذا كان يجب أن يكون لديك وصول إلى هذه الصفحة ولكن ليس لديك، يرجى التواصل مع الدعم أو مسؤول النظام.</value>
+    </data>
+    <data name="UnauthorizedActionGoHome" xml:space="preserve">
+        <value>للعودة السريعة إلى الصفحة الرئيسية، استخدم زر "العودة إلى الرئيسية".</value>
+    </data>
+    <data name="WaitBeforeNextOtp" xml:space="preserve">
+        <value>يُرجى الانتظار دقيقتين قبل طلب رمز جديد.</value>
+    </data>
+</root>

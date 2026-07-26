@@ -1,0 +1,39 @@
+Add Migration:dotnet ef database update --project Announcement/Core/Persistence/Persistence.csproj --startup-project Announcement/Presentation/RestFullApi/RestFullApi.csproj --context Persistence.DatabaseContext --configuration Debug
+
+linux:
+dotnet ef migrations add --project Announcement/Core/Persistence/Persistence.csproj --startup-project Announcement/Presentation/RestFullApi/RestFullApi.csproj --context Persistence.DatabaseContext --configuration Debug <NameMigration> --output-dir Migrations
+
+windows:
+dotnet ef migrations add --project Announcement\Core\Persistence\Persistence.csproj --startup-project Announcement\Presentation\RestFullApi\RestFullApi.csproj --context Persistence.DatabaseContext --configuration Debug InitialDb --output-dir Migrations
+    
+Update Database:
+windows:
+dotnet ef database update --project Announcement\Core\Persistence\Persistence.csproj --startup-project Announcement\Presentation\RestFullApi\RestFullApi.csproj --context Persistence.DatabaseContext --configuration Debug
+
+linux:
+dotnet ef database update --project Announcement/Core/Persistence/Persistence.csproj --startup-project Announcement/Presentation/RestFullApi/RestFullApi.csproj --context Persistence.DatabaseContext --configuration Debug
+
+Remove Migration:
+dotnet ef migrations remove --project Announcement/Core/Persistence/Persistence.csproj --startup-project Announcement/Presentation/RestFullApi/RestFullApi.csproj --context Persistence.DatabaseContext --configuration Debug
+
+-- force
+dotnet ef migrations remove --project Announcement/Core/Persistence/Persistence.csproj --startup-project Announcement/Presentation/RestFullApi/RestFullApi.csproj --context Persistence.DatabaseContext --configuration Debug --force
+
+var provinces = File.ReadAllText("Scripts/Provinces.sql");
+migrationBuilder.Sql(provinces);
+
+var cities = File.ReadAllText("Scripts/Cities.sql");
+migrationBuilder.Sql(cities);
+
+linux:
+publish panel admin:
+dotnet publish -c Release -o '/home/ehsanshahsevani/publish/talasoot/blazor admin'
+
+windows:
+LEVEL 1 [Clear All Files And Folders]:
+Remove-Item -Path "C:\Users\Acer\Desktop\publish-oman\Client\*" -Recurse -Force
+LEVEL 2 [Start Publish]:
+dotnet publish -c Release -o "C:\Users\Acer\Desktop\publish-oman\Client"
+
+blazor hot reload:
+dotnet watch run --no-hot-reload --no-restore

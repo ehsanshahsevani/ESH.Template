@@ -1,0 +1,1344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionPlaceHasTicketError" xml:space="preserve">
+    <value>This action location has reports and cannot be deleted.</value>
+  </data>
+  <data name="ActionPlaceIsNull" xml:space="preserve">
+    <value>No action location exists.</value>
+  </data>
+  <data name="ActionPlaceNameRequired" xml:space="preserve">
+    <value>Action location name is required.</value>
+  </data>
+  <data name="ActionPlaceNotFound" xml:space="preserve">
+    <value>The specified action location was not found.</value>
+  </data>
+  <data name="ActionPlaceSelectError" xml:space="preserve">
+    <value>No action location has been selected.</value>
+  </data>
+  <data name="ActionTypeHasTicketError" xml:space="preserve">
+    <value>This action type has reports and cannot be deleted.</value>
+  </data>
+  <data name="ActionTypeIsNull" xml:space="preserve">
+    <value>No action type exists.</value>
+  </data>
+  <data name="ActionTypeNameRequired" xml:space="preserve">
+    <value>Action type name is required.</value>
+  </data>
+  <data name="ActionTypeNotFound" xml:space="preserve">
+    <value>Action type was not found.</value>
+  </data>
+  <data name="ActionTypeSelectedError" xml:space="preserve">
+    <value>Please enter the action type.</value>
+  </data>
+  <data name="AlbumSelect" xml:space="preserve">
+    <value>Please select the related album!</value>
+  </data>
+  <data name="AnswerChangeStatusTicket" xml:space="preserve">
+    <value>The status of your ticket number {0} was changed from '{1}' to '{2}' by ( {3} ).</value>
+  </data>
+  <data name="AnswerForThisReferenceNotFound" xml:space="preserve">
+    <value>No answer was found for this referral.</value>
+  </data>
+  <data name="AttachFormat" xml:space="preserve">
+    <value>Please upload a file in .zip, .pdf, .rtf, .doc, or .docx format!</value>
+  </data>
+  <data name="CategoryNameRequired" xml:space="preserve">
+    <value>Topic title is required.</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>No topic was found.</value>
+  </data>
+  <data name="CategorySelectedError" xml:space="preserve">
+    <value>No topic has been selected.</value>
+  </data>
+  <data name="CompanyIsDeleted" xml:space="preserve">
+    <value>The specified company was successfully deleted.</value>
+  </data>
+  <data name="CreateDateFormat" xml:space="preserve">
+    <value>Please check the start date format.</value>
+  </data>
+  <data name="CreateSuccessMessage" xml:space="preserve">
+    <value>{0} was created successfully.</value>
+  </data>
+  <data name="CustomerExpiredError" xml:space="preserve">
+    <value>Your company validity period has expired. Please coordinate with the company.</value>
+  </data>
+  <data name="CustomerHasMappingError" xml:space="preserve">
+    <value>To delete the selected company, first check the group mappings.</value>
+  </data>
+  <data name="CustomerHasprojectError" xml:space="preserve">
+    <value>To delete a company, first delete its projects.</value>
+  </data>
+  <data name="CustomerHasUserError" xml:space="preserve">
+    <value>To delete a company, first delete its users.</value>
+  </data>
+  <data name="CustomerNotActiveError" xml:space="preserve">
+    <value>The selected company is not active. Please coordinate with the company.</value>
+  </data>
+  <data name="CustomerNotExist" xml:space="preserve">
+    <value>No company exists.</value>
+  </data>
+  <data name="CustomerNotFound" xml:space="preserve">
+    <value>No company was found.</value>
+  </data>
+  <data name="CustomerOrCompanyIsNull" xml:space="preserve">
+    <value>Customer/company does not exist.</value>
+  </data>
+  <data name="CustomerSelectedError" xml:space="preserve">
+    <value>No company has been selected.</value>
+  </data>
+  <data name="DateConflictError" xml:space="preserve">
+    <value>There is a date conflict.</value>
+  </data>
+  <data name="DateFormat" xml:space="preserve">
+    <value>Invalid date format!</value>
+  </data>
+  <data name="DateOfOperation" xml:space="preserve">
+    <value>The operation date has not been entered.</value>
+  </data>
+  <data name="DegreeOfEducation" xml:space="preserve">
+    <value>Education Level</value>
+  </data>
+  <data name="DeleteMessageSuccess" xml:space="preserve">
+    <value>{0} was deleted successfully.</value>
+  </data>
+  <data name="DescriptionIsRequired" xml:space="preserve">
+    <value>Description is required.</value>
+  </data>
+  <data name="DigitFormat" xml:space="preserve">
+    <value>Please enter numeric fields correctly.</value>
+  </data>
+  <data name="DiscountCode" xml:space="preserve">
+    <value>Please enter the discount code.</value>
+  </data>
+  <data name="EditError" xml:space="preserve">
+    <value>Error saving changes!</value>
+  </data>
+  <data name="EditSuccess" xml:space="preserve">
+    <value>Changes were saved successfully.</value>
+  </data>
+  <data name="EmailFormat" xml:space="preserve">
+    <value>Please enter the email format correctly.</value>
+  </data>
+  <data name="EmailHelp" xml:space="preserve">
+    <value>After completing the required information and selecting the appropriate recipient, click the Send button.</value>
+  </data>
+  <data name="EmploymentStatus" xml:space="preserve">
+    <value>Employment Status</value>
+  </data>
+  <data name="EmpttyTitle" xml:space="preserve">
+    <value>Please enter the desired title!</value>
+  </data>
+  <data name="EmptyAnswer" xml:space="preserve">
+    <value>You have not entered any answer to your question!</value>
+  </data>
+  <data name="EmptyEmail" xml:space="preserve">
+    <value>Please enter your email address!</value>
+  </data>
+  <data name="EmptyFields" xml:space="preserve">
+    <value>Please enter the field!</value>
+  </data>
+  <data name="EmptyFile" xml:space="preserve">
+    <value>Please select the desired file!</value>
+  </data>
+  <data name="Emptyheight" xml:space="preserve">
+    <value>Please enter the height!</value>
+  </data>
+  <data name="EmptyLesson" xml:space="preserve">
+    <value>Please enter the lesson!</value>
+  </data>
+  <data name="EmptyPoll" xml:space="preserve">
+    <value>Please select an option to submit your opinion!</value>
+  </data>
+  <data name="EmptyQuestion" xml:space="preserve">
+    <value>Please enter your question!</value>
+  </data>
+  <data name="EmptySection" xml:space="preserve">
+    <value>Please enter the section name!</value>
+  </data>
+  <data name="EmptyText" xml:space="preserve">
+    <value>Please enter the text!</value>
+  </data>
+  <data name="EmptyTitle" xml:space="preserve">
+    <value>Please enter the title!</value>
+  </data>
+  <data name="EmptyUniversity" xml:space="preserve">
+    <value>Please enter the university!</value>
+  </data>
+  <data name="EmptyWidth" xml:space="preserve">
+    <value>Please enter the width!</value>
+  </data>
+  <data name="ErrorCompare" xml:space="preserve">
+    <value>The fields do not match.</value>
+  </data>
+  <data name="ErrorLogin" xml:space="preserve">
+    <value>The username or password is incorrect. Please try again!</value>
+  </data>
+  <data name="ErrorPathFile" xml:space="preserve">
+    <value>Invalid address.</value>
+  </data>
+  <data name="ErrorRequired" xml:space="preserve">
+    <value>Field {0} is required.</value>
+  </data>
+  <data name="ErrorSizeFile" xml:space="preserve">
+    <value>Your file {0} cannot be larger than {1} MB.</value>
+  </data>
+  <data name="ErroZiroByteFile" xml:space="preserve">
+    <value>Invalid file.</value>
+  </data>
+  <data name="ExpireDateFormat" xml:space="preserve">
+    <value>Please check the end date format.</value>
+  </data>
+  <data name="FamilyEmpty" xml:space="preserve">
+    <value>Please enter the last name.</value>
+  </data>
+  <data name="FAQCategorySelectedError" xml:space="preserve">
+    <value>Please select a knowledge base topic.</value>
+  </data>
+  <data name="FAQIsNull" xml:space="preserve">
+    <value>No item has been registered in the knowledge base.</value>
+  </data>
+  <data name="FAQNotFoundError" xml:space="preserve">
+    <value>The specified knowledge base was not found.</value>
+  </data>
+  <data name="FieldOfStudy" xml:space="preserve">
+    <value>Field of Study</value>
+  </data>
+  <data name="File1MBError" xml:space="preserve">
+    <value>The maximum allowed upload size is 1 MB.</value>
+  </data>
+  <data name="FileEmpty" xml:space="preserve">
+    <value>Please select a file!</value>
+  </data>
+  <data name="FileError_SelectNewFile" xml:space="preserve">
+    <value>An error occurred. Please try a new file.</value>
+  </data>
+  <data name="FileExtensionError" xml:space="preserve">
+    <value>File {0} has an invalid extension. Allowed extensions: {1}.</value>
+  </data>
+  <data name="FileSelect" xml:space="preserve">
+    <value>Select the desired file.</value>
+  </data>
+  <data name="FindUserIdFailed" xml:space="preserve">
+    <value>The specified user was not found.</value>
+  </data>
+  <data name="FixedLengthError" xml:space="preserve">
+    <value>The value of field {0} must be exactly {1}.</value>
+  </data>
+  <data name="ForOrdering" xml:space="preserve">
+    <value>Order By</value>
+  </data>
+  <data name="GifOnly" xml:space="preserve">
+    <value>You must upload a file in gif format!</value>
+  </data>
+  <data name="GroupEmpty" xml:space="preserve">
+    <value>Please enter the group.</value>
+  </data>
+  <data name="GroupHasMappingError" xml:space="preserve">
+    <value>To delete a group, first delete that group's mappings.</value>
+  </data>
+  <data name="GroupHasUserError" xml:space="preserve">
+    <value>A group that contains users cannot be deleted.</value>
+  </data>
+  <data name="GroupIsNull" xml:space="preserve">
+    <value>No group exists.</value>
+  </data>
+  <data name="GroupNotExist" xml:space="preserve">
+    <value>No group exists.</value>
+  </data>
+  <data name="GroupNotFound" xml:space="preserve">
+    <value>The specified group was not found.</value>
+  </data>
+  <data name="GroupRelationIsNull" xml:space="preserve">
+    <value>No relationship exists between groups.</value>
+  </data>
+  <data name="GroupSelectError" xml:space="preserve">
+    <value>No group has been selected.</value>
+  </data>
+  <data name="ImgFormat" xml:space="preserve">
+    <value>You must upload a file in gif, jpg, jpeg, or bmp format!</value>
+  </data>
+  <data name="ImgSize" xml:space="preserve">
+    <value>The file size is too large.</value>
+  </data>
+  <data name="IsNullMessages" xml:space="preserve">
+    <value>No {0} exists.</value>
+  </data>
+  <data name="IsNullWarning" xml:space="preserve">
+    <value>No {0} exists.</value>
+  </data>
+  <data name="ItemNotFound" xml:space="preserve">
+    <value>The specified item was not found.</value>
+  </data>
+  <data name="LastNameRequired" xml:space="preserve">
+    <value>Last name is required.</value>
+  </data>
+  <data name="LinkFormat" xml:space="preserve">
+    <value>The entered link format is invalid!</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Please wait a moment.</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>The username or password is incorrect!</value>
+  </data>
+  <data name="LogOutedMessage" xml:space="preserve">
+    <value>Your account has been closed.</value>
+  </data>
+  <data name="LogOutFromAccount" xml:space="preserve">
+    <value>Log out of account</value>
+  </data>
+  <data name="LogOutFromAccount1" xml:space="preserve">
+    <value>Log out of account</value>
+  </data>
+  <data name="MappingNotFound" xml:space="preserve">
+    <value>No route was found to refer this ticket.</value>
+  </data>
+  <data name="MappingOwnerCompanyNotFound" xml:space="preserve">
+    <value>The specified ticket cannot be referred to the owner company.</value>
+  </data>
+  <data name="MaritalStatus" xml:space="preserve">
+    <value>Marital Status</value>
+  </data>
+  <data name="MaximumSize1MB" xml:space="preserve">
+    <value>Maximum file size is 1 MB.</value>
+  </data>
+  <data name="MaxLengthError" xml:space="preserve">
+    <value>The maximum number of characters for field {0} is {1}.</value>
+  </data>
+  <data name="MaxSize500000" xml:space="preserve">
+    <value>The file size must be less than 500000 bytes!</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Please enter your message!</value>
+  </data>
+  <data name="MinTicketCountError" xml:space="preserve">
+    <value>The maximum ticket submission limit cannot be 0.</value>
+  </data>
+  <data name="MobileError" xml:space="preserve">
+    <value>Please check the mobile number.</value>
+  </data>
+  <data name="NameRequired" xml:space="preserve">
+    <value>Name is required.</value>
+  </data>
+  <data name="NationalCodeError" xml:space="preserve">
+    <value>Please check the national code.</value>
+  </data>
+  <data name="NotAccessToAdminGroup" xml:space="preserve">
+    <value>You do not have access to the management group.</value>
+  </data>
+  <data name="NotAccessToPageConnectToCompany" xml:space="preserve">
+    <value>Access level restriction. Please coordinate with the company.</value>
+  </data>
+  <data name="NotFoundError" xml:space="preserve">
+    <value>The requested {0} was not found.</value>
+  </data>
+  <data name="NumberRange" xml:space="preserve">
+    <value>The entered number is outside the allowed range.</value>
+  </data>
+  <data name="PasswordConfirmRequired" xml:space="preserve">
+    <value>Password confirmation is required.</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Password is required.</value>
+  </data>
+  <data name="Password_PasswordConfirmError" xml:space="preserve">
+    <value>Password and password confirmation do not match.</value>
+  </data>
+  <data name="PhoneError" xml:space="preserve">
+    <value>Please check the phone number.</value>
+  </data>
+  <data name="PhoneNumberStartWithError" xml:space="preserve">
+    <value>The contact number is invalid.</value>
+  </data>
+  <data name="PleaseLoginInSite" xml:space="preserve">
+    <value>Please log in to your account before using the site.</value>
+  </data>
+  <data name="PostEmpty" xml:space="preserve">
+    <value>Please enter the position!</value>
+  </data>
+  <data name="PostNotExistError" xml:space="preserve">
+    <value>No post exists.</value>
+  </data>
+  <data name="PostTypeInitialIsNotWorking" xml:space="preserve">
+    <value>Post types have encountered an issue.</value>
+  </data>
+  <data name="ProjectHasGroup" xml:space="preserve">
+    <value>To delete the project, first delete the related groups.</value>
+  </data>
+  <data name="ProjectHasMapping" xml:space="preserve">
+    <value>To delete the project, first delete its group mappings.</value>
+  </data>
+  <data name="ProjectHasSubSystemError" xml:space="preserve">
+    <value>To delete a project, first delete its subsystems.</value>
+  </data>
+  <data name="ProjectIsNull" xml:space="preserve">
+    <value>No project exists.</value>
+  </data>
+  <data name="ProjectNameRequired" xml:space="preserve">
+    <value>Project name is required.</value>
+  </data>
+  <data name="ProjectNotExist" xml:space="preserve">
+    <value>No project exists.</value>
+  </data>
+  <data name="ProjectNotFound" xml:space="preserve">
+    <value>The specified project was not found.</value>
+  </data>
+  <data name="ProjectSelectedError" xml:space="preserve">
+    <value>No project has been selected.</value>
+  </data>
+  <data name="QuestionDelete" xml:space="preserve">
+    <value>Are you sure you want to delete the selected record?</value>
+  </data>
+  <data name="QuestionEmpty" xml:space="preserve">
+    <value>Please enter the question text.</value>
+  </data>
+  <data name="QuestionUpdate" xml:space="preserve">
+    <value>Do you want to save the changes?</value>
+  </data>
+  <data name="QueueSentTicketIsFull" xml:space="preserve">
+    <value>Your ticket submission queue to the company is full. Please coordinate with the company.</value>
+  </data>
+  <data name="RangeFieldError" xml:space="preserve">
+    <value>Field {0} must be between {1} and {2}.</value>
+  </data>
+  <data name="RangNo1000" xml:space="preserve">
+    <value>Please enter a number in the range of 0 to 1000!</value>
+  </data>
+  <data name="RangUnit" xml:space="preserve">
+    <value>Please enter a number between 0 and 10!</value>
+  </data>
+  <data name="ReferenceIsSeccess" xml:space="preserve">
+    <value>Referral was completed successfully.</value>
+  </data>
+  <data name="ReferenceTicketWithSaveAnswer" xml:space="preserve">
+    <value>Refer and save answer</value>
+  </data>
+  <data name="RelationIsActiveError" xml:space="preserve">
+    <value>To delete this record, first remove its dependencies.</value>
+  </data>
+  <data name="ReportIsDeleted" xml:space="preserve">
+    <value>The specified report was successfully deleted.</value>
+  </data>
+  <data name="ReportIsNull" xml:space="preserve">
+    <value>No report exists.</value>
+  </data>
+  <data name="ReportNotFound" xml:space="preserve">
+    <value>The specified report was not found.</value>
+  </data>
+  <data name="RequiredError" xml:space="preserve">
+    <value>The value {0} is required.</value>
+  </data>
+  <data name="RoleNameRequired" xml:space="preserve">
+    <value>Role name is required.</value>
+  </data>
+  <data name="RoleNotExist" xml:space="preserve">
+    <value>No role exists.</value>
+  </data>
+  <data name="RoleNotFound" xml:space="preserve">
+    <value>The specified role was not found.</value>
+  </data>
+  <data name="RoleSelectedError" xml:space="preserve">
+    <value>Please select a role.</value>
+  </data>
+  <data name="RoleTitleRequired" xml:space="preserve">
+    <value>The Persian role title is required.</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>Error saving information!</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>Information was saved successfully.</value>
+  </data>
+  <data name="SaveTicketToReport" xml:space="preserve">
+    <value>Register as report</value>
+  </data>
+  <data name="SaveTicketWhenCountFAQZiro" xml:space="preserve">
+    <value>If you do not find your issue, you can submit a ticket.</value>
+  </data>
+  <data name="SearchInFAQ" xml:space="preserve">
+    <value>Search in knowledge base</value>
+  </data>
+  <data name="SearchResultIsNull" xml:space="preserve">
+    <value>No results were found.</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="SelectedCategoryError" xml:space="preserve">
+    <value>Please select a topic.</value>
+  </data>
+  <data name="SelectedFieldRequired" xml:space="preserve">
+    <value>Selecting field {0} is required.</value>
+  </data>
+  <data name="SelectedSubSystemError" xml:space="preserve">
+    <value>Please select a subsystem.</value>
+  </data>
+  <data name="SelectedUserPriotryError" xml:space="preserve">
+    <value>Please select a priority.</value>
+  </data>
+  <data name="SelectItem" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SelectSubSystemOrProjectError" xml:space="preserve">
+    <value>Selecting a subsystem or project is required.</value>
+  </data>
+  <data name="SelectTrueOptionUsers" xml:space="preserve">
+    <value>Select the desired items from among the people.</value>
+  </data>
+  <data name="SelectUserGroupProjectOrUserFromProjectSelected" xml:space="preserve">
+    <value>Selecting a group or a person in a group is required.</value>
+  </data>
+  <data name="SendCodeFail" xml:space="preserve">
+    <value>Error sending code.</value>
+  </data>
+  <data name="SendCodeSuccess" xml:space="preserve">
+    <value>A one-time password has been sent to you.</value>
+  </data>
+  <data name="ServerReqestError" xml:space="preserve">
+    <value>Error responding to the request.</value>
+  </data>
+  <data name="ShowProfilePage" xml:space="preserve">
+    <value>Show profile</value>
+  </data>
+  <data name="SiteTitle" xml:space="preserve">
+    <value>Please enter the site title.</value>
+  </data>
+  <data name="StatusTicketNotFound" xml:space="preserve">
+    <value>The specified service was not found!</value>
+  </data>
+  <data name="SubSystemHasTicketError" xml:space="preserve">
+    <value>Subystems with registered tickets cannot be deleted.</value>
+  </data>
+  <data name="SubSystemIsNull" xml:space="preserve">
+    <value>No subsystem exists.</value>
+  </data>
+  <data name="SubSystemNameRequired" xml:space="preserve">
+    <value>Subsystem name is required.</value>
+  </data>
+  <data name="SubSystemNotExist" xml:space="preserve">
+    <value>No subsystem exists.</value>
+  </data>
+  <data name="SubSystemNotFound" xml:space="preserve">
+    <value>No subsystem was found.</value>
+  </data>
+  <data name="SubsystemSelectedError" xml:space="preserve">
+    <value>No subsystem has been selected.</value>
+  </data>
+  <data name="SuccessLoginMessage" xml:space="preserve">
+    <value>You have successfully logged in to your account.</value>
+  </data>
+  <data name="SupportManagmentGroupInCustomerNotFound" xml:space="preserve">
+    <value>Organization management group was not found / a system error occurred.</value>
+  </data>
+  <data name="SystemError" xml:space="preserve">
+    <value>A system error occurred.</value>
+  </data>
+  <data name="SystemErrorReLogin" xml:space="preserve">
+    <value>A system error occurred. Please log in again and try again.</value>
+  </data>
+  <data name="SystemError_TryAgain" xml:space="preserve">
+    <value>A system error occurred. Please try again.</value>
+  </data>
+  <data name="TestNewPasswordError" xml:space="preserve">
+    <value>Please try a new password.</value>
+  </data>
+  <data name="TextFormat" xml:space="preserve">
+    <value>Please upload a file in .pdf, .doc, or .docx format!</value>
+  </data>
+  <data name="ThisNameIsExist" xml:space="preserve">
+    <value>The desired name already exists in the system.</value>
+  </data>
+  <data name="ThisRelationIsExist" xml:space="preserve">
+    <value>This relationship already exists.</value>
+  </data>
+  <data name="TicketNotFound" xml:space="preserve">
+    <value>The specified ticket was not found.</value>
+  </data>
+  <data name="TicketReferenceForTicketNotSet" xml:space="preserve">
+    <value>No referral route was found for the specified ticket with the selected project and subsystem. Please coordinate with the support team.</value>
+  </data>
+  <data name="TicketReferenceNotExist" xml:space="preserve">
+    <value>No default referrals exist.</value>
+  </data>
+  <data name="TicketTypeIsRequired" xml:space="preserve">
+    <value>Ticket type is required.</value>
+  </data>
+  <data name="TicketTypeNotFound" xml:space="preserve">
+    <value>The specified ticket type was not found.</value>
+  </data>
+  <data name="TimeOfOperation" xml:space="preserve">
+    <value>The operation time has not been entered.</value>
+  </data>
+  <data name="TimeOutSendCodeError" xml:space="preserve">
+    <value>Please use the last code that was sent to you.</value>
+  </data>
+  <data name="TitleIsRequired" xml:space="preserve">
+    <value>Title is required.</value>
+  </data>
+  <data name="UpdateMessageSuccess" xml:space="preserve">
+    <value>{0} was updated successfully.</value>
+  </data>
+  <data name="UseCustomers" xml:space="preserve">
+    <value>Customers in use</value>
+  </data>
+  <data name="Useprojects" xml:space="preserve">
+    <value>Projects in use</value>
+  </data>
+  <data name="UserAddedInListGroup" xml:space="preserve">
+    <value>Added users</value>
+  </data>
+  <data name="UserExistInGroup" xml:space="preserve">
+    <value>The specified user exists in this group.</value>
+  </data>
+  <data name="UserExpiredError" xml:space="preserve">
+    <value>Please contact the company to log in with this account.</value>
+  </data>
+  <data name="UserGroupProjectNotFound" xml:space="preserve">
+    <value>No relationship was found for the specified person and group.</value>
+  </data>
+  <data name="UserGroupProjectSelectError" xml:space="preserve">
+    <value>Please select a person with the specified group.</value>
+  </data>
+  <data name="UserHasTicketError" xml:space="preserve">
+    <value>Users who have submitted tickets cannot be deleted.</value>
+  </data>
+  <data name="UserNameIsExistError" xml:space="preserve">
+    <value>The specified username is duplicate.</value>
+  </data>
+  <data name="UserNameRequied" xml:space="preserve">
+    <value>Username is required.</value>
+  </data>
+  <data name="UserNotActiveError" xml:space="preserve">
+    <value>The specified user is not active.</value>
+  </data>
+  <data name="UserNotExist" xml:space="preserve">
+    <value>No user exists.</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>The specified user was not found.</value>
+  </data>
+  <data name="UserPriotryIsRequired" xml:space="preserve">
+    <value>User priority is required.</value>
+  </data>
+  <data name="UserPriotryNotFound" xml:space="preserve">
+    <value>The specified user priority was not found.</value>
+  </data>
+  <data name="UserPriotryNotSelected" xml:space="preserve">
+    <value>Please select the user priority.</value>
+  </data>
+  <data name="UserSelectedCustomer" xml:space="preserve">
+    <value>Users of the selected company</value>
+  </data>
+  <data name="UserWithGroupHasTicketReferenceError" xml:space="preserve">
+    <value>A user selected on the default referrals page cannot be deleted.</value>
+  </data>
+  <data name="ViewOnTheMainPage" xml:space="preserve">
+    <value>Show on the main page</value>
+  </data>
+  <data name="CountFileError" xml:space="preserve">
+    <value>The number of files exceeds the maximum allowed count of {0}.</value>
+  </data>
+  <data name="VolumeFileError" xml:space="preserve">
+    <value>File {0} exceeds the maximum size of {1} MB.</value>
+  </data>
+  <data name="UnAcceptablePrice" xml:space="preserve">
+    <value>The entered amount is not valid.</value>
+  </data>
+  <data name="ReturnRequestNotFound" xml:space="preserve">
+    <value>Return request was not found.</value>
+  </data>
+  <data name="ReturnRequestStillNotChecked" xml:space="preserve">
+    <value>The return request has not been reviewed yet.</value>
+  </data>
+  <data name="ReturnRequestAccepted" xml:space="preserve">
+    <value>The specified return request was successfully approved.</value>
+  </data>
+  <data name="ReturnRequestRejected" xml:space="preserve">
+    <value>The specified return request was successfully rejected.</value>
+  </data>
+  <data name="ReturnRejectDescriptionNotEnterd" xml:space="preserve">
+    <value>The return rejection reason has not been entered.</value>
+  </data>
+  <data name="GroupId" xml:space="preserve">
+    <value>Return group identification field in the returns table</value>
+  </data>
+  <data name="PageSettingDeleted" xml:space="preserve">
+    <value>Page settings were deleted.</value>
+  </data>
+  <data name="TableIsEmpty" xml:space="preserve">
+    <value>No data has been registered.</value>
+  </data>
+  <data name="ImageNotExist" xml:space="preserve">
+    <value>Image does not exist.</value>
+  </data>
+  <data name="TokenLifeTimeError" xml:space="preserve">
+    <value>Your account session has expired. Please log in again.</value>
+  </data>
+  <data name="PhoneNumberAndCaptchaError" xml:space="preserve">
+    <value>The mobile number or captcha is incorrect.</value>
+  </data>
+  <data name="CaptchaNotFound" xml:space="preserve">
+    <value>Please enter the captcha again.</value>
+  </data>
+  <data name="BeforeCodeIsActive" xml:space="preserve">
+    <value>Your previous code is still active.</value>
+  </data>
+  <data name="OtpCodeIsInvalid" xml:space="preserve">
+    <value>The one-time password is not valid.</value>
+  </data>
+  <data name="LawNotFoundFileError" xml:space="preserve">
+    <value>An issue occurred! According to server rules and settings ( {0} ), you are not allowed to upload files for section ( {1} ). Please contact support.</value>
+  </data>
+  <data name="ExtensionFileNotFound" xml:space="preserve">
+    <value>No suitable extension was found for the file.</value>
+  </data>
+  <data name="ExtensionFileNotSupported" xml:space="preserve">
+    <value>The server does not support the current extension.</value>
+  </data>
+  <data name="DataFound" xml:space="preserve">
+    <value>The requested data was found.</value>
+  </data>
+  <data name="Network_Internet_Error" xml:space="preserve">
+    <value>Please check your internet connection.</value>
+  </data>
+  <data name="ListRolesIsNotEmpty" xml:space="preserve">
+    <value>The roles list cannot be empty.</value>
+  </data>
+  <data name="AlreadyAxistsInTheList" xml:space="preserve">
+    <value>{0} with value {1} has already been added.</value>
+  </data>
+  <data name="LisIsNotEmpty" xml:space="preserve">
+    <value>The {0} list cannot be empty.</value>
+  </data>
+  <data name="AssemblyCannotBeNull" xml:space="preserve">
+    <value>The required assembly for checking subsystem settings was not found.</value>
+  </data>
+  <data name="ServerIsErlyExistButThisServerKeyIsChanged" xml:space="preserve">
+    <value>The current server exists, but the server key has changed. Please coordinate with the technical team.</value>
+  </data>
+  <data name="ServerIsCheck" xml:space="preserve">
+    <value>Server with ID {0} was checked.</value>
+  </data>
+  <data name="TextLoading" xml:space="preserve">
+    <value>Loading ...</value>
+  </data>
+  <data name="ForSEO" xml:space="preserve">
+    <value>Suitable for SEO</value>
+  </data>
+  <data name="ForWaitMouseOnImage" xml:space="preserve">
+    <value>Mouse hover over image</value>
+  </data>
+  <data name="ConfirmWarning" xml:space="preserve">
+    <value>This action cannot be undone.</value>
+  </data>
+  <data name="ConfirmMessageSuccess" xml:space="preserve">
+    <value>Store approval status was changed successfully.</value>
+  </data>
+  <data name="QuestionDeleteAttachments" xml:space="preserve">
+    <value>Do you want to delete the files related to this record?</value>
+  </data>
+  <data name="CloseAndTryAgain" xml:space="preserve">
+    <value>Close and try again</value>
+  </data>
+  <data name="CountError" xml:space="preserve">
+    <value>{0} cannot be less than {1}.</value>
+  </data>
+  <data name="RepeatError" xml:space="preserve">
+    <value>Field {0} is duplicate.</value>
+  </data>
+  <data name="ChangeStatusSuccess" xml:space="preserve">
+    <value>Status changed successfully.</value>
+  </data>
+  <data name="ChangePrice" xml:space="preserve">
+    <value>Change Price</value>
+  </data>
+  <data name="ErrorPercentValue" xml:space="preserve">
+    <value>The percentage cannot be less than 1 or greater than 100.</value>
+  </data>
+  <data name="MinAndMaxValueFieldError" xml:space="preserve">
+    <value>The value of field {0} cannot be less than {1} or greater than {2}.</value>
+  </data>
+  <data name="ShopAndProductRequired" xml:space="preserve">
+    <value>Selecting a store and product is required.</value>
+  </data>
+  <data name="ImageSettings" xml:space="preserve">
+    <value>Image settings</value>
+  </data>
+  <data name="InformationPriceIsRequired" xml:space="preserve">
+    <value>Product price history information is required.</value>
+  </data>
+  <data name="QuestionDeleteOtherImages" xml:space="preserve">
+    <value>Are you sure you want to delete all images except this product's profile image?</value>
+  </data>
+  <data name="QuestionChangeActivation" xml:space="preserve">
+    <value>Are you sure you want to change this product's status?</value>
+  </data>
+  <data name="QuestionMoveProductToPriceInquery" xml:space="preserve">
+    <value>Are you sure you want to change this product's price to price inquiry?</value>
+  </data>
+  <data name="FieldMinValueError" xml:space="preserve">
+    <value>{0} must be greater than {1}.</value>
+  </data>
+  <data name="FieldConflictError" xml:space="preserve">
+    <value>{0} must not conflict with {2}.</value>
+  </data>
+  <data name="UpdateMovedFromCategoryToCategoryMessageSuccess" xml:space="preserve">
+    <value>Products were successfully moved from one category to another.</value>
+  </data>
+  <data name="SuccessMoveAllProductToRequestCheckPriceMessage" xml:space="preserve">
+    <value>The products in the selected category were successfully moved to price inquiry status.</value>
+  </data>
+  <data name="FieldMaxValueError" xml:space="preserve">
+    <value>{0} must be less than {1}.</value>
+  </data>
+  <data name="CreateUserMoneyAssets" xml:space="preserve">
+    <value>Wallet of user {0}</value>
+  </data>
+  <data name="CreateUserGoldAssets" xml:space="preserve">
+    <value>Gold assets of user {0}</value>
+  </data>
+  <data name="CreateUserBankAccount" xml:space="preserve">
+    <value>Bank account {0} for user {1} with card number {2}</value>
+  </data>
+  <data name="UserRoundCode" xml:space="preserve">
+    <value>Income from rounding balance {0}</value>
+  </data>
+  <data name="FirstUserAssetsDescription" xml:space="preserve">
+    <value>Registering the first asset for user {0} {1} with wallet balance 0 and gold balance 0</value>
+  </data>
+  <data name="DocumentForTextDocumentTypeDeposit" xml:space="preserve">
+    <value>Wallet top-up for user {0}, amount {1:N0} toman, on {2} | {3}</value>
+  </data>
+  <data name="DocumentForTextDocumentTypeWithdraw" xml:space="preserve">
+    <value>Withdrawal from user {0}'s wallet, amount {1:N0} toman, on {2} | {3}</value>
+  </data>
+  <data name="DocumentForTextDocumentTypeBuyNow" xml:space="preserve">
+    <value>Purchase of molten gold by user {0}, amount {1} soot, on {2} | {3}</value>
+  </data>
+  <data name="DocumentForTextDocumentTypeSellNow" xml:space="preserve">
+    <value>Sale of molten gold by user {0}, amount {1} soot, on {2} | {3}</value>
+  </data>
+  <data name="DocumentForTextDocumentTypeReferal" xml:space="preserve">
+    <value>Referral gift deposit as molten gold for user {0}, amount {1} soot, on {2} | {3}</value>
+  </data>
+  <data name="RestrictedAccessToThisRecordContactTechnicalTeam" xml:space="preserve">
+    <value>Access to this record is restricted. Please contact the technical team.</value>
+  </data>
+  <data name="AccessDeny" xml:space="preserve">
+    <value>You are not authorized to access this section!</value>
+  </data>
+  <data name="AccessRestrictionsContactTechnicalTeam" xml:space="preserve">
+    <value>Access is restricted. Please contact the technical team.</value>
+  </data>
+  <data name="TheDesiredRecordHasAlreadyBeenDeleted" xml:space="preserve">
+    <value>The desired record has already been deleted.</value>
+  </data>
+  <data name="TicketIsClosed" xml:space="preserve">
+    <value>The ticket is closed.</value>
+  </data>
+  <data name="DeleteMessageError" xml:space="preserve">
+    <value>Deletion is not possible.</value>
+  </data>
+  <data name="ZeroValueError" xml:space="preserve">
+    <value>The count cannot be zero.</value>
+  </data>
+  <data name="EmptyCount" xml:space="preserve">
+    <value>Please enter the count.</value>
+  </data>
+  <data name="GoldSootValuesError" xml:space="preserve">
+    <value>Gold weight cannot be less than 1000 soot.</value>
+  </data>
+  <data name="RestrictedAccessContactTechnicalTeam" xml:space="preserve">
+    <value>Access level restriction. Please contact the technical team.</value>
+  </data>
+  <data name="Status404NotFoundErrorMessage" xml:space="preserve">
+    <value>The requested address was not found.</value>
+  </data>
+  <data name="NotEnoughGoldValue" xml:space="preserve">
+    <value>The gold balance is not sufficient to register a physical withdrawal request.</value>
+  </data>
+  <data name="NotEnoughGoldValueForDelivery" xml:space="preserve">
+    <value>The gold balance is not sufficient for this amount. You can increase the gold balance before approval or change the request to rejected status.</value>
+  </data>
+  <data name="RequestExistInDeliveryPending" xml:space="preserve">
+    <value>The request has already been placed in the pending delivery stage.</value>
+  </data>
+  <data name="RequestExistInDeliverd" xml:space="preserve">
+    <value>The request has already been placed in the delivered stage.</value>
+  </data>
+  <data name="RequestExistInRejected" xml:space="preserve">
+    <value>The request has already been placed in the rejected stage.</value>
+  </data>
+  <data name="RequestExistInUnderReview" xml:space="preserve">
+    <value>The request has already been placed in the under review stage.</value>
+  </data>
+  <data name="RequestExistInClosed" xml:space="preserve">
+    <value>The request has already been placed in the closed stage.</value>
+  </data>
+  <data name="RegisterProfileQueueError" xml:space="preserve">
+    <value>Your registration process has not been completed. Please try again in a few minutes.</value>
+  </data>
+  <data name="CaptchaIsNotValid" xml:space="preserve">
+    <value>Captcha verification failed. Please try again.</value>
+  </data>
+  <data name="CommutingNotFound" xml:space="preserve">
+    <value>The specified session was not found.</value>
+  </data>
+  <data name="BankCodeIsRequired" xml:space="preserve">
+    <value>Bank code is required.</value>
+  </data>
+  <data name="BankCodeIsInvalid" xml:space="preserve">
+    <value>The bank code is not valid.</value>
+  </data>
+  <data name="CardNumberIsRequired" xml:space="preserve">
+    <value>Card number is required.</value>
+  </data>
+  <data name="CardNumberIsInvalid" xml:space="preserve">
+    <value>The card number is not valid.</value>
+  </data>
+  <data name="ConfirmdPersonalInformationMessageSuccess" xml:space="preserve">
+    <value>Your personal information was successfully verified.</value>
+  </data>
+  <data name="ConfirmdIdCardImageMessageSuccess" xml:space="preserve">
+    <value>Your ID card images were successfully verified.</value>
+  </data>
+  <data name="ConfirmdFirstBankAccountMessageSuccess" xml:space="preserve">
+    <value>The bank card was successfully verified.</value>
+  </data>
+  <data name="CardNumberIsNotValid" xml:space="preserve">
+    <value>The card number is invalid.</value>
+  </data>
+  <data name="CreateProfileCodingForBankAccount" xml:space="preserve">
+    <value>{0} bank accounts</value>
+  </data>
+  <data name="HasProductInThisCategory" xml:space="preserve">
+    <value>A product has been registered in this category.</value>
+  </data>
+  <data name="HasProductInThisBranch" xml:space="preserve">
+    <value>A product has been registered for this branch.</value>
+  </data>
+  <data name="TicketSaveSuccessMessageSendError" xml:space="preserve">
+    <value>Your ticket was registered successfully, but there was an issue sending the SMS.</value>
+  </data>
+  <data name="TicketSaveChangesMessageSendError" xml:space="preserve">
+    <value>The changes to the specified ticket were saved successfully, but there was an issue sending the SMS to the user.</value>
+  </data>
+  <data name="PurchasingProductsFromDifferentBranchesIsNotAllowed" xml:space="preserve">
+    <value>Purchasing different products from different branches is not allowed.</value>
+  </data>
+  <data name="UserReferralLogExist" xml:space="preserve">
+    <value>Referral log has already been registered for the user.</value>
+  </data>
+  <data name="ReferralCanNotUseForYourSelf" xml:space="preserve">
+    <value>Using a user's referral code for themselves is not allowed.</value>
+  </data>
+  <data name="MaxUserUsed" xml:space="preserve">
+    <value>The maximum number of users has used this referral code.</value>
+  </data>
+  <data name="ClosingSaleAndPurchaseMoltenGoldError" xml:space="preserve">
+    <value>Due to TalaSoot system policies, buying and selling are unavailable until further notice. Please try again in a few minutes.</value>
+  </data>
+  <data name="CreateBuyInShopAccountCoding" xml:space="preserve">
+    <value>{0} orders from store</value>
+  </data>
+  <data name="CreateOrderForBuyInShopAccount" xml:space="preserve">
+    <value>Order {0} with order code {1}</value>
+  </data>
+  <data name="DocumentForTextDocumentTypeBuyFromShop" xml:space="preserve">
+    <value>Purchase of {0}, for order {1}, amount {2:N0} toman</value>
+  </data>
+  <data name="CreateUserBuyByGoldRequestCodeAccountCoding" xml:space="preserve">
+    <value>{0} orders for gold request</value>
+  </data>
+  <data name="NoRulesError" xml:space="preserve">
+    <value>No rule is available for review.</value>
+  </data>
+  <data name="NoDocumentDetailsError" xml:space="preserve">
+    <value>No document is available for review.</value>
+  </data>
+  <data name="NotAllowedNowBuyError" xml:space="preserve">
+    <value>Gold purchase is not currently allowed.</value>
+  </data>
+  <data name="BelowMinBuy" xml:space="preserve">
+    <value>The minimum purchase amount in this time period is {0} soot.</value>
+  </data>
+  <data name="NotAllowedNowSellError" xml:space="preserve">
+    <value>Gold sale is not currently allowed.</value>
+  </data>
+  <data name="BelowMinSell" xml:space="preserve">
+    <value>The minimum sale amount in this time period is {0} soot.</value>
+  </data>
+  <data name="DepositFromWalletError" xml:space="preserve">
+    <value>Due to TalaSoot policies, wallet top-up is unavailable until further notice.</value>
+  </data>
+  <data name="ClosingPurchaseMoltenGoldError" xml:space="preserve">
+    <value>Purchase of molten gold is disabled.</value>
+  </data>
+  <data name="ClosingSaleMoltenGoldError" xml:space="preserve">
+    <value>Sale of molten gold is disabled.</value>
+  </data>
+  <data name="UpdateActiveLastGoldPriceMessageError" xml:space="preserve">
+    <value>You are only allowed to change the status of the last price in the list.</value>
+  </data>
+  <data name="ListIsNull" xml:space="preserve">
+    <value>No data was found.</value>
+  </data>
+  <data name="MaxWordCountError" xml:space="preserve">
+    <value>The maximum allowed word count for field {0} is {1} words.</value>
+  </data>
+  <data name="ProfileNotVerifiedError" xml:space="preserve">
+    <value>The specified user has not been verified.</value>
+  </data>
+  <data name="PhoneNumberIsInvalid" xml:space="preserve">
+    <value>Phone number is invalid.</value>
+  </data>
+  <data name="FileIsEmpty" xml:space="preserve">
+    <value>File is empty.</value>
+  </data>
+  <data name="AltText" xml:space="preserve">
+    <value>Alt Text</value>
+  </data>
+  <data name="AllLanguagesRequired" xml:space="preserve">
+    <value>All language fields are required when creating a new record.</value>
+  </data>
+  <data name="LanguageRequired" xml:space="preserve">
+    <value>The value in {0} is required.</value>
+  </data>
+  <data name="ValueCannotBeNull" xml:space="preserve">
+    <value>Value cannot be null.</value>
+  </data>
+  <data name="InvalidDecimalFormat" xml:space="preserve">
+    <value>Invalid decimal format.</value>
+  </data>
+  <data name="ValueIsLessMinimumError" xml:space="preserve">
+    <value>Value is less than the minimum allowed value of {0}.</value>
+  </data>
+  <data name="DecimalValueExceedsScaleError" xml:space="preserve">
+    <value>Decimal value exceeds the allowed scale of {0}.</value>
+  </data>
+  <data name="LocationMustBeMapped" xml:space="preserve">
+    <value>Location must be mapped.</value>
+  </data>
+  <data name="AddressSummary" xml:space="preserve">
+    <value>Multiple values are required.</value>
+  </data>
+  <data name="MultipleValuesAreRequired" xml:space="preserve">
+    <value>Multiple values are required.</value>
+  </data>
+  <data name="OnlyOneValueAllowedErrorMessage" xml:space="preserve">
+    <value>Only one value is allowed.</value>
+  </data>
+  <data name="InvalidNumberFormat" xml:space="preserve">
+    <value>Invalid number format.</value>
+  </data>
+  <data name="ValueIsGreaterThanTheMaximum" xml:space="preserve">
+    <value>Value is greater than the maximum allowed value of {0}.</value>
+  </data>
+  <data name="StringInvalidValue" xml:space="preserve">
+    <value>Invalid string value.</value>
+  </data>
+  <data name="StringLengthExceedsTheMaximumLengthErrorMessage" xml:space="preserve">
+    <value>String length exceeds the maximum length of {0}.</value>
+  </data>
+  <data name="StringLengthMustBeExactlyErrorMessage" xml:space="preserve">
+    <value>String length must be exactly {0}.</value>
+  </data>
+  <data name="ExistingNoteErrorMessage" xml:space="preserve">
+    <value>A note already exists for this announcement. Please delete or update the existing note before creating a new one.</value>
+  </data>
+  <data name="YouCanNotReportYourOwnAnnouncementErrorMessage" xml:space="preserve">
+    <value>You cannot report your own announcement.</value>
+  </data>
+  <data name="SaveReportSuccessfully" xml:space="preserve">
+    <value>Your report has been successfully submitted.</value>
+  </data>
+  <data name="AnnouncementHiddenStatusChangedSuccessfully" xml:space="preserve">
+    <value>The announcement visibility status has been successfully changed.</value>
+  </data>
+  <data name="PageTitleNotExist" xml:space="preserve">
+    <value>Page Title Not Exist !!!</value>
+  </data>
+  <data name="UseForBetterSearch" xml:space="preserve">
+    <value>Use for Better Search</value>
+  </data>
+  <data name="AnnouncementHasPublishedStatus" xml:space="preserve">
+    <value>The announcement status is published!</value>
+  </data>
+  <data name="AnnouncementStatusIsLocked" xml:space="preserve">
+    <value>Announcement status change is not allowed!</value>
+  </data>
+  <data name="FieldHasExistErrorMessage" xml:space="preserve">
+    <value>The desired field has been previously registered.</value>
+  </data>
+  <data name="ProcessingText" xml:space="preserve">
+    <value>Processing the request...</value>
+  </data>
+  <data name="NoResultsFound" xml:space="preserve">
+    <value>No results found</value>
+  </data>
+  <data name="UserIDNotSpecified" xml:space="preserve">
+    <value>User ID not specified</value>
+  </data>
+  <data name="UserSuspensionHistory" xml:space="preserve">
+    <value>User suspension history</value>
+  </data>
+  <data name="ExampleDateInput" xml:space="preserve">
+    <value>Example: 2025-05-25</value>
+  </data>
+  <data name="OTPVerification" xml:space="preserve">
+    <value>OTP Verification</value>
+  </data>
+  <data name="EnterCode" xml:space="preserve">
+    <value>Enter Code</value>
+  </data>
+  <data name="UserActiveSessionsDescription" xml:space="preserve">
+    <value>User Active Sessions Description</value>
+  </data>
+  <data name="RoleAlreadyHasDashboardAccess" xml:space="preserve">
+    <value>The selected role already has dashboard-level access to this dashboard.</value>
+  </data>
+  <data name="RoleAlreadyHasDashboardAccessRemoveItFirst" xml:space="preserve">
+    <value>The selected role already has dashboard-level access. Please remove the dashboard access first.</value>
+  </data>
+  <data name="TabPageMustBeSubmittedWithOneOfItsSubMenus" xml:space="preserve">
+    <value>The tab page must be submitted along with one of its submenus.</value>
+  </data>
+  <data name="DuplicateAccessesIgnoredNoNewItemsToCreate" xml:space="preserve">
+    <value>Duplicate accesses were ignored; no new items are available to create.</value>
+  </data>
+  <data name="CannotDeleteLockedAccessLevels" xml:space="preserve">
+    <value>You are not allowed to delete locked access levels.</value>
+  </data>
+  <data name="NoAccessToDelete" xml:space="preserve">
+    <value>There is no access to delete.</value>
+  </data>
+  <data name="UserHasReportedErrorMessage" xml:space="preserve">
+    <value>You have already reported this announcement.</value>
+  </data>
+  <data name="DuplicateValuesNotAllowedErrorMessage" xml:space="preserve">
+    <value>You are not allowed to submit duplicate values.</value>
+  </data>
+  <data name="ForceUpdateErrorMessage" xml:space="preserve">
+    <value>Force update to version {0} is required.</value>
+  </data>
+  <data name="UpdateRecommended" xml:space="preserve">
+    <value>A new version is available. Update recommended.</value>
+  </data>
+  <data name="YouAreLatestVersion" xml:space="preserve">
+    <value>You are using the latest version</value>
+  </data>
+  <data name="AccountDeletedMessage" xml:space="preserve">
+    <value>Your account has been successfully deleted.</value>
+  </data>
+  <data name="PermissionsAppliedDescription" xml:space="preserve">
+    <value>Permissions are applied immediately when you check or uncheck the box.</value>
+  </data>
+  <data name="AdvertisementManagementSystem" xml:space="preserve">
+    <value>Advertisement Management System</value>
+  </data>
+  <data name="SecureOTPLogin" xml:space="preserve">
+    <value>Secure OTP Login</value>
+  </data>
+  <data name="SultanateOfOman" xml:space="preserve">
+    <value>Sultanate of Oman</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="LoginRegisterMobile" xml:space="preserve">
+    <value>Login / Register with your mobile number</value>
+  </data>
+  <data name="Country Code" xml:space="preserve">
+    <value>You can only edit categories that do not contain license plates, phone numbers, or real estate.</value>
+  </data>
+  <data name="CountryCode" xml:space="preserve">
+    <value>Country Code</value>
+  </data>
+  <data name="EnterNumberWithoutCountryCode" xml:space="preserve">
+    <value>Enter number without country code</value>
+  </data>
+  <data name="YourInformationSecure" xml:space="preserve">
+    <value>Your information is secure</value>
+  </data>
+  <data name="SecureAccessToAdminPanel" xml:space="preserve">
+    <value>Secure access to admin panel</value>
+  </data>
+  <data name="OneTimePassword" xml:space="preserve">
+    <value>One-Time Password</value>
+  </data>
+  <data name="ValidForMinutes" xml:space="preserve">
+    <value>Valid for {0} minutes</value>
+  </data>
+  <data name="VerifyYourIdentity" xml:space="preserve">
+    <value>Verify Your Identity</value>
+  </data>
+  <data name="EnterDigitCodeSentToYourMobile" xml:space="preserve">
+    <value>Enter the {0}-digit code sent to your mobile</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
+  <data name="PageNotFoundSorryMessage" xml:space="preserve">
+    <value>Sorry, the page you are looking for does not exist or may have been moved.</value>
+  </data>
+  <data name="Solutions" xml:space="preserve">
+    <value>Solutions</value>
+  </data>
+  <data name="PleaseCheckPage" xml:space="preserve">
+    <value>Please check the page address again.</value>
+  </data>
+  <data name="GotToHomePageDescription" xml:space="preserve">
+    <value>Go to the desired section from the home page.</value>
+  </data>
+  <data name="PleaseContactSupportErrorMessage" xml:space="preserve">
+    <value>If you are sure this is a system error, please contact support.</value>
+  </data>
+  <data name="AccountBlocked" xml:space="preserve">
+    <value>Your account has been blocked.</value>
+  </data>
+  <data name="EditRestrictionCategories" xml:space="preserve">
+    <value>You do not have permission to view this page. This issue may be due to one of the following reasons:</value>
+  </data>
+  <data name="UnauthorizedPageMessage" xml:space="preserve">
+    <value>If you should have access to this page but don't, please contact support or the system administrator.</value>
+  </data>
+  <data name="UnauthorizedReasonLoginRequired" xml:space="preserve">
+    <value>Editing or viewing this section requires logging into your account.</value>
+  </data>
+  <data name="UnauthorizedReasonInsufficientPermission" xml:space="preserve">
+    <value>Your current account's access level is not sufficient for this operation.</value>
+  </data>
+  <data name="UnauthorizedActionsTitle" xml:space="preserve">
+    <value>What you can do:</value>
+  </data>
+  <data name="UnauthorizedActionLogin" xml:space="preserve">
+    <value>If you have an account, please log in first and then try again.</value>
+  </data>
+  <data name="UnauthorizedActionContactSupport" xml:space="preserve">
+    <value>If you should have access to this page but don't, please contact support or the system administrator.</value>
+  </data>
+  <data name="UnauthorizedActionGoHome" xml:space="preserve">
+    <value>To quickly return to the home page, use the "Back to Home" button.</value>
+  </data>
+  <data name="WaitBeforeNextOtp" xml:space="preserve">
+    <value>Please wait 2 minutes before requesting a new code.</value>
+  </data>
+</root>

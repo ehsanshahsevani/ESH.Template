@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="AnnouncementStatus10" xml:space="preserve">
+        <value>تم إدراج إعلانك في الفئة {0} بنجاح وهو في انتظار موافقة المشرف. {1}</value>
+    </data>
+    <data name="AnnouncementStatus10Title" xml:space="preserve">
+        <value>إعلان قيد الانتظار</value>
+    </data>
+    <data name="AnnouncementStatus20" xml:space="preserve">
+        <value>يحتاج إعلانك في الفئة {0} إلى تحرير بسبب {1} وهو الآن في انتظار التحرير. {2}</value>
+    </data>
+    <data name="AnnouncementStatus20Title" xml:space="preserve">
+        <value>الإعلان يحتاج إلى تحرير</value>
+    </data>
+    <data name="AnnouncementStatus30" xml:space="preserve">
+        <value>تمت الموافقة على إعلانك في الفئة {0} ونشره. {1}</value>
+    </data>
+    <data name="AnnouncementStatus30Title" xml:space="preserve">
+        <value>الإعلان تمت الموافقة عليه ونشره</value>
+    </data>
+    <data name="AnnouncementStatus40" xml:space="preserve">
+        <value>تم رفض إعلانك في الفئة {0} من قبل فريق الدعم. {1}</value>
+    </data>
+    <data name="AnnouncementStatus40Title" xml:space="preserve">
+        <value>الإعلان مرفوض</value>
+    </data>
+    <data name="AnnouncementStatus50" xml:space="preserve">
+        <value>انتهت مدة إعلانك في الفئة {0}. {1}</value>
+    </data>
+    <data name="AnnouncementStatus50Title" xml:space="preserve">
+        <value>الإعلان منتهي الصلاحية</value>
+    </data>
+    <data name="Login" xml:space="preserve">
+        <value>سجّل المشرف برقم الهاتف {0} الدخول إلى النظام في تاريخ {1} الساعة {2} من عنوان IP {3}.</value>
+    </data>
+    <data name="LoginTitle" xml:space="preserve">
+        <value>تسجيل الدخول بنجاح</value>
+    </data>
+    <data name="Otp" xml:space="preserve">
+        <value>رمز التحقق هو {0}. لا تشاركه مع أحد.</value>
+    </data>
+    <data name="OtpTitle" xml:space="preserve">
+        <value>إرسال رمز لمرة واحدة</value>
+    </data>
+    <data name="TicketReviewClosed" xml:space="preserve">
+        <value>عزيزي المستخدم، تذكرتك رقم {0} تم إغلاقها. إذا لزم الأمر، يمكنك تسجيل تذكرة جديدة. شكرًا لتعاونك.</value>
+    </data>
+    <data name="TicketReviewClosedTitle" xml:space="preserve">
+        <value>التذكرة مغلقة</value>
+    </data>
+    <data name="TicketReviewPending" xml:space="preserve">
+        <value>عزيزي المستخدم، تذكرتك رقم {0} قيد المراجعة من قبل الخبراء. سيتم إعلامك بالنتيجة في أقرب وقت.</value>
+    </data>
+    <data name="TicketReviewPendingTitle" xml:space="preserve">
+        <value>التذكرة في قائمة الانتظار للمراجعة</value>
+    </data>
+    <data name="TicketUnderAnswered" xml:space="preserve">
+        <value>عزيزي المستخدم، تم تسجيل رد تذكرتك رقم {0} من قبل الخبراء. يرجى تسجيل الدخول إلى لوحة التحكم الخاصة بك لعرض الرد.</value>
+    </data>
+    <data name="TicketUnderAnsweredTitle" xml:space="preserve">
+        <value>تم الرد على التذكرة</value>
+    </data>
+    <data name="TicketUnderReview" xml:space="preserve">
+        <value>عزيزي المستخدم، تذكرتك رقم {0} تم تسجيلها بنجاح ووضعت في قائمة الانتظار للمراجعة. يرجى انتظار رد خبرائنا.</value>
+    </data>
+    <data name="TicketUnderReviewTitle" xml:space="preserve">
+        <value>تم تسجيل التذكرة وهي في انتظار المراجعة</value>
+    </data>
+    <data name="VerifyAccountSuccess" xml:space="preserve">
+        <value>عزيزي المستخدم رقم الهاتف {0}، اكتملت عملية التحقق من هويتك.</value>
+    </data>
+    <data name="VerifyAccountSuccessTitle" xml:space="preserve">
+        <value>تأكيد التحقق النهائي من الهوية</value>
+    </data>
+</root>

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.1" />
+      <PackageReference Include="ESH.BuildingBlocks.Attachments" Version="1.0.2" />
+      <PackageReference Include="ESH.BuildingBlocks.NotificationCenter" Version="1.0.2" />
+      <PackageReference Include="ESH.Helpers" Version="1.0.2" />
+      <PackageReference Include="FluentResults" Version="4.0.0" />
+    </ItemGroup>
+        
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\Domain\Domain.csproj" />
+      <ProjectReference Include="..\..\Core\Persistence\Persistence.csproj" />
+      <ProjectReference Include="..\OnlineTranslate\OnlineTranslate.csproj" />
+    </ItemGroup>
+        
+    <ItemGroup>
+      <PackageReference Include="ESH.SeedworkSystem.ViewModel" Version="1.0.3" />
+    </ItemGroup>
+</Project>

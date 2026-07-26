@@ -1,0 +1,88 @@
+﻿/* ==========================
+   Swagger Dark Theme - Full Headers Fix
+========================== */
+
+body, html {
+    background-color: #0f172a !important;
+}
+
+.swagger-ui {
+    background-color: #0f172a !important;
+    color: #e5e7eb !important;
+}
+
+    .swagger-ui .topbar {
+        background-color: #020617 !important;
+        border-bottom: 1px solid #1e293b !important;
+    }
+
+        .swagger-ui .topbar a {
+            color: #38bdf8 !important;
+        }
+
+    /* Controller / Tag */
+    .swagger-ui .opblock-tag {
+        color: #61afef !important;
+        font-weight: 700 !important;
+    }
+
+        /* Controller small text */
+        .swagger-ui .opblock-tag small {
+            color: #abb2bf !important;
+        }
+
+    /* Endpoint Path */
+    .swagger-ui .opblock-summary-path,
+    .swagger-ui .opblock-summary-description {
+        color: #e5c07b !important;
+        font-weight: 600 !important;
+    }
+
+    /* Method Labels */
+    .swagger-ui .opblock-summary-method {
+        text-transform: uppercase !important;
+        font-weight: bold !important;
+    }
+
+    /* GET / POST / PUT / DELETE */
+    .swagger-ui .opblock-summary-get {
+        background-color: #98c379 !important;
+        color: #0f172a !important;
+    }
+
+    .swagger-ui .opblock-summary-post {
+        background-color: #61afef !important;
+        color: #0f172a !important;
+    }
+
+    .swagger-ui .opblock-summary-put {
+        background-color: #e5c07b !important;
+        color: #0f172a !important;
+    }
+
+    .swagger-ui .opblock-summary-delete {
+        background-color: #e06c75 !important;
+        color: #0f172a !important;
+    }
+
+    /* Opblocks */
+    .swagger-ui .opblock {
+        background-color: #020617 !important;
+        border: 1px solid #1e293b !important;
+    }
+
+    /* Buttons */
+    .swagger-ui .btn {
+        background-color: #38bdf8 !important;
+        color: #020617 !important;
+    }
+
+        .swagger-ui .btn:hover {
+            background-color: #0ea5e9 !important;
+        }
+
+    /* Hide models for clean look */
+    .swagger-ui .model-box,
+    .swagger-ui .models {
+        display: none !important;
+    }

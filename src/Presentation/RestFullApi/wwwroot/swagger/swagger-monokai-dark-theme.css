@@ -1,0 +1,64 @@
+﻿/* ==========================
+   Swagger Dark Theme - Monokai
+========================== */
+html, .swagger-ui {
+    background-color: #272822;
+    color: #f8f8f2;
+}
+
+    .swagger-ui .topbar {
+        background-color: #1e1f1c;
+        border-bottom: 1px solid #66d9ef;
+    }
+
+        .swagger-ui .topbar a {
+            color: #f92672 !important;
+        }
+
+    .swagger-ui .opblock {
+        background-color: #3e3d32;
+        border: 1px solid #66d9ef;
+    }
+
+    .swagger-ui .opblock-summary {
+        color: #fd971f !important;
+        font-weight: 600;
+    }
+
+    .swagger-ui .opblock-summary-get {
+        background-color: #a6e22e !important;
+        color: #272822 !important;
+    }
+
+    .swagger-ui .opblock-summary-post {
+        background-color: #66d9ef !important;
+        color: #272822 !important;
+    }
+
+    .swagger-ui .opblock-summary-put {
+        background-color: #fd971f !important;
+        color: #272822 !important;
+    }
+
+    .swagger-ui .opblock-summary-delete {
+        background-color: #f92672 !important;
+        color: #272822 !important;
+    }
+
+    .swagger-ui .opblock-tag {
+        color: #a6e22e !important;
+        font-weight: 700;
+    }
+
+        .swagger-ui .opblock-tag small {
+            color: #f8f8f2 !important;
+        }
+
+    .swagger-ui .btn {
+        background-color: #66d9ef;
+        color: #272822;
+    }
+
+        .swagger-ui .btn:hover {
+            background-color: #38a1d8;
+        }

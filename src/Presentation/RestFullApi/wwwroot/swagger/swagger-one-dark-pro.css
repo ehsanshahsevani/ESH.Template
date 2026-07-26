@@ -1,0 +1,64 @@
+﻿/* ==========================
+   Swagger Dark Theme - One Dark Pro
+========================== */
+html, .swagger-ui {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+    .swagger-ui .topbar {
+        background-color: #020617;
+        border-bottom: 1px solid #1e293b;
+    }
+
+        .swagger-ui .topbar a {
+            color: #38bdf8 !important;
+        }
+
+    .swagger-ui .opblock {
+        background-color: #020617;
+        border: 1px solid #1e293b;
+    }
+
+    .swagger-ui .opblock-summary {
+        color: #e5c07b !important;
+        font-weight: 600;
+    }
+
+    .swagger-ui .opblock-summary-get {
+        background-color: #98c379 !important;
+        color: #282c34 !important;
+    }
+
+    .swagger-ui .opblock-summary-post {
+        background-color: #61afef !important;
+        color: #282c34 !important;
+    }
+
+    .swagger-ui .opblock-summary-put {
+        background-color: #e5c07b !important;
+        color: #282c34 !important;
+    }
+
+    .swagger-ui .opblock-summary-delete {
+        background-color: #e06c75 !important;
+        color: #282c34 !important;
+    }
+
+    .swagger-ui .opblock-tag {
+        color: #61afef !important;
+        font-weight: 700;
+    }
+
+        .swagger-ui .opblock-tag small {
+            color: #abb2bf !important;
+        }
+
+    .swagger-ui .btn {
+        background-color: #38bdf8;
+        color: #020617;
+    }
+
+        .swagger-ui .btn:hover {
+            background-color: #0ea5e9;
+        }

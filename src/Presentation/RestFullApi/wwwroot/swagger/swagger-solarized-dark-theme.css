@@ -1,0 +1,64 @@
+﻿/* ==========================
+   Swagger Dark Theme - Solarized
+========================== */
+html, .swagger-ui {
+    background-color: #002b36;
+    color: #839496;
+}
+
+    .swagger-ui .topbar {
+        background-color: #073642;
+        border-bottom: 1px solid #586e75;
+    }
+
+        .swagger-ui .topbar a {
+            color: #b58900 !important;
+        }
+
+    .swagger-ui .opblock {
+        background-color: #073642;
+        border: 1px solid #586e75;
+    }
+
+    .swagger-ui .opblock-summary {
+        color: #b58900 !important;
+        font-weight: 600;
+    }
+
+    .swagger-ui .opblock-summary-get {
+        background-color: #859900 !important;
+        color: #002b36 !important;
+    }
+
+    .swagger-ui .opblock-summary-post {
+        background-color: #268bd2 !important;
+        color: #002b36 !important;
+    }
+
+    .swagger-ui .opblock-summary-put {
+        background-color: #b58900 !important;
+        color: #002b36 !important;
+    }
+
+    .swagger-ui .opblock-summary-delete {
+        background-color: #dc322f !important;
+        color: #002b36 !important;
+    }
+
+    .swagger-ui .opblock-tag {
+        color: #268bd2 !important;
+        font-weight: 700;
+    }
+
+        .swagger-ui .opblock-tag small {
+            color: #93a1a1 !important;
+        }
+
+    .swagger-ui .btn {
+        background-color: #268bd2;
+        color: #002b36;
+    }
+
+        .swagger-ui .btn:hover {
+            background-color: #00629d;
+        }

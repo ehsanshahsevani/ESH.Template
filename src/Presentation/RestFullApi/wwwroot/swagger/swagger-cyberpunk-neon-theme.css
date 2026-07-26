@@ -1,0 +1,64 @@
+﻿/* ==========================
+   Swagger Dark Theme - Cyberpunk
+========================== */
+html, .swagger-ui {
+    background-color: #0a0a0a;
+    color: #f0f0f0;
+}
+
+    .swagger-ui .topbar {
+        background-color: #0d0d0d;
+        border-bottom: 1px solid #ff00ff;
+    }
+
+        .swagger-ui .topbar a {
+            color: #00ffff !important;
+        }
+
+    .swagger-ui .opblock {
+        background-color: #111111;
+        border: 1px solid #ff00ff;
+    }
+
+    .swagger-ui .opblock-summary {
+        color: #ff00ff !important;
+        font-weight: 600;
+    }
+
+    .swagger-ui .opblock-summary-get {
+        background-color: #00ff00 !important;
+        color: #0a0a0a !important;
+    }
+
+    .swagger-ui .opblock-summary-post {
+        background-color: #00ffff !important;
+        color: #0a0a0a !important;
+    }
+
+    .swagger-ui .opblock-summary-put {
+        background-color: #ff00ff !important;
+        color: #0a0a0a !important;
+    }
+
+    .swagger-ui .opblock-summary-delete {
+        background-color: #ff0044 !important;
+        color: #0a0a0a !important;
+    }
+
+    .swagger-ui .opblock-tag {
+        color: #ff00ff !important;
+        font-weight: 700;
+    }
+
+        .swagger-ui .opblock-tag small {
+            color: #c0c0c0 !important;
+        }
+
+    .swagger-ui .btn {
+        background-color: #00ffff;
+        color: #0a0a0a;
+    }
+
+        .swagger-ui .btn:hover {
+            background-color: #00e6e6;
+        }

@@ -1,0 +1,64 @@
+﻿/* ==========================
+   Swagger Light Theme - Soft Blue
+========================== */
+html, .swagger-ui {
+    background-color: #f0f4f8;
+    color: #1f2937;
+}
+
+    .swagger-ui .topbar {
+        background-color: #3b82f6;
+        border-bottom: 1px solid #2563eb;
+    }
+
+        .swagger-ui .topbar a {
+            color: #f0f4f8 !important;
+        }
+
+    .swagger-ui .opblock {
+        background-color: #ffffff;
+        border: 1px solid #cbd5e1;
+    }
+
+    .swagger-ui .opblock-summary {
+        color: #1e40af !important;
+        font-weight: 600;
+    }
+
+    .swagger-ui .opblock-summary-get {
+        background-color: #22c55e !important;
+        color: #ffffff !important;
+    }
+
+    .swagger-ui .opblock-summary-post {
+        background-color: #3b82f6 !important;
+        color: #ffffff !important;
+    }
+
+    .swagger-ui .opblock-summary-put {
+        background-color: #facc15 !important;
+        color: #1f2937 !important;
+    }
+
+    .swagger-ui .opblock-summary-delete {
+        background-color: #ef4444 !important;
+        color: #ffffff !important;
+    }
+
+    .swagger-ui .opblock-tag {
+        color: #2563eb !important;
+        font-weight: 700;
+    }
+
+        .swagger-ui .opblock-tag small {
+            color: #475569 !important;
+        }
+
+    .swagger-ui .btn {
+        background-color: #3b82f6;
+        color: #ffffff;
+    }
+
+        .swagger-ui .btn:hover {
+            background-color: #2563eb;
+        }
